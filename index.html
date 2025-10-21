@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>タイトル</title>
+<meta name="description" content="web / graphic — 紙PFと連動した最小構成のポートフォリオ"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <!--jQuery本体-->
@@ -18,7 +22,128 @@ $(function(){
 </head>
 
 <body>
+  <!-- Header -->
+  <header>
+    <div class="wrap hd">
+      <div class="brand">Mayumi Kohata</div>
+      <nav class="nav">
+        <a href="#about">about</a>
+        <a href="#works">works</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <!-- MV / Hero （動画 or GIF を差し替え）-->
+    <section class="mv">
+      <video class="mv__video" autoplay muted loop playsinline poster="assets/mv-poster.jpg">
+        <source src="assets/mv-hero.mp4" type="video/mp4">
+        <img src="assets/mv-hero.gif" alt="hero" />
+      </video>
+      <div class="mv__copy">
+        <h1 class="mv__title">Mayumi Kohata — portfolio</h1>
+        <p class="mv__lead">web / graphic — 紙PFと連動した最小構成</p>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section id="works">
+      <div class="wrap">
+        <h2 class="sec">works</h2>
+        <p class="note">web / graphic（紙PFの該当ページを併記）</p>
+        <div class="grid">
+          <!-- 以降、同じ構造で複製して差し替え -->
+          <article class="item">
+            <a href="#">
+              <figure class="thumb"><img src="assets/paluna.jpg" alt="Paluna — EC"></figure>
+              <h3 class="ttl">Paluna — ring EC <span class="pg">P.04–05</span></h3>
+              <p class="meta">Web design / UI / Copy</p>
+            </a>
+          </article>
+          <article class="item">
+            <a href="#">
+              <figure class="thumb"><img src="assets/aquarium.jpg" alt="Minatomirai Aquarium"></figure>
+              <h3 class="ttl">Minatomirai Aquarium — special site <span class="pg">P.06–07</span></h3>
+              <p class="meta">Web design / Writing / Motion</p>
+            </a>
+          </article>
+          <article class="item">
+            <a href="#">
+              <figure class="thumb"><img src="assets/chairshop.jpg" alt="ChairShop"></figure>
+              <h3 class="ttl">ChairShop — furniture LP <span class="pg">P.08–09</span></h3>
+              <p class="meta">Web design / Photo / Copy</p>
+            </a>
+          </article>
+          <article class="item">
+            <a href="#">
+              <figure class="thumb"><img src="assets/fujifields.jpg" alt="FUJI FIELDS"></figure>
+              <h3 class="ttl">FUJI FIELDS — wine label <span class="pg">P.12–13</span></h3>
+              <p class="meta">Graphic design / Packaging</p>
+            </a>
+          </article>
+          <article class="item">
+            <a href="#">
+              <figure class="thumb"><img src="assets/farm.jpg" alt="さんちゃん農園"></figure>
+              <h3 class="ttl">さんちゃん農園 — leaflet <span class="pg">P.14–15</span></h3>
+              <p class="meta">Graphic design / Copy</p>
+            </a>
+          </article>
+          <article class="item">
+            <a href="#">
+              <figure class="thumb"><img src="assets/morinoza.jpg" alt="森ノ座"></figure>
+              <h3 class="ttl">森ノ座 — logo <span class="pg">P.16–17</span></h3>
+              <p class="meta">Logo / Branding</p>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="wrap">
+        <h2 class="sec">about</h2>
+        <div class="about">
+          <div>
+            <p>web / graphic を中心に、媒体を跨いだ一貫性のある表現を目指しています。紙PFの構成を踏襲し、web では見出しとキャプションを最小単位で掲載しています。</p>
+            <ul style="margin:12px 0 0 18px; font-size:14px; color:color-mix(in oklab, var(--fg) 70%, white)">
+              <li>2007–2014: DTPオペレーター & デザイナー（株式会社グラビティ）</li>
+              <li>2016–2025: Webデザイナー（株式会社SSFホールディングス）</li>
+              <li>現在: マルチディシプリンデザイナーとして活動</li>
+            </ul>
+            <p class="note" style="margin-top:10px">紙PFのページ番号を作品キャプションに併記しています（例: P.04–05）。</p>
+          </div>
+          <aside class="profile" aria-label="profile">
+            <img src="assets/profile.jpg" alt="profile" style="width:100%; height:220px; object-fit:cover" />
+            <div class="p">
+              <div class="name">木幡 真由美</div>
+              <div class="muted">Tokyo, Japan / Multi‑disciplinary Designer</div>
+              <div style="margin-top:8px">好き：写真、パン屋巡り、ラベルや包装の観察。</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Mayumi Kohata · <a class="link" href="#">contact</a>
+    </div>
+  </footer>
+
+<script>
+  // 年表示
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // MV: 画面外で一時停止（省電力 & 静音演出の維持）
+  const v = document.querySelector('.mv__video');
+  if ('IntersectionObserver' in window && v){
+    new IntersectionObserver(([e])=>{
+      if (!e.isIntersecting) v.pause(); else v.play().catch(()=>{});
+    },{threshold:.25}).observe(v);
+  }
+</script>
 </body>
 
 </html>
