@@ -78,16 +78,7 @@ body {
     text-decoration: underline
 }
 
-.menu-button {
-    /* display: inline-flex; */
-    /* flex-direction: column; */
-    /* gap: 3px; */
-    /* margin-left: 16px; */
-    /* border: 1px solid var(--line); */
-    /* background: transparent; */
-    /* border-radius: 999px; */
-    /* padding: 8px 10px */
-}
+
 
 .menu-button span {
     display: block;
@@ -119,8 +110,16 @@ body {
     font-size: 14px;
 }
 
+.section .section-kickerworks {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: .12em;
+    margin: 0 0 24px 70px;
+    font-size: 14px;
+}
+
 .section-title {
-  font-family: "Kiwi Maru", serif;  
+    font-family: "Kiwi Maru", serif;
     color: var(--navy);
     font-size: clamp(28px, 3.6vw, 40px);
     text-align: center;
@@ -192,7 +191,7 @@ body {
 /* ====== About preview ====== */
 .about-preview .icon-flower {
     display: block;
-    margin: 8px auto 16px;
+    margin: 80px auto;
     width: 36px;
     opacity: .8
 }
@@ -204,7 +203,7 @@ body {
     margin-bottom: 100px;
 }
 
-.about-preview p {
+.about-preview .about-text {
     text-align: center;
 }
 
@@ -257,6 +256,10 @@ body {
     color: var(--muted)
 }
 
+.nav {
+    margin-left: 200px;
+}
+
 /* ====== Buttons ====== */
 .btn {
     display: inline-block;
@@ -285,7 +288,7 @@ body {
 /* ====== Thanks ====== */
 .thanks .icon-flower {
     display: block;
-    margin: 10px auto 6px;
+    margin: 80px auto;
     width: 42px;
     opacity: .85
 }
@@ -312,9 +315,10 @@ body {
 .about-page .about-illustration {
     width: 160px;
     height: 160px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-2), var(--accent));
-    box-shadow: var(--shadow);
+    /* border-radius: 50%; */
+    background: url("../assets/profile.png") center center / cover no-repeat;
+    box-shadow: none;
+    /* ← 影を消す */
 }
 
 .about-hero {
@@ -324,6 +328,16 @@ body {
     align-items: center;
     margin-bottom: 100px;
 }
+
+.about-hero2 {
+    display: grid;
+    grid-template-columns: 800px 1fr;
+    gap: 36px;
+    align-items: center;
+    margin: 0 auto 100px;
+    /* margin-bottom: 100px; */
+}
+
 
 .about-cols {
     display: grid;
@@ -354,11 +368,61 @@ body {
 
 .divider-flowers {
     display: block;
-    margin: 10px 0 14px;
+    margin: 80px 0;
     width: 100%;
     max-width: 480px;
     opacity: .85
 }
+
+
+/* 見た目は2カラム×2行のグリッド */
+.split-two-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 左・右 */
+    grid-template-rows: auto auto;
+    /* 上：テキスト / 下：画像 */
+    gap: 40px 100px;
+    /* row gap 40px, col gap 100px */
+    margin: 50px 0;
+}
+
+/* テキスト部分 */
+.skill-text h3 {
+    font-family: "Kiwi Maru", sans-serif;
+    font-weight: 500;
+    color: var(--navy);
+    font-size: 1.2rem;
+    margin: 0 0 1em;
+}
+
+.skill-text p {
+    margin: 0;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+/* 画像ボックス（共通） */
+.skill-img {
+    height: 300px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: none;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+/* 左の画像 */
+.illus-dtp {
+    background-image: url("../assets/item_dtp.png");
+}
+
+/* 右の画像 */
+.illus-web {
+    background-image: url("../assets/item_web.png");
+}
+
 
 .split {
     /* margin-top: 48px; */
@@ -368,7 +432,7 @@ body {
 .split.two {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    gap: 100px;
 }
 
 .split.one {
@@ -376,7 +440,7 @@ body {
 }
 
 .split .illus-box {
-    height: 140px;
+    height: 300px;
     background: #E6EAEF;
     border: 1px solid var(--line);
     border-radius: 12px;
@@ -387,9 +451,9 @@ body {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 18px;
-    box-shadow: var(--shadow);
-    
-        width: 60%;
+    /* box-shadow: var(--shadow); */
+
+    width: 60%;
     margin: 50px auto 100px;
 }
 
@@ -494,4 +558,13 @@ body {
     .detail .detail-header {
         grid-template-columns: 1fr;
     }
+
+    .split-two-grid {
+        grid-template-columns: 1fr;
+        /* 1カラム */
+        grid-template-rows: auto auto auto auto;
+        /* 4段 */
+        gap: 32px;
+    }
+
 }
