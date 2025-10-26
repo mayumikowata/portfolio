@@ -5,25 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mayumi Kowata Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
-  <!--jQuery本体-->
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/script.js"></script>
-
-  <!--ready関数-->
-  <script>
-    $(function () {
-
-    });
-  </script>
-
 </head>
 
 <body>
@@ -33,30 +26,26 @@
       <nav class="site-nav" aria-label="primary">
         <a href="about/index.html">ABOUT ME</a>
         <a href="#works">WORKS</a>
-        <!-- 
-        <button class="menu-button" aria-label="menu">
-          <span></span><span></span><span></span>
-        </button>
-         -->
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="wrap">
-        <div class="hero-media" role="img" aria-label="Hero image placeholder"></div>
+        <div class="hero-media"></div>
         <h1 class="hero-title">Mayumi Kowata Portfolio</h1>
       </div>
     </section>
 
-    <!-- About preview -->
     <section id="about" class="section about-preview">
-      <div class="wrap narrow">
+      <div class="wrap">
         <p class="section-kicker">ABOUT ME</p>
+      </div>
+
+      <div class="wrap narrow">
         <h2 class="section-title en">Profile</h2>
-        <img class="icon-flower" src="assets/profile_flower.png" alt="" aria-hidden="true">
+        <img class="icon-flower" src="assets/profile_flower.png" alt="">
         <div class="about-columns">
           <p class="about-text">
             はじめまして。<br>
@@ -72,24 +61,16 @@
       </div>
     </section>
 
-    <!-- Works -->
+
     <section id="works" class="section works">
       <div class="wrap">
-        <p class="section-kickerworks">WORKS</p>
+        <p class="section-kicker">WORKS</p>
 
+        <!-- グラフィック デザイン -->
         <h2 class="section-title en">Graphic Design</h2>
         <div class="card-grid">
-          <!-- 3 cards -->
           <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
-              <img src="assets/placeholder-4x3.svg" alt="">
-            </a>
-            <h3 class="work-title">Paluna</h3>
-            <p class="work-meta">ブライダルリングショップ（パラジウム&素材）</p>
-            <p class="work-desc">コンセプト設計/ロゴデザイン</p>
-          </article>
-          <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
+            <a href="detail/index.html" class="thumb">
               <img src="assets/placeholder-4x3.svg" alt="">
             </a>
             <h3 class="work-title">Paluna</h3>
@@ -98,28 +79,7 @@
           </article>
 
           <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
-              <img src="assets/placeholder-4x3.svg" alt="">
-            </a>
-            <h3 class="work-title">Paluna</h3>
-            <p class="work-meta">ブライダルリングショップ（パラジウム&素材）</p>
-            <p class="work-desc">コンセプト設計/ロゴデザイン</p>
-          </article>
-
-        </div>
-
-        <div class="card-grid">
-          <!-- 3 cards -->
-          <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
-              <img src="assets/placeholder-4x3.svg" alt="">
-            </a>
-            <h3 class="work-title">Paluna</h3>
-            <p class="work-meta">ブライダルリングショップ（パラジウム&素材）</p>
-            <p class="work-desc">コンセプト設計/ロゴデザイン</p>
-          </article>
-          <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
+            <a href="detail/index.html" class="thumb">
               <img src="assets/placeholder-4x3.svg" alt="">
             </a>
             <h3 class="work-title">Paluna</h3>
@@ -128,7 +88,7 @@
           </article>
 
           <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
+            <a href="detail/index.html" class="thumb">
               <img src="assets/placeholder-4x3.svg" alt="">
             </a>
             <h3 class="work-title">Paluna</h3>
@@ -136,21 +96,24 @@
             <p class="work-desc">コンセプト設計/ロゴデザイン</p>
           </article>
         </div>
-<!--  
-        <p class="center mt-32"><a class="btn" href="about.html#skills">View more</a></p>
--->
+
+
+        <!-- ウェブデザイン -->
         <h2 class="section-title en mt-64">Web Design</h2>
         <div class="card-grid">
+
           <article class="work-card">
             <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
-              <img src="assets/placeholder-4x3.svg" alt="">
+              <img src="assets/mockup_paluna.png" alt="Paluna サイト モックアップ">
             </a>
             <h3 class="work-title">Paluna</h3>
-            <p class="work-meta">ブライダルリングショップ（パラジウム&素材）</p>
-            <p class="work-desc">コンセプト設計/ロゴデザイン</p>
+            <p class="work-meta">ブライダルリングショップ（パラジウム素材専門）</p>
+            <p class="work-desc">コンセプト設計 / ロゴデザイン</p>
           </article>
+
+
           <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
+            <a href="paluna/index.html" class="thumb">
               <img src="assets/placeholder-4x3.svg" alt="">
             </a>
             <h3 class="work-title">Paluna</h3>
@@ -159,7 +122,7 @@
           </article>
 
           <article class="work-card">
-            <a href="detail/index.html" class="thumb" aria-label="Paluna プロジェクトの詳細">
+            <a href="detail/index.html" class="thumb">
               <img src="assets/placeholder-4x3.svg" alt="">
             </a>
             <h3 class="work-title">Paluna</h3>
@@ -168,15 +131,16 @@
           </article>
         </div>
 
-        <p class="center mt-32"><a class="btn" href="#works">View more</a></p>
+        <p class="center mt-32">
+          <a class="btn" href="#works">View more</a>
+        </p>
       </div>
     </section>
 
-    <!-- Thanks -->
     <section class="section thanks">
       <div class="wrap narrow">
         <h2 class="section-title en">Thank you for viewing.</h2>
-        <img class="icon-flower" src="assets/thankyou_flower.png" alt="" aria-hidden="true">
+        <img class="icon-flower" src="assets/thankyou_flower.png" alt="">
         <p class="center small">
           ひとつひとつの作品に向き合いながら、日々デザインを楽しんでいます。<br>
           ご覧いただき、ありがとうございました。
@@ -191,8 +155,6 @@
       <a class="btn small" href="#top" id="backToTop">Back to top</a>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

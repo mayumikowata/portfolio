@@ -1,570 +1,615 @@
 @charset "utf-8";
-/* CSS Document */
 
 :root {
-    --bg: #F4F2E6;
-    /* クリーム背景 */
-    --paper: #FBFAF5;
-    --text: #30404D;
-    --muted: #6B7A86;
-    --navy: #2D3C66;
-    /* 見出しの紺 */
-    --accent: #F59C8D;
-    /* コーラル */
-    --accent-2: #FAD2C9;
-    --line: #E7E2D4;
-    --radius: 18px;
-    --radius-lg: 28px;
-    --wrap: min(1080px, 92vw);
-    --shadow: 0 6px 18px rgba(0, 0, 0, .06);
+  --bg: #F4F2E6;
+  --paper: #FBFAF5;
+  --text: #30404D;
+  --muted: #6B7A86;
+  --navy: #2D3C66;
+  --accent: #F59C8D;
+  --accent-2: #FAD2C9;
+  --line: #E7E2D4;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --wrap: min(1080px, 92vw);
+  --shadow: 0 6px 18px rgba(0, 0, 0, .06);
 }
 
 * {
-    box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    color: var(--text);
-    background: var(--bg);
-    font-family: "Kiwi Maru", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    line-height: 1.8;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Kiwi Maru", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.8;
 }
 
-/* ====== Header ====== */
+/* = Header = */
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(244, 242, 230, .8);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(244, 242, 230, .8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
 }
 
 .site-header .wrap {
-    width: var(--wrap);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
+  width: var(--wrap);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 .brand {
-    display: inline-grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border: 2px solid var(--accent);
-    border-radius: 999px;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 700;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .site-nav a {
-    margin-left: 24px;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: .06em;
-    color: var(--navy);
+  margin-left: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
 }
 
 .site-nav a[aria-current="page"] {
-    text-decoration: underline
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;        /* 下線消す */
+
 }
 
 
 
 .menu-button span {
-    display: block;
-    width: 18px;
-    height: 2px;
-    background: var(--navy)
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--navy);
 }
 
-/* ====== Layout helpers ====== */
+/* = Layout helpers = */
 .wrap {
-    width: var(--wrap);
-    margin-inline: auto;
-    padding: 0 0;
+  width: var(--wrap);
+  margin-inline: auto;
+  padding: 0;
 }
 
 .wrap.narrow {
-    width: min(780px, 92vw);
+  width: min(780px, 92vw);
 }
 
 .section {
-    padding: 56px 0;
+  padding: 56px 0;
 }
 
-.section .section-kicker {
-    color: var(--accent);
-    font-weight: 700;
-    letter-spacing: .12em;
-    margin: 0 0 24px;
-    font-size: 14px;
-}
-
+.section .section-kicker,
 .section .section-kickerworks {
-    color: var(--accent);
-    font-weight: 700;
-    letter-spacing: .12em;
-    margin: 0 0 24px 70px;
-    font-size: 14px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: .12em;
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+.section-kicker {
+  margin-bottom: 20px;
+}
+.section-title {
+  margin-top: 0;
 }
 
 .section-title {
-    font-family: "Kiwi Maru", serif;
-    color: var(--navy);
-    font-size: clamp(28px, 3.6vw, 40px);
-    text-align: center;
-    margin: 0 0 24px;
+  font-family: "Kiwi Maru", serif;
+  color: var(--navy);
+  font-size: clamp(28px, 3.6vw, 32px);
+  text-align: center;
+  margin: 0 0 24px;
 }
 
 .section-title.en {
-    letter-spacing: .06em;
+  letter-spacing: .06em;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .small {
-    font-size: 14px;
-    color: var(--muted);
+  font-size: 14px;
+  color: var(--muted);
 }
 
-.mt-32 {
-    margin-top: 32px;
-}
+.mt-32 { margin-top: 32px; }
+.mt-48 { margin-top: 48px; }
+.mt-64 { margin-top: 64px; }
 
-.mt-48 {
-    margin-top: 48px;
-}
-
-.mt-64 {
-    margin-top: 64px;
-}
-
-/* ====== Hero ====== */
+/* = Hero = */
 .hero .wrap {
-    position: relative;
-    padding-top: 20px;
+  position: relative;
+  padding-top: 20px;
 }
 
 .hero-media {
-    height: clamp(180px, 33vw, 420px);
-    border-radius: var(--radius);
-    background: linear-gradient(180deg, var(--accent) 0%, #F07F6D 100%);
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+  height: clamp(180px, 33vw, 420px);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--accent) 0%, #F07F6D 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .hero-media::before {
-    /* simple pattern */
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle at 20px 20px, rgba(255, 255, 255, .25) 8px, transparent 9px);
-    background-size: 70px 70px;
-    opacity: .35;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20px 20px, rgba(255, 255, 255, .25) 8px, transparent 9px);
+  background-size: 70px 70px;
+  opacity: .35;
 }
 
 .hero-title {
-    position: absolute;
-    left: 24px;
-    bottom: 18px;
-    color: #fff;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, .18);
-    font-family: "Kiwi Maru", sans-serif;
-    font-weight: 700;
-    font-size: clamp(30px, 5.4vw, 56px);
-    letter-spacing: .02em;
+  position: absolute;
+  left: 24px;
+  bottom: 18px;
+  color: #fff;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, .18);
+  font-family: "Kiwi Maru", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5.4vw, 56px);
+  letter-spacing: .02em;
 }
 
-/* ====== About preview ====== */
+/* = About preview (TOP用) = */
 .about-preview .icon-flower {
-    display: block;
-    margin: 80px auto;
-    width: 36px;
-    opacity: .8
+  display: block;
+  margin: 80px auto;
+  width: 36px;
+  opacity: .8;
 }
 
 .about-columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 100px;
 }
 
 .about-preview .about-text {
-    text-align: center;
+  text-align: center;
 }
 
-/* ====== Works grid ====== */
+/* = Works grid (TOP用) = */
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(14px, 2.2vw, 28px);
-    margin: 28px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2.2vw, 28px);
+  margin: 28px 0;
 }
 
 .work-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 14px;
-    box-shadow: var(--shadow);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
 }
 
 .work-card .thumb {
-    display: block;
-    overflow: hidden;
-    border-radius: 12px;
-    border: 1px solid var(--line);
-    aspect-ratio: 4 / 3;
-    background: #E6E6EA;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 3;
+  background: #E6E6EA;
 }
 
 .work-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 全体をきれいにトリミング */
+  display: block;
+  border-radius: 12px;
 }
 
+
 .work-title {
-    margin: 12px 0 4px;
-    font-weight: 700
+  margin: 12px 0 4px;
+  font-weight: 700;
 }
 
 .work-meta {
-    margin: 0;
-    font-size: 13px;
-    color: var(--muted)
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .work-desc {
-    margin: 2px 0 0;
-    font-size: 13px;
-    color: var(--muted)
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .nav {
-    margin-left: 200px;
+  margin-left: 200px;
 }
 
-/* ====== Buttons ====== */
+/* = Buttons = */
 .btn {
-    display: inline-block;
-    line-height: 1;
-    padding: 14px 24px;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 999px;
-    /* box-shadow: 0 6px 0 #E37F6E, 0 10px 20px rgba(245, 156, 141, .35); */
-    transition: transform .05s ease, box-shadow .2s ease;
+  display: inline-block;
+  line-height: 1;
+  padding: 14px 24px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 999px;
+  transition: transform .05s ease, box-shadow .2s ease;
 }
 
 .btn:hover {
-    transform: translateY(1px);
-    /* box-shadow: 0 4px 0 #E37F6E, 0 8px 16px rgba(245, 156, 141, .3); */
+  transform: translateY(1px);
 }
 
 .btn.small {
-    padding: 10px 16px;
-    font-size: 14px;
-    /* box-shadow: 0 4px 0 #E37F6E, 0 8px 16px rgba(245, 156, 141, .3); */
+  padding: 10px 16px;
+  font-size: 14px;
 }
 
-/* ====== Thanks ====== */
+/* = Thanks block (TOPフッター直前) = */
 .thanks .icon-flower {
-    display: block;
-    margin: 80px auto;
-    width: 42px;
-    opacity: .85
+  display: block;
+  margin: 80px auto;
+  width: 42px;
+  opacity: .85;
 }
 
-/* ====== Footer ====== */
+/* = Footer = */
 .site-footer {
-    padding: 28px 0 48px;
-    border-top: 1px solid var(--line);
+  padding: 28px 0 48px;
+  border-top: 1px solid var(--line);
 }
 
 .site-footer .wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-footer p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 14px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
 }
 
-/* ====== About page ====== */
-.about-page .about-illustration {
-    width: 160px;
-    height: 160px;
-    /* border-radius: 50%; */
-    background: url("../assets/profile.png") center center / cover no-repeat;
-    box-shadow: none;
-    /* ← 影を消す */
+/* = About page: プロフィールカード = */
+.profile-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 32px;
 }
 
-.about-hero {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 36px;
-    align-items: center;
-    margin-bottom: 100px;
+.profile-inner {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.about-hero2 {
-    display: grid;
-    grid-template-columns: 800px 1fr;
-    gap: 36px;
-    align-items: center;
-    margin: 0 auto 100px;
-    /* margin-bottom: 100px; */
+.about-illustration {
+  width: 160px;
+  height: 160px;
+  background: url("../assets/profile.png") center center / contain no-repeat;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0 auto;
 }
 
+.about-meta {
+  color: var(--text);
+  line-height: 1.8;
+}
 
-.about-cols {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
+.about-meta .name {
+  font-family: "Kiwi Maru", serif;
+  color: var(--navy);
+  font-size: clamp(24px, 2vw, 28px);
+  font-weight: 500;
+  margin: 0 0 24px;
 }
 
 .about-meta p {
-    margin: 0;
+  font-size: 20px;
+  margin: 0 0 12px;
+  font-weight: 400;
 }
 
-.about-meta p strong {
-    margin: 0;
-    font-weight: 500;
+.about-meta p:last-child {
+  margin-bottom: 0;
+}
+
+/* = About page: What I Can Do セクション = */
+.about-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-text .en.big {
-    font-family: "Kiwi Maru", sans-serif;
-    font-size: clamp(24px, 3vw, 32px);
-    color: var(--navy);
-    margin: 0
+  font-family: "Kiwi Maru", sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  color: var(--navy);
+  margin: 0;
 }
 
 .about-text .sub {
-    margin: 0 0 12px;
-    color: var(--muted)
+  margin: 0 0 12px;
+  color: var(--muted);
 }
 
-.divider-flowers {
-    display: block;
-    margin: 80px 0;
-    width: 100%;
-    max-width: 480px;
-    opacity: .85
+.about-text p {
+  text-align: center;
 }
 
+.about-text .divider-flowers {
+  display: block;
+  margin: 60px auto;
+  width: 100%;
+  max-width: 480px;
+  opacity: .9;
+}
 
-/* 見た目は2カラム×2行のグリッド */
+/* = About page: DTP / Webデザイン スキル紹介ブロック = */
 .split-two-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* 左・右 */
-    grid-template-rows: auto auto;
-    /* 上：テキスト / 下：画像 */
-    gap: 40px 100px;
-    /* row gap 40px, col gap 100px */
-    margin: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px 100px;
+  margin: 50px 0;
 }
 
-/* テキスト部分 */
 .skill-text h3 {
-    font-family: "Kiwi Maru", sans-serif;
-    font-weight: 500;
-    color: var(--navy);
-    font-size: 1.2rem;
-    margin: 0 0 1em;
+  font-family: "Kiwi Maru", sans-serif;
+  font-weight: 500;
+  color: var(--navy);
+  font-size: 30px;
+  margin: 0 0 1em;
 }
 
 .skill-text p {
-    margin: 0;
-    line-height: 1.8;
-    color: var(--text);
+  margin: 0;
+  line-height: 1.8;
+  color: var(--text);
 }
 
-/* 画像ボックス（共通） */
 .skill-img {
-    height: 300px;
-    border-radius: 12px;
-    background-color: transparent;
-    border: none;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 80%;
+  height: 300px;
+  border-radius: 12px;
+  background-color: transparent;
+  border: none;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 80%;
 }
 
-/* 左の画像 */
 .illus-dtp {
-    background-image: url("../assets/item_dtp.png");
+  background-image: url("../assets/item_dtp.png");
 }
 
-/* 右の画像 */
 .illus-web {
-    background-image: url("../assets/item_web.png");
+  background-image: url("../assets/item_web.png");
 }
 
-
+/* = About page: Strength / Design Approach = */
 .split {
-    /* margin-top: 48px; */
-    margin: 50px 0;
-}
-
-.split.two {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
+  margin: 50px 0;
 }
 
 .split.one {
-    display: block;
+  text-align: center;
+  max-width: 800px;
+  margin: 80px auto;
 }
 
-.split .illus-box {
-    height: 300px;
-    background: #E6EAEF;
-    border: 1px solid var(--line);
-    border-radius: 12px;
+.split.one h3 {
+  font-family: "Kiwi Maru", serif;
+  color: var(--navy);
+  font-size: clamp(26px, 3vw, 32px);
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
 }
 
+.split.one p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+/* = About page: Skillsカード = */
 .skills-grid {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 18px;
-    /* box-shadow: var(--shadow); */
-
-    width: 60%;
-    margin: 50px auto 100px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  width: 60%;
+  margin: 50px auto 100px;
 }
 
 .skills-grid ul {
-    margin: 0 0 0 18px;
+  margin: 0 0 0 18px;
 }
 
-/* ====== Detail ====== */
+/* = Detail page (作品詳細) = */
 .detail .detail-header {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 20px;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 16px;
-    box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
 }
 
 .detail .logo-box {
-    display: grid;
-    place-items: center;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    font-weight: 700;
-    color: var(--navy);
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px; /* 角を少し丸く */
+  width: 140px;
+  height: 140px;
+  overflow: hidden; /* 画像のはみ出し防止 */
 }
 
+.detail .logo-box img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain; /* ロゴをゆがませず四角にフィット */
+  display: block;
+}
+
+
 .detail .pill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0;
-    margin: 8px 0 12px;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 8px 0 12px;
+  list-style: none;
 }
 
 .detail .pill-list li {
-    background: #EFF2F6;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-size: 13px;
+  background: #EFF2F6;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
 }
 
 .mockup {
-    margin: 24px 0 0;
+  margin: 24px 0 0;
 }
 
 .mockup img {
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow)
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 .note-box {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-top: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-top: 16px;
 }
 
-/* ====== Responsive ====== */
+
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  text-align: center;
+  margin: -8px 0 32px;
+  line-height: 1.6;
+}
+
+.detail-category {
+  text-align: center;
+  font-family: "Kiwi Maru", serif;
+  color: var(--navy);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 24px;
+  letter-spacing: .05em;
+}
+
+
+/* = Responsive = */
 @media (max-width: 900px) {
-    .card-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .site-footer .wrap {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .about-hero {
-        grid-template-columns: 120px 1fr;
-    }
+  .site-footer .wrap {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
-@media (max-width: 580px) {
-    .site-header .wrap {
-        padding: 0 6px;
-    }
+@media (max-width: 750px) {
+  .site-header .wrap {
+    padding: 0 6px;
+  }
 
-    .brand {
-        width: 38px;
-        height: 38px;
-    }
+  .brand {
+    width: 38px;
+    height: 38px;
+  }
 
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .hero-title {
-        left: 16px;
-        bottom: 14px;
-    }
+  .hero-title {
+    left: 16px;
+    bottom: 14px;
+  }
 
-    .detail .detail-header {
-        grid-template-columns: 1fr;
-    }
+  .detail .detail-header {
+    grid-template-columns: 1fr;
+  }
 
-    .split-two-grid {
-        grid-template-columns: 1fr;
-        /* 1カラム */
-        grid-template-rows: auto auto auto auto;
-        /* 4段 */
-        gap: 32px;
-    }
+  .split-two-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 32px;
+  }
 
+  .profile-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-meta {
+    text-align: center;
+  }
+
+  .about-meta p {
+    font-size: 18px;
+  }
 }
