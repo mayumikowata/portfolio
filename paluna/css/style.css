@@ -1,0 +1,900 @@
+@charset "utf-8";
+
+/* -------------------------------------------------
+  Base / Global
+------------------------------------------------- */
+
+.home {
+  background-color: #f7f7f7;
+}
+
+.collection,
+.details,
+.our_craft,
+.moments,
+.our_philosophy,
+.reservation_cv,
+.privacy_policy {
+  background-color: #f7f7f7;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+
+main {
+  font-size: 15px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 55px;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 180%;
+}
+
+h3 {
+  font-size: 15px;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+a:active {
+  color: #012d72;
+}
+
+/* Utility classes */
+.df {
+  display: flex;
+}
+
+.f-center {
+  align-items: center;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.mb60 {
+  margin-bottom: 60px;
+}
+
+.mb100 {
+  margin-bottom: 100px;
+}
+
+.mb150 {
+  margin-bottom: 150px;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+
+.mr17 {
+  margin-right: 17px;
+}
+
+.mr22 {
+  margin-right: 22px;
+}
+
+.mr60 {
+  margin-right: 60px;
+}
+
+.mr80 {
+  margin-right: 80px;
+}
+
+.size35 {
+  font-size: 35px;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.copy {
+  margin-top: 200px;
+  text-align: right;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* -------------------------------------------------
+  Header / Navigation
+------------------------------------------------- */
+
+header {
+  width: 1200px;
+  height: 100px;
+  background-color: #012d72;
+  padding: 25px 50px;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  text-align: center; 
+  margin-right: 50px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+/* .logo が nav の下にある例がないので、
+   これが本当に nav .logo 用なのか確認してね */
+nav .logo {
+  margin: 30px 0 0 50px;
+}
+
+/* 予約ボタン */
+nav .cv {
+  width: 169px;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav li a {
+  color: #fff;
+  font-size: 15px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+nav li a:hover,
+nav li a:active,
+nav li a:visited,
+nav li a:link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+nav .cv a {
+  color: #012d72;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav .cv a:hover,
+nav .cv a:active,
+nav .cv a:visited,
+nav .cv a:link {
+  color: #012d72;
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------
+  Home: MV
+------------------------------------------------- */
+
+.home .mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../images/mv_bg.png") no-repeat;
+  padding: 100px 0 0 550px;
+}
+
+.home .mv h1 {
+  color: #fff;
+  font-size: 45px;
+  letter-spacing: 0.05em;
+  line-height: 100%;
+  margin-bottom: 50px;
+  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
+}
+
+.home .mv h2 {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
+}
+
+/* -------------------------------------------------
+  Home: First Step
+------------------------------------------------- */
+
+.the-first-step {
+  position: relative;
+  text-align: center;
+  width: 1200px;
+  height: 694px;
+  background: url("../images/thefirststep_bg.png") no-repeat;
+}
+
+.the-first-step h1 {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 55px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.the-first-step h2 {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.the-first-step .banner {
+  padding-top: 313px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 25px;
+  color: #fff;
+}
+
+.photo02 {
+  display: flex;
+}
+
+/* -------------------------------------------------
+  Home: Collection section
+------------------------------------------------- */
+
+.top_collection {
+  color: #444;
+}
+
+.top_collection h1 {
+  padding: 80px 120px;
+}
+
+.top_collection h2 {
+  padding: 108px 0;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.collectionbox {
+  display: flex;
+}
+
+.collectionbox .bigitem {
+  margin-right: 22px;
+}
+
+.c_photo02 {
+  display: flex;
+}
+
+.item2 .item22,
+.item2 .item {
+  width: 278px;
+  height: 460px;
+}
+
+.item2 .item22 {
+  margin-right: 22px;
+}
+
+.pickuptxt {
+  height: 90px;
+}
+
+.pickuptxt h3 {
+  margin-top: 11px;
+  font-weight: 400;
+}
+
+.pickuptxt p {
+  margin-bottom: 44px;
+}
+
+/* text color for items in collection listing */
+.rings .item h3 {
+  color: #444;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.rings .item p {
+  color: #444;
+  margin-bottom: 36px;
+}
+
+/* -------------------------------------------------
+  Home: Philosophy
+------------------------------------------------- */
+
+.our-philosophy {
+  width: 1200px;
+  height: 600px;
+  background: url("../images/ourphilosophy_bg.png") no-repeat;
+  margin-bottom: 50px;
+}
+
+.our-philosophy h1 {
+  color: #fff;
+  padding: 200px 0 30px 120px;
+}
+
+.our-philosophy h2 {
+  color: #fff;
+  padding-left: 120px;
+}
+
+.our-philosophy a {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 80px;
+}
+
+.our-philosophy p {
+  margin-bottom: 80px;
+}
+
+/* -------------------------------------------------
+  Home: Reservation block
+------------------------------------------------- */
+
+.reservation {
+  width: 1200px;
+  height: 400px;
+  background: url("../images/reservation_bg.png") no-repeat;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.reservation h1 {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 55px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.reservation p {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.cvlink {
+  padding-top: 223px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+}
+
+/* -------------------------------------------------
+  Details / Ring detail pages
+------------------------------------------------- */
+
+.ring-details {
+  width: 1200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ring-details h1 {
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.ring-details h2 {
+  color: #333;
+}
+
+.detail-ph {
+  margin: 0 100px 100px;
+}
+
+.detail-contens {
+  display: flex;
+  margin: 100px 100px 0 0;
+}
+
+.detail-contens .cv {
+  margin-bottom: 100px;
+}
+
+.detail-txt h2 {
+  color: #333;
+  font-size: 35px;
+  margin-bottom: 17px;
+}
+
+.detail-txt h3 {
+  color: #444;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 17px;
+}
+
+.detail-txt h4 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.detail-txt p {
+  color: #444;
+  line-height: 180%;
+  margin-bottom: 37px;
+}
+
+.detail-txt img {
+  margin-bottom: 50px;
+}
+
+.details .banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* simple divider line */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.sorry {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* -------------------------------------------------
+  our_craft
+------------------------------------------------- */
+
+.ourcraft_mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../our_craft/images/our_craft_mv.png") no-repeat;
+  padding: 220px 0 0 700px;
+  margin-bottom: 200px;
+}
+
+.ourcraft_mv h1 {
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-bottom: 50px;
+  line-height: 100%;
+  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
+}
+
+.ourcraft_mv h2 {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
+}
+
+.text-area {
+  padding: 0 200px;
+}
+
+.ourcraft_contens {
+  color: #444;
+}
+
+.ourcraft_contens h2 {
+  color: #333;
+  margin-bottom: 100px;
+  font-size: 35px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ourcraft_contens h3 {
+  color: #444;
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ourcraft_contens p {
+  color: #444;
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+
+.bar {
+  width: 3px;
+  height: 50px;
+  background-color: #444;
+  margin: 0 auto 100px;
+}
+
+.banner {
+  margin-bottom: 150px;
+}
+
+.our_craft .banner {
+  margin-left: 100px;
+}
+
+/* -------------------------------------------------
+  moments
+------------------------------------------------- */
+
+.moments_mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../moments/images/moments_mv.png") no-repeat;
+  padding: 270px 0 0 700px;
+  margin-bottom: 200px;
+}
+
+.moments_mv h1 {
+  color: #fff;
+  font-size: 45px;
+  letter-spacing: 0.05em;
+  margin-bottom: 50px;
+  line-height: 100%;
+  /* text-shadow: 0 0 35px rgba(85,85,85,0.75); */
+}
+
+.moments_mv h2 {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  /* text-shadow: 0 0 35px rgba(85,85,85,0.75); */
+}
+
+.moment-contens h1 {
+  color: #333;
+  margin-bottom: 80px;
+}
+
+.moment-contens h2 {
+  color: #333;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.moment-contens p {
+  color: #444;
+  line-height: 180%;
+  margin-bottom: 100px;
+}
+
+.episode-txt {
+  width: 748px;
+  padding: 100px 0 100px 100px;
+  margin-bottom: 200px;
+}
+
+.episode-txt h4 {
+  color: #444;
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.episode-txt p {
+  color: #444;
+  font-size: 15px;
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+
+/* -------------------------------------------------
+  our_philosophy page
+------------------------------------------------- */
+
+.ourphilosophy_mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../our_philosophy/images/our_philosophy_mv.png") no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.ourphilosophy_mv h1 {
+  color: #fff;
+  letter-spacing: 0.05em;
+  line-height: 100%;
+  margin: 0 auto 50px;
+}
+
+.ourphilosophy_mv h2 {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.t-logo {
+  margin-bottom: 25px;
+}
+
+.our_philosophy .text-area {
+  margin-bottom: 150px;
+}
+
+.our_philosophy .text-area h2 {
+  color: #333;
+  margin-bottom: 78px;
+}
+
+.our_philosophy .text-area h4 {
+  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ourphilosophy_contens {
+  color: #444;
+}
+
+.ourphilosophy_contens h2 {
+  color: #333;
+  margin-bottom: 100px;
+  font-size: 35px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ourphilosophy_contens h3 {
+  color: #444;
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ourphilosophy_contens p {
+  color: #444;
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+
+.ourphilosophy_contens .bar {
+  width: 3px;
+  height: 50px;
+  background-color: #444;
+  margin: 0 auto 100px;
+}
+
+.text-area .bar-w,
+.text-area02 .bar-w {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.text-area02 .bar-w {
+  margin: 20px 0;
+}
+
+.our_philosophy .text-area02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.our_philosophy .liora {
+  margin-left: 100px;
+  margin-bottom: 150px;
+}
+
+.accese {
+  margin-bottom: 100px;
+}
+
+/* -------------------------------------------------
+  reservation_cv page
+------------------------------------------------- */
+
+.cv-contens {
+  width: 1200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cv-contens h1 {
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.cv-contens h2 {
+  color: #333;
+}
+
+.pic {
+  margin-bottom: 100px;
+}
+
+.yoyaku_txt {
+  color: #444;
+  line-height: 180%;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.formcv {
+  margin-bottom: 100px;
+}
+
+.teltext {
+  color: #444;
+  line-height: 180%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------------
+  privacy_policy page
+------------------------------------------------- */
+
+.privacy_policy .text-area {
+  margin-bottom: 150px;
+}
+
+.privacy_policy ul {
+  color: #333;
+  line-height: 180%;
+  list-style-type: none;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.privacy_policy p {
+  color: #444;
+  font-size: 15px;
+  line-height: 180%;
+  margin-bottom: 50px;
+}
+
+.privacy_policy h2 {
+  color: #333;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 50px;
+}
+
+.privacy_policy .pmb20 {
+  color: #444;
+  font-size: 15px;
+  line-height: 180%;
+  margin-bottom: 20px;
+}
+
+/* -------------------------------------------------
+  Footer
+------------------------------------------------- */
+
+footer {
+  color: #fff;
+  font-size: 15px;
+  background-color: #333;
+  padding: 100px 50px;
+  line-height: 200%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer a {
+  color: #fff;
+  vertical-align: top;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:active,
+footer a:visited,
+footer a:link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer h4 {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+footer p {
+  color: #fff;
+}
