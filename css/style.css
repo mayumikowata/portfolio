@@ -363,6 +363,10 @@ body {
   text-align: center;
 }
 
+.about-text p {
+  text-align: center;
+}
+
 .about-text .en.big {
   margin: 0;
   font-family: "Kiwi Maru", sans-serif;
@@ -393,7 +397,7 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 80px;
   row-gap: 60px;
-  margin: 80px 0;
+  margin: 80px 150px;
   align-items: start;
   justify-items: center;
 }
@@ -431,7 +435,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 12px;
   display: flex;
-  align-items: flex-end; /* 下そろえ */
+  align-items: flex-end;
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden;

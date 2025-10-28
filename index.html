@@ -1,35 +1,36 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Web・グラフィック両方の制作実績をまとめたポートフォリオサイトです。企画からデザイン、コーディング、ロゴ制作まで幅広く担当しています。">
-
   <title>Mayumi Kowata Portfolio | Web & Graphic Designer</title>
 
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-  <link href="css/reset.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 
+  <!-- Scripts -->
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/script.js"></script>
 </head>
 
 <body>
+  <!-- = Header = -->
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="index.html">
         <img class="brand-logo" src="assets/MK.svg" alt="ホームへ戻る">
       </a>
-  
+
       <nav class="site-nav" aria-label="primary">
         <a href="about/index.html">ABOUT ME</a>
         <a href="#works">WORKS</a>
@@ -38,6 +39,7 @@
   </header>
 
   <main>
+    <!-- = Hero = -->
     <section class="hero">
       <div class="wrap">
         <div class="hero-media"></div>
@@ -45,6 +47,7 @@
       </div>
     </section>
 
+    <!-- = About preview = -->
     <section id="about" class="section about-preview">
       <div class="wrap">
         <p class="section-kicker">ABOUT ME</p>
@@ -52,71 +55,83 @@
 
       <div class="wrap narrow">
         <h2 class="section-title en">Profile</h2>
+
         <img class="icon-flower" src="assets/profile_flower.png" alt="">
+
         <div class="about-columns">
           <p class="about-text">
             はじめまして。<br>
-            Webデザイナーとして約10年、DTPオペレーターとして約7年<br>
+            Webデザイナーとして約10年、DTPオペレーターとして約7年、<br>
             Webと印刷物の企画や提案、制作を幅広く行ってきました。<br><br>
             本ポートフォリオでは、これまでの経験を活かしつつ、<br>
             ターゲットに合わせた提案を意識して制作した作品を掲載しています。<br><br>
             見る人にとって「わかりやすい」「安心できる」情報設計を大切にしています。
           </p>
         </div>
+
         <p class="center">
           <a class="btn" href="about/index.html">More about me</a>
         </p>
       </div>
     </section>
 
-
+    <!-- = Works = -->
     <section id="works" class="section works">
       <div class="wrap">
         <p class="section-kicker">WORKS</p>
 
-        <!-- グラフィック デザイン -->
+        <!-- Graphic Design -->
         <h2 class="section-title en">Graphic Design</h2>
+
         <div class="card-grid">
           <article class="work-card">
             <a href="fujiFields/index.html" class="thumb">
               <img src="assets/mockup_fujiFields.png" alt="FUJI FIELDS ワインパッケージのモックアップ">
             </a>
             <h3 class="work-title">FUJI FIELDS</h3>
-            <p class="work-meta">ワインパッケージ<br>（ラベル・ポスター・化粧箱・ショッパー）</p>
+            <p class="work-meta">
+              ワインパッケージ<br>
+              （ラベル・ポスター・化粧箱・ショッパー）
+            </p>
             <p class="work-desc">企画 / デザイン / ロゴデザイン</p>
           </article>
 
           <article class="work-card">
             <a href="goshikinoyu/index.html" class="thumb">
-              <img src="assets/mockup_goshikinoyu.png" alt="モックアップ 五色の湯">
+              <img src="assets/mockup_goshikinoyu.png" alt="五色の湯 プロモーションデザイン モックアップ">
             </a>
             <h3 class="work-title">土湯温泉　五色の湯</h3>
-            <p class="work-meta">温泉旅館プロモーションデザイン<br>（ポスター＆中吊り広告）</p>
+            <p class="work-meta">
+              温泉旅館プロモーションデザイン<br>
+              （ポスター＆中吊り広告）
+            </p>
             <p class="work-desc">企画 / デザイン / ロゴデザイン</p>
           </article>
 
           <article class="work-card">
             <a href="sanchanFarm/index.html" class="thumb">
-              <img src="assets/mockup_sanchanFarm.png" alt="モックアップ さんちゃん農園">
+              <img src="assets/mockup_sanchanFarm.png" alt="さんちゃん農園 リーフレット モックアップ">
             </a>
             <h3 class="work-title">さんちゃん農園</h3>
-            <p class="work-meta">家族向け野菜収穫体験リーフレット（観音折り8P）</p>
+            <p class="work-meta">
+              家族向け野菜収穫体験リーフレット（観音折り8P）
+            </p>
             <p class="work-desc">企画 / デザイン / ロゴデザイン</p>
           </article>
         </div>
 
-
-        <!-- ウェブデザイン -->
+        <!-- Web Design -->
         <h2 class="section-title en mt-64">Web Design</h2>
-        <div class="card-grid">
 
+        <div class="card-grid">
           <article class="work-card">
             <a href="minatomiraiAquarium/index.html" class="thumb">
               <img src="assets/mockup_minatomiraiAquarium.png" alt="みなとみらい水族館 サイト モックアップ">
             </a>
             <h3 class="work-title">みなとみらい水族館</h3>
-            <p class="work-meta">家族向け水族館サイト（横浜・みなとみらい）</p>
-
+            <p class="work-meta">
+              家族向け水族館サイト（横浜・みなとみらい）
+            </p>
             <p class="work-desc">企画 / デザイン / コーディング / ロゴデザイン</p>
           </article>
 
@@ -129,7 +144,6 @@
             <p class="work-desc">企画 / デザイン / コーディング / ロゴデザイン</p>
           </article>
 
-
           <article class="work-card">
             <a href="chairshop/index.html" class="thumb">
               <img src="assets/mockup_chairshop.png" alt="Chair Shop サイト モックアップ">
@@ -138,20 +152,23 @@
             <p class="work-meta">在宅ワーク向けチェア専門店の紹介サイト</p>
             <p class="work-desc">企画 / デザイン / コーディング / ロゴデザイン</p>
           </article>
-
         </div>
-        <!-- 
+
+        <!--
         <p class="center mt-32">
           <a class="btn" href="#works">View more</a>
         </p>
-  -->
+        -->
       </div>
     </section>
 
+    <!-- = Thanks / Closing message = -->
     <section class="section thanks">
       <div class="wrap narrow">
         <h2 class="section-title en">Thank you for viewing.</h2>
+
         <img class="icon-flower" src="assets/thankyou_flower.png" alt="">
+
         <p class="center small">
           ひとつひとつの作品に向き合いながら、日々デザインを楽しんでいます。<br>
           ご覧いただき、ありがとうございました。
@@ -160,14 +177,14 @@
     </section>
   </main>
 
+  <!-- footer pattern -->
   <div class="footer-pattern"></div>
 
+  <!-- = Footer = -->
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2025 Mayumi Kowata Portfolio</p>
     </div>
   </footer>
-
 </body>
-
 </html>
