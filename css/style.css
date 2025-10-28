@@ -193,7 +193,7 @@ body {
   bottom: 18px;
   color: #fff;
   font-family: "Kiwi Maru", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: clamp(30px, 5.4vw, 56px);
   letter-spacing: .02em;
 }
