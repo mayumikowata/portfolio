@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* --------------------------------
+   CSS Variables / Base
+-------------------------------- */
 :root {
   --bg: #F4F2E6;
   --paper: #FBFAF5;
@@ -27,11 +30,14 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--bg);
-  font-family: "Kiwi Maru", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "Kiwi Maru", system-ui, -apple-system,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.8;
 }
 
-/* Header */
+/* --------------------------------
+   Header
+-------------------------------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -55,11 +61,16 @@ body {
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 2px solid var(--accent);
   border-radius: 999px;
   color: var(--accent);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.brand-logo {
+  display: block;
+  width: 39px;
+  height: 39px;
 }
 
 .site-nav a {
@@ -77,7 +88,7 @@ body {
 
 .site-nav a[aria-current="page"] {
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -88,7 +99,9 @@ body {
   background: var(--navy);
 }
 
-/* Layout helpers */
+/* --------------------------------
+   Layout helpers / Utils
+-------------------------------- */
 .wrap {
   width: var(--wrap);
   margin-inline: auto;
@@ -104,24 +117,33 @@ body {
 }
 
 .section-kicker {
-  color: var(--accent);
-  font-weight: 700;
-  letter-spacing: .12em;
   margin: 0 0 20px;
   font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  color: var(--accent);
 }
 
 .section-title {
-  font-family: "Kiwi Maru", serif;
-  color: var(--navy);
-  font-size: clamp(28px, 3.6vw, 32px);
-  text-align: center;
   margin: 0 0 1em;
+  font-family: "Kiwi Maru", serif;
+  font-size: clamp(28px, 3.6vw, 32px);
+  color: var(--navy);
+  text-align: center;
   letter-spacing: normal;
 }
 
 .section-title.en {
   letter-spacing: .06em;
+}
+
+.section-title .sub {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.03em;
 }
 
 .center {
@@ -137,26 +159,30 @@ body {
 .mt-48 { margin-top: 48px; }
 .mt-64 { margin-top: 64px; }
 
-/* Hero */
+/* --------------------------------
+   Hero (TOP)
+-------------------------------- */
 .hero .wrap {
   position: relative;
   padding-top: 20px;
 }
 
 .hero-media {
+  position: relative;
   height: clamp(180px, 33vw, 420px);
   border-radius: var(--radius);
   background: linear-gradient(180deg, var(--accent) 0%, #F07F6D 100%);
-  position: relative;
-  overflow: hidden;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .hero-media::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 20px 20px, rgba(255, 255, 255, .25) 8px, transparent 9px);
+  background-image:
+    radial-gradient(circle at 20px 20px,
+    rgba(255, 255, 255, .25) 8px, transparent 9px);
   background-size: 70px 70px;
   opacity: .35;
 }
@@ -172,11 +198,13 @@ body {
   letter-spacing: .02em;
 }
 
-/* About preview (TOP) */
+/* --------------------------------
+   About preview (TOP)
+-------------------------------- */
 .about-preview .icon-flower {
   display: block;
-  margin: 80px auto;
   width: 36px;
+  margin: 80px auto;
   opacity: .8;
 }
 
@@ -190,7 +218,9 @@ body {
   text-align: center;
 }
 
-/* Works grid (TOP) */
+/* --------------------------------
+   Works grid (TOP)
+-------------------------------- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -208,18 +238,18 @@ body {
 
 .work-card .thumb {
   display: block;
-  overflow: hidden;
-  border-radius: 12px;
   border: 1px solid var(--line);
+  border-radius: 12px;
   aspect-ratio: 4 / 3;
   background: #E6E6EA;
+  overflow: hidden;
 }
 
 .work-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -240,7 +270,9 @@ body {
   color: var(--muted);
 }
 
-/* Buttons */
+/* --------------------------------
+   Buttons
+-------------------------------- */
 .btn {
   display: inline-block;
   line-height: 1;
@@ -262,41 +294,26 @@ body {
   font-size: 14px;
 }
 
-/* Thanks block */
+/* --------------------------------
+   Thanks block
+-------------------------------- */
 .thanks .icon-flower {
   display: block;
-  margin: 80px auto;
   width: 42px;
+  margin: 80px auto;
   opacity: .85;
 }
 
-/* Footer */
-.site-footer {
-  padding: 28px 0 48px;
-  border-top: 1px solid var(--line);
-}
-
-.site-footer .wrap {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.site-footer p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  text-align: right;
-}
-
-/* About page: profile card */
+/* --------------------------------
+   Profile card (About page)
+-------------------------------- */
 .profile-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
   max-width: 700px;
   margin: 100px auto;
   padding: 32px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   box-shadow: none;
 }
 
@@ -310,8 +327,8 @@ body {
 .about-illustration {
   width: 160px;
   height: 160px;
-  background: url("../assets/profile.png") center center / contain no-repeat;
   margin: 0 auto;
+  background: url("../assets/profile.png") center center / contain no-repeat;
 }
 
 .about-meta {
@@ -320,16 +337,16 @@ body {
 }
 
 .about-meta .name {
+  margin: 0 0 24px;
   font-family: "Kiwi Maru", serif;
-  color: var(--navy);
   font-size: clamp(24px, 2vw, 28px);
   font-weight: 500;
-  margin: 0 0 24px;
+  color: var(--navy);
 }
 
 .about-meta p {
-  font-size: 16px;
   margin: 0 0 12px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -337,39 +354,40 @@ body {
   margin-bottom: 0;
 }
 
-/* About page: What I Can Do */
+/* --------------------------------
+   What I Can Do (About page intro)
+-------------------------------- */
 .about-text {
-  text-align: center;
   max-width: 800px;
   margin: 0 auto 100px;
+  text-align: center;
 }
 
 .about-text .en.big {
+  margin: 0;
   font-family: "Kiwi Maru", sans-serif;
   font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
   color: var(--navy);
-  margin: 0;
 }
 
 .about-text .sub {
   margin: 0 0 12px;
-  color: var(--muted);
   font-size: 1.25rem;
-}
-
-.about-text p {
-  text-align: center;
+  color: var(--muted);
 }
 
 .about-text .divider-flowers {
   display: block;
-  margin: 60px auto;
   width: 100%;
   max-width: 480px;
+  margin: 60px auto;
   opacity: .9;
 }
 
-/* About page: DTP / Webデザイン 2カラム */
+/* --------------------------------
+   Skills pair (DTP / Webデザイン)
+-------------------------------- */
 .skill-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -381,39 +399,39 @@ body {
 }
 
 .skill-block {
-  width: 100%;
-  max-width: 320px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 320px;
   text-align: center;
 }
 
 .skill-title {
-  font-family: "Kiwi Maru", sans-serif;
-  font-weight: 400;
-  color: var(--navy);
-  font-size: 24px;
-  line-height: 1.3;
   margin: 0 0 24px;
+  font-family: "Kiwi Maru", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--navy);
 }
 
 .skill-desc {
   margin: 0 0 32px;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text);
-  font-size: 1.05rem;
 }
 
 .skill-image {
+  width: 100%;
+  max-width: 260px;
   margin: 0 auto 30px;
+  aspect-ratio: 4 / 3;
   background-color: #F9F7EE;
   border: 1px solid var(--line);
   border-radius: 12px;
-  width: 100%;
-  max-width: 260px;
-  aspect-ratio: 4 / 3;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end; /* 下そろえ */
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden;
@@ -421,27 +439,38 @@ body {
 
 .skill-image img {
   width: 100%;
-  object-fit: contain;
   display: block;
+  object-fit: contain;
 }
 
-/* About page: Strength / Design Approach */
+/* --------------------------------
+   Strength / Design Approach
+-------------------------------- */
 .split {
   margin: 50px 0;
 }
 
 .split.one {
-  text-align: center;
   max-width: 800px;
   margin: 80px auto;
+  text-align: center;
 }
 
 .split.one h3 {
-  font-family: "Kiwi Maru", serif;
-  color: var(--navy);
-  font-size: clamp(26px, 3vw, 32px);
   margin-bottom: 1em;
+  font-family: "Kiwi Maru", serif;
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 500;
   letter-spacing: 0.05em;
+  color: var(--navy);
+}
+
+.split.one h3 .sub {
+  margin-left: 6px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--muted);
 }
 
 .split.one p {
@@ -450,65 +479,53 @@ body {
   color: var(--text);
 }
 
-.split.one h3 .sub {
-  font-size: 1.25rem;
-  color: var(--muted);
-  font-weight: 400;
-  margin-left: 6px;
-  letter-spacing: 0.03em;
-}
-
-/* Section title sub label (– スキル紹介 –) */
-.section-title .sub {
-  display: inline-block;
-  font-size: 1.25rem;
-  color: var(--muted);
-  margin-left: 6px;
-  letter-spacing: 0.03em;
-}
-
-/* Skills card */
+/* --------------------------------
+   Skills list card
+-------------------------------- */
 .skills-grid {
+  width: 60%;
+  margin: 25px auto 100px;
+  padding: 50px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 50px;
-  width: 60%;
-  margin: 25px auto 100px;
 }
 
 .skills-grid ul {
   margin: 0 0 0 18px;
+  padding: 0;
 }
 
-/* Detail page */
+/* --------------------------------
+   Detail page blocks
+-------------------------------- */
 .detail .detail-header {
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 20px;
+  padding: 16px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 16px;
   box-shadow: var(--shadow);
 }
 
 .detail .logo-box {
-  display: grid;
-  place-items: center;
+  width: 140px;
+  height: 140px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
-  width: 140px;
-  height: 140px;
+  display: grid;
+  place-items: center;
   overflow: hidden;
 }
 
 .detail .logo-box img {
   width: 80%;
   height: 80%;
-  object-fit: contain;
   display: block;
+  object-fit: contain;
 }
 
 .detail .pill-list {
@@ -521,11 +538,11 @@ body {
 }
 
 .detail .pill-list li {
+  padding: 6px 12px;
+  font-size: 13px;
   background: #EFF2F6;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 13px;
 }
 
 .mockup {
@@ -535,38 +552,40 @@ body {
 .mockup img {
   width: 100%;
   height: auto;
-  border-radius: 14px;
   border: 1px solid var(--line);
+  border-radius: 14px;
   box-shadow: var(--shadow);
 }
 
 .note-box {
+  margin-top: 16px;
+  padding: 16px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 16px;
-  margin-top: 16px;
 }
 
 .section-subtitle {
+  margin: -8px 0 32px;
   font-size: 1.1rem;
+  line-height: 1.6;
   color: var(--muted);
   text-align: center;
-  margin: -8px 0 32px;
-  line-height: 1.6;
 }
 
 .detail-category {
-  text-align: center;
+  margin: 0 0 24px;
   font-family: "Kiwi Maru", serif;
-  color: var(--navy);
   font-size: 18px;
   font-weight: 500;
-  margin: 0 0 24px;
   letter-spacing: .05em;
+  color: var(--navy);
+  text-align: center;
 }
 
-/* Footer pattern */
+/* --------------------------------
+   Footer pattern + footer
+-------------------------------- */
 .footer-pattern {
   width: 100%;
   height: 88px;
@@ -574,12 +593,12 @@ body {
   background-image:
     repeating-linear-gradient(
       to right,
-      #F59C8D 0 16px,
+      var(--accent) 0 16px,
       transparent 16px 24px
     ),
     repeating-linear-gradient(
       to bottom,
-      #F59C8D 0 16px,
+      var(--accent) 0 16px,
       transparent 16px 24px
     );
   background-size: 24px 24px;
@@ -587,7 +606,29 @@ body {
   background-repeat: repeat;
 }
 
-/* Responsive */
+.site-footer {
+  padding: 28px 0 48px;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer .wrap {
+  width: var(--wrap);
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* --------------------------------
+   Responsive
+-------------------------------- */
 @media (max-width: 750px) {
   .site-header .wrap {
     padding: 0 6px;
@@ -622,8 +663,8 @@ body {
 
   .skill-pair {
     grid-template-columns: 1fr;
-    row-gap: 60px;
     column-gap: 0;
+    row-gap: 60px;
     margin: 60px 0;
     justify-items: center;
   }
@@ -635,8 +676,8 @@ body {
   }
 
   .skill-image {
-    width: 100%;
     max-width: 260px;
+    width: 100%;
     margin: 24px auto 30px;
     aspect-ratio: 4 / 3;
   }

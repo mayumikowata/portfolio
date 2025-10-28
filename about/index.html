@@ -31,20 +31,20 @@
 
 <body>
 
-  <!-- ▼ ここがTOPと同じナビ。パスだけ調整してある版 ▼ -->
+  <!-- nav -->
   <header class="site-header">
     <div class="wrap">
-      <!-- about から見た index.html は ../index.html -->
-      <a class="brand" href="../index.html">MK</a>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../assets/MK.svg" alt="ホームへ戻る">
+      </a>
+  
       <nav class="site-nav" aria-label="primary">
-        <!-- 自分自身(about)なので "#" でもいいけど、明示的に今のページを指すなら ./index.html -->
         <a href="./index.html" aria-current="page">ABOUT ME</a>
-        <!-- WORKSセクションはトップページ下にあるので ../index.html#works -->
         <a href="../index.html#works">WORKS</a>
       </nav>
     </div>
   </header>
-  <!-- ▲ ナビここまで ▲ -->
+  <!-- nav end -->
    
   
   <main>
@@ -127,7 +127,7 @@
         <h2 id="skills" class="section-title en mt-64">Skills　<span class="sub">– スキル紹介 –</span></h2>
         <div class="skills-grid">
           <ul>
-            <li>Illustrator / Photoshop / Premiere Pro / Figma / InDesign ほか</li>
+            <li>Illustrator / Photoshop <!-- / Premiere Pro  -->/ Figma / InDesign ほか</li>
             <li>HTML / CSS / jQuery / VS Code など</li>
           </ul>
         </div>
