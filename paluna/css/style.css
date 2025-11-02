@@ -354,6 +354,68 @@ nav .cv a:link {
   margin-bottom: 36px;
 }
 
+
+/* ===== Collection: MV（メインビジュアル） ===== */
+.mv_collection{
+  width: 1200px;
+  height: 600px;
+  /* ここを実際の画像名に合わせてください */
+  background: url("../collection/images/collection_mv.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;   /* 右寄せにしたくない場合は center に */
+  padding-right: 120px;    /* 見出しの右余白 */
+  margin: 0 auto 120px;    /* 下余白 */
+}
+
+.mv_collection h1{
+  color: #fff;
+  font-family: "Playfair Display SC", serif;
+  font-size: 55px;
+  letter-spacing: .05em;
+  line-height: 1;
+  margin: 0 0 20px;
+  text-shadow: 0 0 35px rgba(85,85,85,.75);
+}
+
+.mv_collection h2{
+  color: #fff;
+  font-family: "Shippori Mincho", serif;
+  font-size: 25px;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 0 35px rgba(85,85,85,.75);
+}
+
+/* ===== Collection: サムネグリッド ===== */
+.rings{ width: 1200px; margin: 0 auto; }
+.rings > .df{
+  gap: 17px;
+  justify-content: space-between;
+  margin: 0 0 40px;
+}
+.rings .item{
+  width: 278px;
+}
+.rings .item img{
+  width: 100%;
+  height: 278px;
+  object-fit: cover;
+  display: block;
+  background: #eee;
+  border-radius: 4px;
+}
+.rings .item h3{
+  margin: 10px 0 6px;
+  color: #444;
+  font-weight: 500;
+}
+.rings .item p{
+  margin: 0 0 24px;
+  color: #444;
+}
+
 /* -------------------------------------------------
   Home: Philosophy
 ------------------------------------------------- */
