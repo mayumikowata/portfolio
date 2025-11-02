@@ -891,3 +891,35 @@ footer .copy {
 .reservation_cv hr {
   display: none;
 }
+
+/* === TOP(ホーム)専用: Our philosophy ヒーロー === */
+.home .our-philosophy {
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+.home .our-philosophy section {
+  position: absolute;
+  top: 56%;
+  left: 9%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.home .our-philosophy section h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  margin: 0 0 24px;
+}
+.home .our-philosophy section h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 26px;
+  line-height: 1.9;
+  margin: 0 0 32px;
+}
+.home .our-philosophy section a {
+  display: inline-block;
+}
+.home .our-philosophy section a img {
+  width: 280px;
+  height: auto;
+}
