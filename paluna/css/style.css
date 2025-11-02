@@ -906,7 +906,6 @@ footer .copy {
   color: #fff;
 }
 .home .our-philosophy section h1 {
-  /* font-family: "Playfair Display", serif; */
   font-size: 60px;
   margin: 0 0 24px;
 }
@@ -941,7 +940,7 @@ footer .copy {
 
 .home .our-philosophy section a {
   position: absolute;
-  right: -71%;
+  right: -103%;
   bottom: 9%;
   margin-top: 0;
 }
