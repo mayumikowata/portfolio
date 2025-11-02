@@ -363,9 +363,9 @@ nav .cv a:link {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;   /* 右寄せにしたくない場合は center に */
-  padding-right: 120px;    /* 見出しの右余白 */
-  margin: 0 auto 120px;    /* 下余白 */
+  align-items: flex-end;  
+  padding-right: 120px; 
+  margin: 0 auto 120px; 
 }
 
 .mv_collection h1{
