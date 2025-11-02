@@ -1,0 +1,849 @@
+@charset "utf-8";
+
+/* ---------- Tokens ---------- */
+:root {
+    --ink: #222;
+    --muted: #6b7280;
+    --bg: #f7f7f7;
+    --paper: #fff;
+    --accent: #6ec6c0;
+    --accent-2: #bde4e0;
+    --beige: #ece6df;
+    --line: #e5e7eb;
+    --radius: 16px;
+    --radius-lg: 22px;
+    --shadow: 0 6px 24px rgba(0, 0, 0, .08);
+    --shadow-soft: 0 4px 16px rgba(0, 0, 0, .06);
+    --w: 1060px;
+    /* 収まり良く */
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Noto Sans JP", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.8
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.container {
+    width: min(100%, var(--w));
+    margin-inline: auto;
+    padding-inline: 20px
+}
+
+.eyebrow,
+.heading {
+    font-family: Montserrat, sans-serif
+}
+
+.eyebrow {
+    letter-spacing: .08em;
+    font-weight: 700
+}
+
+/* ---------- Header / Nav ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: #f0ede6;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .03);
+    margin-bottom: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 100px
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700
+}
+
+.logo img {
+    height: 28px
+}
+
+nav ul {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 999px
+}
+
+nav a:hover {
+    background: var(--accent-2)
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5em;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 0;
+    font-weight: 700;
+    box-shadow: var(--shadow-soft)
+}
+
+.btn--ghost {
+    background: #fff;
+    color: var(--ink);
+    border: 1px solid var(--line)
+}
+
+/* 問い合わせボタン */
+header .btn {
+    background: #abd0ce;
+    color: #08090e;
+    border: none
+}
+
+header .btn:hover {
+    background: #9cc6c3
+}
+
+/* ---------- Hero (MV) ---------- */
+.hero {
+    position: relative;
+    background: transparent;
+    padding: 0;
+    margin: 0
+}
+
+.hero::before,
+.hero::after {
+    content: none
+}
+
+.hero__img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1440/500;
+    object-position: center 40%
+}
+
+/* ---------- Section common ---------- */
+section {
+    padding: 72px 0
+}
+
+.section-title {
+    text-align: center;
+    margin: 0 0 36px
+}
+
+.section-title small {
+    display: block;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: .06em;
+    opacity: .9
+}
+
+.section-title h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(22px, 3.2vw, 30px);
+    letter-spacing: .02em;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: .3em 0 0
+}
+
+/* ---------- Two cards ---------- */
+.twocards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px
+}
+
+.card {
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden
+}
+
+.card__img {
+    aspect-ratio: 4/3.2;
+    object-fit: cover
+}
+
+.card__body {
+    padding: 20px 22px
+}
+
+.card__title {
+    font-weight: 700;
+    margin: 2px 0 8px
+}
+
+.card__meta {
+    font-size: .88rem;
+    color: var(--muted)
+}
+
+/* ---------- Recommendations ---------- */
+.recommend {
+    background: #e9f2f2
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px
+}
+
+.product {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .05)
+}
+
+.product__img {
+    aspect-ratio: 1/1;
+    object-fit: cover
+}
+
+.product__body {
+    padding: 16px 18px 18px;
+    text-align: center
+}
+
+.product__name {
+    font-weight: 700;
+    margin-bottom: 6px
+}
+
+.product__desc {
+    font-size: .9rem;
+    color: #5f6b76
+}
+
+.product__foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px
+}
+
+.more {
+    display: inline-flex;
+    align-items: center;
+    gap: .5em;
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 1px solid #dfe5ea;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .04)
+}
+
+.chip {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #dfe5ea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .04)
+}
+
+.chip::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    border-radius: 50%;
+    border: 1px solid #cfd7de;
+    vertical-align: -5px;
+    background: radial-gradient(currentColor 2px, transparent 3px) center/100% 100% no-repeat
+}
+
+/* ---------- Stories ---------- */
+.stories .story {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 28px;
+    align-items: center;
+    margin: 38px 0;
+    padding: 22px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: var(--shadow-soft)
+}
+
+.stories .story:nth-child(even) {
+    grid-template-columns: .8fr 1.2fr
+}
+
+.story__img {
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft)
+}
+
+.story__tag {
+    font-size: .82rem;
+    letter-spacing: .02em;
+    color: #6a737d
+}
+
+.story__title {
+    font-weight: 700;
+    margin: .3em 0 .2em
+}
+
+/* 「わたしの椅子」見出し行：左右の椅子 */
+.stories {
+    position: relative;
+    overflow: visible
+}
+
+.stories .section-title {
+    position: relative;
+    padding: 120px 0 28px;
+    z-index: 0
+}
+
+.stories .section-title h2 {
+    font-size: clamp(28px, 4.2vw, 40px);
+    font-weight: 800;
+    letter-spacing: .01em;
+    margin: 0 0 12px
+}
+
+.stories .section-title small {
+    font-size: clamp(14px, 2.2vw, 18px);
+    color: #444;
+    font-weight: 700;
+    letter-spacing: .03em;
+    margin-bottom: 10px
+}
+
+.stories .section-title::before,
+.stories .section-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    height: 420px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: .55;
+    filter: blur(1px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stories .section-title::before {
+    left: -240px;
+    background-image: url("../images/wooden-chair-left.png")
+}
+
+.stories .section-title::after {
+    right: -240px;
+    background-image: url("../images/wooden-chair-right.png")
+}
+
+/* ---------- “わたしの椅子、見つけた” セクション（中央文） ---------- */
+.my-chair {
+    position: relative;
+    text-align: center;
+    padding: 120px 0 90px;
+    max-width: 100%;
+    overflow: hidden
+}
+
+.my-chair-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    font-family: "Noto Sans JP", sans-serif
+}
+
+.my-chair-lead {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Noto Sans JP", sans-serif
+}
+
+/* ---------- 4つの楽しみ方 ---------- */
+.joys {
+    background: #dff1ef;
+    padding: 80px 0
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px
+}
+
+.joy {
+    background: #fff;
+    border-radius: 22px;
+    padding: 30px 26px;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .06)
+}
+
+.joy .num {
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    border: 2px solid #222;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 12px;
+    font-weight: 700
+}
+
+.joy-icon {
+    width: 80px;
+    margin: 0 auto 12px;
+    display: block;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .08))
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background: #f3eee7;
+    padding: 90px 0 60px
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 100px;
+    align-items: flex-start
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px
+}
+
+.footer-info {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px
+}
+
+.footer-map {
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08)
+}
+
+.footer-links-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 28px
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.footer-links a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: .2s
+}
+
+.footer-links.left a {
+    background: #fff;
+    border: 1px solid #e6e6e6
+}
+
+.footer-links.right a {
+    background: #d9d4cd;
+    border: 1px solid #cfc8c1
+}
+
+.footer-links a:hover {
+    transform: translateY(-2px);
+    opacity: .9
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 13px;
+    color: #7a736d
+}
+
+/* ---------- Helpers ---------- */
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 48px
+}
+
+/* ---------- Responsive (簡易) ---------- */
+@media (max-width:768px) {
+    .nav {
+        height: 72px
+    }
+
+    .twocards {
+        grid-template-columns: 1fr
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr
+    }
+
+    .grid-4 {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .stories .story {
+        grid-template-columns: 1fr;
+        gap: 18px
+    }
+
+    .my-chair-title {
+        font-size: 24px
+    }
+
+    .my-chair-lead {
+        font-size: 16px
+    }
+}
+
+
+/* ========== 1) ナビが崩れる対策（1行固定＆左ロゴ） ========== */
+.nav {
+    flex-wrap: nowrap;
+}
+
+.nav>nav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 18px;
+    flex-wrap: nowrap;
+}
+
+nav li {
+    white-space: nowrap;
+}
+
+.logo img {
+    margin: 0;
+}
+
+/* グローバルの img {margin:auto} を打ち消し */
+.hero__cta {
+    flex: 0 0 auto;
+}
+
+/* ========== 2) MVの比率を“画像そのまま”に ========== */
+/* 既存の aspect-ratio 指定を打ち消し、歪みなしにする */
+.hero__img {
+    width: 100%;
+    height: auto !important;
+    /* ← これで元画像比率のまま */
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    /* 必要なら center 40% に戻してOK */
+}
+
+/* MVの上下の塗り/疑似要素が残っていたら無効化 */
+.hero::before,
+.hero::after {
+    content: none !important;
+}
+
+/* ========== 3) 「わたしの椅子、見つけた」イスの位置 ========== */
+/* イスは .my-chair に付ける（セクション見出しブロック） */
+.stories .section-title::before,
+.stories .section-title::after {
+    content: none !important;
+}
+
+/* 以前の付け先を無効化 */
+
+.my-chair {
+    position: relative;
+    text-align: center;
+    padding: 100px 0 80px;
+    overflow: visible;
+}
+
+.my-chair::before,
+.my-chair::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(260px, 30vw, 420px);
+    height: clamp(260px, 30vw, 420px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .85;
+    /* filter:drop-shadow(0 6px 18px rgba(0,0,0,.08)); */
+    pointer-events: none;
+    z-index: -1;
+    /* テキストの背面 */
+}
+
+.my-chair::before {
+    left: -140px;
+    /* はみ出し量（必要なら微調整） */
+    background-image: url("../images/wooden-chair-left.png");
+}
+
+.my-chair::after {
+    right: -140px;
+    background-image: url("../images/wooden-chair-right.png");
+}
+
+/* ========== 4) フッター：ロゴ＆マップをテキストと同じ左揃え ========== */
+.footer-store {
+    text-align: left;
+}
+
+.footer-brand img,
+.footer-map {
+    margin: 0;
+}
+
+/* グローバルの img 中央寄せを打ち消し */
+
+
+/* =========================
+   ハンバーガー（共通）
+========================= */
+.nav-toggle{
+  display:none;            /* デフォはPCで非表示 */
+  -webkit-appearance:none;
+  appearance:none;
+  border:0;
+  background:transparent;
+  width:44px; height:44px;
+  border-radius:8px;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  padding:0;
+}
+.nav-toggle .bar{
+  display:block;
+  width:24px; height:2px;
+  background:#08090e;
+  border-radius:2px;
+  transition:transform .25s ease, opacity .2s;
+}
+.only-sp{ display:none; }
+.only-pc{ display:block; }
+
+/* ============ 768px以下でドロワー化 ============ */
+@media (max-width: 768px){
+  .nav{ height:64px; gap:10px; }
+
+  .nav-toggle{ display:inline-flex; }
+
+  /* PCの問い合わせボタンを隠す（SPはメニュー内に配置） */
+  .only-pc{ display:none; }
+  .only-sp{ display:block; }
+
+  /* ナビ本体を右側ドロワーに */
+  #global-nav{
+    position:fixed;
+    top:0; right:0; bottom:0;
+    width:min(75%, 320px);
+    background:#fff;
+    transform: translateX(100%);
+    transition: transform .28s ease;
+    box-shadow: -20px 0 40px rgba(0,0,0,.06);
+    z-index: 120;
+  }
+  #global-nav ul{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    padding:20px 20px 28px;
+    margin-top:64px; /* ヘッダー分の余白 */
+    list-style:none;
+  }
+  #global-nav a{
+    display:block;
+    padding:14px 12px;
+    border-radius:12px;
+    font-size:16px;
+  }
+  #global-nav a:hover{
+    background:#f2f4f6;
+  }
+  #global-nav .btn{
+    width:100%;
+    justify-content:center;
+    margin-top:6px;
+    border-radius:999px;
+  }
+
+  /* オープン時の状態（html に .nav-open を付与） */
+  html.nav-open #global-nav{ transform: translateX(0); }
+
+  /* 背景のマスク */
+  body::after{
+    content:"";
+    position:fixed; inset:0;
+    background:rgba(0,0,0,.35);
+    opacity:0; pointer-events:none;
+    transition:opacity .25s ease;
+    z-index: 110;
+  }
+  html.nav-open body::after{
+    opacity:1; pointer-events:auto;
+  }
+  html.nav-open, html.nav-open body{
+    overflow:hidden; /* 背景スクロール抑止 */
+  }
+
+  /* ハンバーガー → × アニメーション */
+  html.nav-open .nav-toggle .bar:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+  }
+  html.nav-open .nav-toggle .bar:nth-child(2){
+    opacity:0;
+  }
+  html.nav-open .nav-toggle .bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+/* -----------------------
+   ハンバーガー（3本線）
+   変数で太さ・角丸・色を一括調整
+------------------------*/
+:root {
+  --burger-w: 28px;      /* 線の長さ */
+  --burger-h: 3px;       /* 線の太さ（6pxにすると”カプセル”） */
+  --burger-gap: 6px;     /* 線の間隔 */
+  --burger-radius: 2px;  /* 角丸（6pxにすると丸端） */
+  --burger-color: #08090e;
+}
+
+/* ボタン本体 */
+.nav-toggle{
+  display: none;              /* PCでは非表示 */
+  appearance: none;
+  border: 0;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 3本ライン */
+.nav-toggle .bar{
+  display: block;
+  width: var(--burger-w);
+  height: var(--burger-h);
+  background: var(--burger-color);
+  border-radius: var(--burger-radius);
+  transition: transform .25s ease, opacity .2s ease, width .2s ease;
+}
+
+/* 縦積み（中央揃え） */
+.nav-toggle{
+  display: none;
+}
+@media (max-width: 768px){
+  .nav-toggle{
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--burger-gap);
+  }
+}
+
+/* 開いたとき（×に変形） */
+html.nav-open .nav-toggle .bar:nth-child(1){
+  transform: translateY(calc(var(--burger-h) + var(--burger-gap))) rotate(45deg);
+}
+html.nav-open .nav-toggle .bar:nth-child(2){
+  opacity: 0;
+}
+html.nav-open .nav-toggle .bar:nth-child(3){
+  transform: translateY(calc(-1 * (var(--burger-h) + var(--burger-gap)))) rotate(-45deg);
+}
+
+/* （任意）“カプセルっぽい”太めデザインにしたい時
+   例：.nav-toggle--pill をボタンに足す */
+.nav-toggle--pill { --burger-h: 6px; --burger-radius: 6px; }
+
+
+/* PCそのまま / SPでドロワー */
+@media (max-width: 768px){
+  header .nav ul{
+    position: fixed;
+    inset: 64px 0 0 0;             /* ヘッダー下から全画面 */
+    background: #ffffff;
+    padding: 24px 20px;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    z-index: 30;
+  }
+  html.nav-open header .nav ul{
+    display: flex;
+  }
+}

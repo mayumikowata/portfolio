@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChairShop</title>
+
+    <!-- Google Fonts（重複を整理） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- Header -->
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html"><img src="images/logo.png" alt="ChairShop ロゴ"></a>
+
+    <!-- ▼ 追加：ハンバーガー -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <!-- ▲ 追加 -->
+
+    <nav id="global-nav" aria-label="主要ナビゲーション">
+      <ul>
+        <li><a href="#about">お店について</a></li>
+        <li><a href="#value">大切にしていること</a></li>
+        <li><a href="#recommend">今月のおすすめ</a></li>
+        <li><a href="#stories">わたしの椅子</a></li>
+        <li><a href="#joys">4つの楽しみ方</a></li>
+        <!-- モバイル時はメニュー内にも問い合わせを入れておくと親切 -->
+        <li class="only-sp"><a class="btn" href="#contact">問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <!-- PC時のみ表示（SPはメニュー内の「問い合わせ」を使う） -->
+    <div class="hero__cta only-pc"><a class="btn" href="#contact">問い合わせ</a></div>
+  </div><button class="nav-toggle" aria-label="メニューを開閉">
+
+</button>
+</header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="about" aria-label="ヒーロー">
+        <img class="hero__img" src="./images/mv.png" alt="リビングに置かれた椅子とテーブル" />
+        <div class="hero__overlay container">
+            <!-- <div class="hero__bubble"> -->
+            <!-- <div class="eyebrow">オンの時間も、オフの時間も。</div> -->
+            <!-- <strong>自分らしくすごせる椅子。</strong> -->
+            <!-- </div> -->
+        </div>
+    </section>
+
+
+    <!-- Values: Two cards -->
+    <section id="value" class="container">
+        <div class="section-title">
+            <img src="./images/h1.png" alt="cheirshopが大切にしていること">
+            <h2 class="heading">暮らしに寄り添う椅子選び</h2>
+        </div>
+        <div class="twocards">
+            <article class="card">
+                <img class="card__img" src="./images/ph.png" alt="日常の床に置いた椅子" />
+                <div class="card__body">
+                    <div class="card__title">生活に安らぎを
+                        <span class="card__meta">— 使い心地を丁寧に確かめます。</span>
+                    </div>
+                    <p>座り心地・素材・サイズ感をしっかりと確認して、くつろぎの時間を支える椅子をご提案します。</p>
+                </div>
+            </article>
+            <article class="card">
+                <img class="card__img" src="./images/ph-05.png" alt="白い空間に置かれた椅子とテーブル" />
+                <div class="card__body">
+                    <div class="card__title">ワンランク上の、心地よい暮らしへ
+                        <span class="card__meta">— デザインと機能のバランス。</span>
+                    </div>
+                    <p>素材・デザイン・メンテ性。あなたのライフスタイルに合う一脚を一緒に探します。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section id="recommend" class="recommend">
+        <div class="container">
+            <div class="section-title">
+                <small>今月のおすすめ椅子</small>
+                <h2 class="heading">スタッフが選ぶ“いま”気分</h2>
+            </div>
+            <div class="grid-3">
+                <article class="product">
+                    <img class="product__img" src="./images/ph-06.png" alt="木の座面のシンプルな椅子" />
+                    <div class="product__body">
+                        <div class="product__name">lax</div>
+                        <p class="product__desc">飾り気のない素直なデザイン。キッチンにもワークスペースにも。</p>
+                        <div class="product__foot">
+                            <a class="product-btn" href="#">
+                                <img src="./images/wbg_view.png" alt="商品を見る">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product">
+                    <img class="product__img" src="./images/ph-07.png" alt="グレーの張地の椅子" />
+                    <div class="product__body">
+                        <div class="product__name">rio</div>
+                        <p class="product__desc">柔らかな印象と、頼れる座り心地。読書の相棒に。</p>
+                        <div class="product__foot">
+                            <a class="product-btn" href="#">
+                                <img src="./images/wbg_view.png" alt="商品を見る">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product">
+                    <img class="product__img" src="./images/ph-08.png" alt="アーム付の木製チェア" />
+                    <div class="product__body">
+                        <div class="product__name">lumik</div>
+                        <p class="product__desc">包み込むような座り心地。木の温かみで部屋がやわらぐ。</p>
+                        <div class="product__foot">
+                            <a class="product-btn" href="#">
+                                <img src="./images/wbg_view.png" alt="商品を見る">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories -->
+    <!-- Stories（ラッパー） -->
+    <section id="stories" class="stories container">
+
+        <!-- 見出しだけのブロック：イス画像はCSSの ::before/::after で出します -->
+        <section class="my-chair">
+            <h2 class="my-chair-title">わたしの椅子、見つけた</h2>
+            <p class="my-chair-lead">なんでもない日が、少し特別になった気がします。</p>
+        </section>
+
+        <article class="story">
+            <img class="story__img" src="./images/ph-10.png" alt="曲木のローチェア" />
+            <div>
+                <div class="story__tag">神奈川県・Kさん（34歳）／在宅ワーク・1LDK</div>
+                <h3 class="story__title">しゃん、と背筋が伸びる。</h3>
+                <p>テレワークで座る時間が長くなって、肩こりがひどくて…。<br>
+                    いくつか座り比べて「kasane」に決めました。<br>
+                    見た目もやわらかくて、部屋になじんでくれるのが気に入ってます。</p>
+                <div class="product__foot">
+                    <a class="product-btn" href="#"><img src="./images/wbg_view.png" alt="商品を見る"></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="story">
+            <div>
+                <div class="story__tag">東京都・Yさん（30歳）／ひとり暮らし・ナチュラルインテリア派</div>
+                <h3 class="story__title">「ちょい置き」も絵になる。</h3>
+                <p>SNSで見て気になっていた「komorebi」。<br>
+                    実物は想像以上に木の質感がよくて、座ったときの安心感がちがいました。<br>
+                    コーヒータイムがちょっと特別な時間になりました。</p>
+                <div class="product__foot">
+                    <a class="product-btn" href="#"><img src="./images/wbg_view.png" alt="商品を見る"></a>
+                </div>
+            </div>
+            <img class="story__img" src="./images/ph-11.png" alt="ウッド×メタルのスツールと観葉植物" />
+        </article>
+
+        <article class="story">
+            <img class="story__img" src="./images/ph-12.png" alt="革張りのワークチェア" />
+            <div>
+                <div class="story__tag">埼玉県・Rさん（29歳）／フリーランス・猫と暮らす</div>
+                <h3 class="story__title">座ったら、仕事スイッチ。</h3>
+                <p>作業とリラックスを兼ねられる椅子がほしくて相談に行きました。<br>
+                    スタッフの方がすごく丁寧で、「yorisou」をおすすめしてくれて。<br>
+                    猫もこの椅子が気に入ったみたいです（笑）</p>
+                <div class="product__foot">
+                    <a class="product-btn" href="#"><img src="./images/wbg_view.png" alt="商品を見る"></a>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+
+    <!-- Four Joys -->
+    <section id="joys" class="joys">
+        <div class="container">
+            <div class="section-title">
+                <img src="./images/h2.png" alt="ChairShopでの、4つの楽しみ方">
+
+                <h2 class="heading">暮らしに寄り添う、“ちょうどいい”椅子。</h2>
+            </div>
+            <div class="grid-4">
+                <div class="joy">
+                    <img class="joy-icon" src="./images/icon-01.png" alt="01">
+                    <h3 class="heading">すわってみる</h3>
+                    <p>お好みに合わせて、座り心地や高さを体験。スタッフが使い方のコツもご案内します。</p>
+                </div>
+
+                <div class="joy">
+                    <img class="joy-icon" src="./images/icon-02.png" alt="02">
+                    <h3 class="heading">想像してみる</h3>
+                    <p>お部屋の写真をお持ちください。コーディネートの相性を一緒に考えます。</p>
+                </div>
+                <div class="joy">
+                    <img class="joy-icon" src="./images/icon-03.png" alt="03">
+                    <h3 class="heading">話してみる</h3>
+                    <p>「こんな使い方を想定で…」など、ご希望を伺いながら最適な一脚をご提案。</p>
+                </div>
+                <div class="joy">
+                    <img class="joy-icon" src="./images/icon-04.png" alt="04">
+                    <h3 class="heading">ひと息つく</h3>
+                    <p>選びながら、ゆっくり休憩。ドリンクのご用意もあります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+
+            <!-- 左：ロゴ・住所・マップ -->
+            <div class="footer-store">
+                <div class="footer-brand">
+                    <img src="./images/logo.png" alt="ChairShopロゴ">
+
+                </div>
+                <div class="footer-brand">
+
+                    <span>Global Designer's Shop ChairShop</span>
+                </div>
+
+                <p class="footer-info">
+                    電話：03-1234-5678<br>
+                    151-0064 東京都渋谷区上原1-234-56
+                </p>
+
+                <img class="footer-map" src="./images/map.png" alt="店舗地図">
+            </div>
+
+            <!-- 右：リンクボタン 2列 -->
+            <div class="footer-links-wrap">
+                <div class="footer-links left">
+                    <a href="#">おみせについて</a>
+                    <a href="#">椅子のこと</a>
+                    <a href="#">小さな家具たち</a>
+                    <a href="#">お店の場所</a>
+                </div>
+
+                <div class="footer-links right">
+                    <a href="#">企業・株主の方へ</a>
+                    <a href="#">社長の日々</a>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">お問い合わせ</a>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="footer-copy">©2025 Global Designer's Shop: ChairShop</p>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+  (function(){
+    const toggle = document.querySelector('.nav-toggle');
+    const html   = document.documentElement;
+    if(!toggle) return;
+
+    // 開閉
+    toggle.addEventListener('click', () => {
+      const open = html.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    });
+
+    // マスクをクリックで閉じる
+    document.addEventListener('click', (e) => {
+      if(!html.classList.contains('nav-open')) return;
+      const nav = document.getElementById('global-nav');
+      const insideNav = nav && nav.contains(e.target);
+      const onToggle  = toggle.contains(e.target);
+      if(!insideNav && !onToggle){
+        html.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.setAttribute('aria-label','メニューを開く');
+      }
+    });
+
+    // Esc キーでも閉じる
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && html.classList.contains('nav-open')){
+        html.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.setAttribute('aria-label','メニューを開く');
+        toggle.focus();
+      }
+    });
+  })();
+</script>
