@@ -1,424 +1,60 @@
 @charset "utf-8";
 
-.home {
-  background-color: #f7f7f7;
+:root {
+  --bg: #f7f7f7;
+  --ink: #444;
+  --ink2: #333;
+  --navy: #012d72;
+}
+
+html,
+body {
+  background: #fff;
+}
+
+body {
+  font: 400 15px/1.8 "Noto Sans JP", sans-serif;
+  color: var(--ink);
 }
 
 .wrap {
   width: 1200px;
   margin: 0 auto;
-
-  background-color: #f7f7f7;
-}
-
-header {
-  width: 1200px;
-  height: 100px;
-  background-color: #012d72;
-  padding: 25px 50px;
-  justify-content: space-between;
-}
-
-main {
-  font-size: 15px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-}
-
-nav li {
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: center;
-
-}
-
-nav .logo {
-  margin: 30px 0 0 50px;
-}
-
-nav .cv {
-  width: 169px;
-  height: 50px;
-  background-color: #FFF;
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: center;
-
-}
-
-nav li {
-  margin-right: 50px;
-}
-
-nav .cv a {
-  color: #012d72;
-  font-weight: 600;
-}
-
-nav .cv a:link {
-  text-decoration: none;
-  color: #012d72;
-}
-
-nav .cv a:visited {
-  text-decoration: none;
-  color: #012d72;
-}
-
-nav .cv a:hover {
-  text-decoration: underline;
-  color: #012d72;
-}
-
-nav .cv a:active {
-  text-decoration: underline;
-  color: #012d72;
-}
-
-nav li a {
-  color: #FFF;
-  font-size: 15px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-nav li a:link {
-  text-decoration: none;
-  color: #fff;
-}
-
-nav li a:visited {
-  text-decoration: none;
-  color: #fff;
-}
-
-nav li a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
-nav li a:active {
-  text-decoration: underline;
-  color: #fff;
-}
-
-.home .mv {
-  width: 1200px;
-  height: 600px;
-  background: url("../images/mv_bg.png") no-repeat;
-  padding: 100px 0 0 550px;
-}
-
-.home .mv h1 {
-  color: #FFF;
-  font-size: 45px;
-  letter-spacing: 0.05em;
-
-  margin-bottom: 50px;
-  line-height: 100%;
-
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
-}
-
-.home .mv h2 {
-  color: #FFF;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
-}
-
-.the-first-step {
-  position: relative;
-
-  text-align: center;
-
-  width: 1200px;
-
-  height: 694px;
-  background: url("../images/thefirststep_bg.png") no-repeat;
-  position: relative;
-
-}
-
-.the-first-step .banner {
-  padding-top: 313px;
-  display: flex;
-
-  justify-content: center;
-
-  color: #fff;
-
-  position: relative;
-
-  gap: 25px;
-}
-
-.the-first-step h1 {
-  position: absolute;
-
-  top: 100px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  font-size: 55px;
-  color: #fff;
-  letter-spacing: 0.05em;
-
-}
-
-.the-first-step h2 {
-  position: absolute;
-
-  top: 200px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  font-size: 25px;
-  color: #fff;
-  letter-spacing: 0.05em;
-
-}
-
-.hoto02 {
-  display: flex;
-}
-
-.top_collection {
-  color: #444444;
-}
-
-.top_collection h1 {
-  padding: 80px 120px;
-}
-
-.top_collection h2 {
-  padding: 108px 0;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.collectionbox {
-  display: flex;
-}
-
-.collectionbox .bigitem {
-  margin-right: 22px;
-}
-
-.pickuptxt {
-  height: 90px;
-}
-
-.pickuptxt h3 {
-  margin-top: 11px;
-}
-
-.pickuptxt p {
-  margin-bottom: 44px;
-}
-
-.c_photo02 {
-  display: flex;
-}
-
-.item2 .item22 {
-  width: 278px;
-  height: 460px;
-  margin-right: 22px;
-}
-
-.item2 .item {
-  width: 278px;
-  height: 460px;
-}
-
-.details {
-  background-color: #f7f7f7;
-}
-
-.ring-details {
-  width: 1200px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.ring-details h1 {
-  color: #333;
-  margin-bottom: 50px;
-}
-
-.ring-details h2 {
-  color: #333;
-}
-
-.detail-ph {
-  margin: 0 100px 100px;
+  background: var(--bg);
 }
 
 h1 {
-  font-size: 55px;
-  font-family: "Playfair Display SC", serif;
-  font-weight: 400;
-  font-style: normal;
+  font: 400 55px/1 "Playfair Display SC", serif;
 }
 
 h2 {
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 180%;
+  font: 400 25px/1.8 "Shippori Mincho", serif;
 }
 
 h3 {
-  font-size: 15px;
-  font-family: "Playfair Display SC", serif;
-  font-weight: 400;
-  font-style: normal;
+  font: 400 15px/1.4 "Playfair Display SC", serif;
 }
 
-.our-philosophy {
-  width: 1200px;
-
-  height: 600px;
-  background: url("../images/ourphilosophy_bg.png") no-repeat;
-  margin-bottom: 50px;
-}
-
-.our-philosophy h1 {
-  color: #FFF;
-  padding: 200px 0 30px 120px;
-}
-
-.our-philosophy h2 {
-  color: #FFF;
-  padding-left: 120px;
-}
-
-.our-philosophy a {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 80px;
-}
-
-.reservation {
-  width: 1200px;
-  height: 400px;
-  background: url("../images/reservation_bg.png") no-repeat;
-  position: relative;
-
-  margin-bottom: 100px;
-}
-
-.reservation h1 {
-  font-size: 55px;
-  color: #fff;
-  position: absolute;
-
-  top: 100px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  letter-spacing: 0.05em;
-
-}
-
-.reservation p {
-  color: #fff;
-  position: absolute;
-
-  top: 180px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-}
-
-.cvlink {
-  padding-top: 223px;
-  display: flex;
-
-  justify-content: center;
-
-  position: relative;
-
-  gap: 20px;
-}
-
-footer {
-  color: #FFF;
-  font-size: 15px;
-  background-color: #333;
-  padding: 100px 50px;
-  line-height: 200%;
-  display: flex;
-  justify-content: space-between;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-footer a {
-  color: #FFF;
-  vertical-align: top;
-}
-
-footer a:link {
+a {
+  color: var(--ink);
   text-decoration: none;
-  color: #fff;
 }
 
-footer a:visited {
-  text-decoration: none;
-  color: #fff;
-}
-
-footer a:hover {
+a:hover {
+  color: var(--ink2);
   text-decoration: underline;
-  color: #fff;
 }
 
-footer a:active {
-  text-decoration: underline;
-  color: #fff;
+a:active {
+  color: var(--navy);
 }
 
 .df {
   display: flex;
+}
+
+.f-center {
+  align-items: center;
 }
 
 .mb25 {
@@ -461,26 +97,189 @@ footer a:active {
   margin-right: 80px;
 }
 
-.copy {
-  margin-top: 200px;
-  text-align: right;
-}
-
-footer h4 {
-  font-weight: 600;
-  margin-bottom: 30px;
+.size35 {
+  font-size: 35px;
 }
 
 .icon {
   vertical-align: middle;
 }
 
-.size35 {
-  font-size: 35px;
+.copy {
+  text-align: right;
+  margin-top: 200px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+header {
+  width: 1200px;
+  height: 100px;
+  background: var(--navy);
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 50px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav li a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font: 400 15px "Shippori Mincho", serif;
+}
+
+nav .cv {
+  width: 169px;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .cv a {
+  color: var(--navy) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.home {
+  background: var(--bg);
+}
+
+.home .mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../images/mv_bg.png") no-repeat;
+  padding: 100px 0 0 550px;
+}
+
+.home .mv h1,
+.home .mv h2 {
+  color: #fff;
+  text-shadow: 0 0 35px rgba(85, 85, 85, .75);
+}
+
+.home .mv h1 {
+  font-size: 45px;
+  letter-spacing: .05em;
+  margin-bottom: 50px;
+}
+
+.home .mv h2 {
+  font: 400 25px "Shippori Mincho", serif;
+}
+
+.the-first-step {
+  position: relative;
+  text-align: center;
+  width: 1200px;
+  height: 694px;
+  background: url("../images/thefirststep_bg.png") no-repeat;
+}
+
+.the-first-step .banner {
+  padding-top: 313px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  color: #fff;
+  position: relative;
+}
+
+.the-first-step h1,
+.the-first-step h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  letter-spacing: .05em;
+}
+
+.the-first-step h1 {
+  top: 100px;
+  font-size: 55px;
+}
+
+.the-first-step h2 {
+  top: 200px;
+  font-size: 25px;
+}
+
+.top_collection {
+  color: var(--ink);
+}
+
+.top_collection h1 {
+  padding: 80px 120px;
+}
+
+.top_collection h2 {
+  padding: 108px 0;
+  font: 500 25px "Shippori Mincho", serif;
+}
+
+.collectionbox {
+  display: flex;
+}
+
+.collectionbox .bigitem {
+  margin-right: 22px;
+}
+
+.c_photo02 {
+  display: flex;
+}
+
+.item2 .item22,
+.item2 .item {
+  width: 278px;
+  height: 460px;
+}
+
+.item2 .item22 {
+  margin-right: 22px;
+}
+
+.pickuptxt {
+  height: 90px;
+}
+
+.pickuptxt h3 {
+  margin-top: 11px;
+}
+
+.pickuptxt p {
+  margin-bottom: 44px;
 }
 
 .collection {
-  background-color: #f7f7f7;
+  background: var(--bg);
 }
 
 .mv_collection {
@@ -491,40 +290,57 @@ footer h4 {
 }
 
 .mv_collection h1 {
-  color: #FFF;
+  color: #fff;
   font-size: 45px;
-  letter-spacing: 0.05em;
-
+  letter-spacing: .05em;
   margin-bottom: 50px;
-  line-height: 100%;
-
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+  line-height: 1;
+  text-shadow: 0 0 35px rgba(85, 85, 85, .75);
 }
 
 .mv_collection h2 {
-  color: #FFF;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 150%;
-
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 15px rgba(85, 85, 85, 0.75);
+  color: #fff;
+  font: 400 25px "Shippori Mincho", serif;
+  line-height: 1.5;
+  text-shadow: 0 0 15px rgba(85, 85, 85, .75);
 }
 
 .rings .item h3 {
-  color: #444;
+  color: var(--ink);
   margin: 10px 0;
   font-weight: 500;
 }
 
 .rings .item p {
-  color: #444;
+  color: var(--ink);
   margin-bottom: 36px;
+}
+
+.details {
+  background: var(--bg);
+}
+
+.ring-details {
+  width: 1200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ring-details h1,
+.ring-details h2 {
+  color: #333;
+}
+
+.ring-details h1 {
+  margin-bottom: 50px;
+}
+
+.detail-ph {
+  margin: 0 100px 100px;
 }
 
 .detail-contens {
@@ -543,23 +359,21 @@ footer h4 {
 }
 
 .detail-txt h3 {
-  color: #444;
+  color: var(--ink);
   font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
   margin-bottom: 17px;
 }
 
 .detail-txt h4 {
-  color: #444;
+  color: var(--ink);
   margin-bottom: 15px;
 }
 
 .detail-txt p {
-  color: #444;
+  color: var(--ink);
   margin-bottom: 37px;
-  line-height: 180%;
+  line-height: 1.8;
 }
 
 .detail-txt img {
@@ -575,9 +389,7 @@ footer h4 {
 
 hr {
   border: none;
-
   border-top: 1px solid #ccc;
-
   margin-bottom: 20px;
 }
 
@@ -586,7 +398,7 @@ hr {
 }
 
 .our_craft {
-  background-color: #f7f7f7;
+  background: var(--bg);
 }
 
 .ourcraft_mv {
@@ -598,70 +410,50 @@ hr {
 }
 
 .ourcraft_mv h1 {
-  color: #FFF;
-  letter-spacing: 0.05em;
-
+  color: #fff;
+  letter-spacing: .05em;
   margin-bottom: 50px;
-  line-height: 100%;
-
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+  line-height: 1;
+  text-shadow: 0 0 35px rgba(85, 85, 85, .75);
 }
 
 .ourcraft_mv h2 {
-  color: #FFF;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+  color: #fff;
+  font: 400 25px "Shippori Mincho", serif;
+  text-shadow: 0 0 35px rgba(85, 85, 85, .75);
 }
 
 .text-area {
   padding: 0 200px;
 }
 
+.ourcraft_contens {
+  color: var(--ink);
+}
+
 .ourcraft_contens h2 {
   color: #333;
   margin-bottom: 100px;
-  font-size: 35px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
+  font: 400 35px "Shippori Mincho", serif;
 }
 
 .ourcraft_contens h3 {
-  color: #444;
+  color: var(--ink);
   margin-bottom: 50px;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
+  font: 500 25px "Shippori Mincho", serif;
 }
 
 .ourcraft_contens p {
-  color: #444;
-  line-height: 200%;
+  color: var(--ink);
+  line-height: 2;
   margin-bottom: 50px;
-}
-
-.ourcraft_contens {
-  color: #444;
 }
 
 .bar {
   width: 3px;
-
   height: 50px;
-
-  background-color: #444;
-
+  background: #444;
   margin: 0 auto 100px;
-
 }
 
 .banner {
@@ -673,7 +465,7 @@ hr {
 }
 
 .moments {
-  background-color: #f7f7f7;
+  background: var(--bg);
 }
 
 .moments_mv {
@@ -687,21 +479,15 @@ hr {
 .moments_mv h1 {
   color: #fff;
   font-size: 45px;
-  letter-spacing: 0.05em;
-
+  letter-spacing: .05em;
   margin-bottom: 50px;
-  line-height: 100%;
-
+  line-height: 1;
 }
 
 .moments_mv h2 {
   color: #fff;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 150%;
-
+  font: 400 25px "Shippori Mincho", serif;
+  line-height: 1.5;
 }
 
 .moment-contens h1 {
@@ -716,56 +502,32 @@ hr {
 }
 
 .moment-contens p {
-  color: #444;
+  color: var(--ink);
   margin-bottom: 100px;
-  line-height: 180%;
+  line-height: 1.8;
 }
 
 .episode-txt {
   width: 748px;
-
   padding: 100px 0 100px 100px;
   margin-bottom: 200px;
 }
 
 .episode-txt h4 {
-  color: #444;
-  font-size: 25px;
+  color: var(--ink);
+  font: 500 25px "Shippori Mincho", serif;
   margin-bottom: 50px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
 }
 
 .episode-txt p {
-  color: #444;
+  color: var(--ink);
   font-size: 15px;
-  line-height: 200%;
+  line-height: 2;
   margin-bottom: 50px;
 }
 
 .our_philosophy {
-  background-color: #f7f7f7;
-}
-
-a:link {
-  text-decoration: none;
-  color: #444;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #444;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #333;
-}
-
-a:active {
-  text-decoration: underline;
-  color: #012d72;
+  background: var(--bg);
 }
 
 .ourphilosophy_mv {
@@ -777,26 +539,27 @@ a:active {
   justify-content: center;
   align-items: center;
   margin-bottom: 200px;
+  text-align: center;
 }
 
 .ourphilosophy_mv h1 {
-  color: #FFF;
-  letter-spacing: 0.05em;
-
-  line-height: 100%;
+  color: #fff;
+  letter-spacing: .05em;
+  line-height: 1;
   margin: 0 auto 50px;
 }
 
 .ourphilosophy_mv h2 {
-  color: #FFF;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
+  color: #fff;
+  font: 400 25px "Shippori Mincho", serif;
 }
 
 .t-logo {
   margin-bottom: 25px;
+}
+
+.our_philosophy .text-area {
+  margin-bottom: 150px;
 }
 
 .our_philosophy .text-area h2 {
@@ -806,61 +569,47 @@ a:active {
 
 .our_philosophy .text-area h4 {
   color: #333;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+  font: 600 15px "Noto Sans JP", sans-serif;
 }
 
-.bold {
-  font-weight: 600;
-}
-
-.our-philosophy p {
-  margin-bottom: 80px;
+.ourphilosophy_contens {
+  color: var(--ink);
 }
 
 .ourphilosophy_contens h2 {
   color: #333;
   margin-bottom: 100px;
-  font-size: 35px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
+  font: 400 35px "Shippori Mincho", serif;
 }
 
 .ourphilosophy_contens h3 {
-  color: #444;
+  color: var(--ink);
   margin-bottom: 50px;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
+  font: 500 25px "Shippori Mincho", serif;
 }
 
 .ourphilosophy_contens p {
-  color: #444;
-  line-height: 200%;
+  color: var(--ink);
+  line-height: 2;
   margin-bottom: 50px;
-}
-
-.ourphilosophy_contens {
-  color: #444;
 }
 
 .ourphilosophy_contens .bar {
   width: 3px;
-
   height: 50px;
-
-  background-color: #444;
-
+  background: #444;
   margin: 0 auto 100px;
-
 }
 
-.our_philosophy .text-area {
-  margin-bottom: 150px;
+.text-area .bar-w,
+.text-area02 .bar-w {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.text-area02 .bar-w {
+  margin: 20px 0;
 }
 
 .our_philosophy .text-area02 {
@@ -876,116 +625,269 @@ a:active {
   margin-bottom: 150px;
 }
 
-.text-area .bar-w {
-
-  border: none;
-
-  border-top: 1px solid #ccc;
-
-
-  margin: 20px auto;
-
-}
-
-.text-area02 .bar-w {
-
-  border: none;
-
-  border-top: 1px solid #ccc;
-
-
-  margin: 20px 0;
-
-}
-
 .accese {
   margin-bottom: 100px;
 }
 
-.reservation_cv {
-  background-color: #f7f7f7;
-}
-
-.cv-contens {
+.reservation {
   width: 1200px;
-  height: 300px;
+  height: 400px;
+  background: url("../images/reservation_bg.png") no-repeat;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.reservation h1 {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 55px;
+  color: #fff;
+  letter-spacing: .05em;
+}
+
+.reservation p {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+}
+
+.cvlink {
+  padding-top: 223px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
+  position: relative;
 }
 
-.cv-contens h1 {
-  color: #333;
-  margin-bottom: 50px;
+.reservation_cv {
+  background: var(--bg);
 }
 
-.cv-contens h2 {
-  color: #333;
+.reservation_cv img {
+  width: 100%;
+  display: block;
 }
 
-.pic {
-  margin-bottom: 100px;
+.reservation_cv .cv-contens {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
 }
 
-.yoyaku_txt {
-  color: #444;
-  margin-bottom: 100px;
-  line-height: 180%;
+.reservation_cv .cv-contens h1 {
+  /* color: #012d72; */
+  margin: 40px 0 8px;
+  letter-spacing: .03em;
+  text-align: center;
 }
 
-.formcv {
-  margin-bottom: 100px;
+.reservation_cv .cv-contens h2 {
+  /* color: #30404d; */
+  margin-bottom: 32px;
+  text-align: center;
 }
 
-.teltext {
-  color: #444;
-  line-height: 180%;
-  margin-bottom: 50px;
+.reservation_cv .yoyaku_txt {
+  color: #30404D;
+  line-height: 2;
+  margin: 24px 0 56px;
+  font-size: .95rem;
+  text-align: center;
+}
+
+.reservation_cv .reservation-page {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.reservation_cv .reservation-form {
+  /* max-width: 980px; */
+  width: 70%;
+  margin: 0 auto;
+}
+
+.reservation_cv fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.reservation_cv .form-row {
+  margin: 0 0 50px;
+}
+
+.reservation_cv .form-row.two {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 24px;
+}
+
+.reservation_cv .form-row.two .field {
+  flex: 1;
+}
+
+.reservation_cv .reservation-form label,
+.reservation_cv .reservation-form legend {
+  display: block;
+  font-size: 14px;
+  color: #30404d;
+  margin: 0 0 6px;
+  /* text-align: center; */
+}
+
+.tc{
+  text-align: center;
+margin: 0 auto;  
+}
+
+.reservation_cv input[type="text"],
+.reservation_cv input[type="email"],
+.reservation_cv input[type="tel"],
+.reservation_cv textarea {
+  width: 100%;
+  height: 48px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.reservation_cv textarea {
+  height: 260px;
+  resize: vertical;
+}
+
+.reservation_cv input:focus,
+.reservation_cv textarea:focus {
+  outline: 2px solid rgba(1, 45, 114, .15);
+  border-color: #cbd6ea;
+}
+
+.reservation_cv .radio {
+  margin-right: 16px;
+}
+
+.reservation_cv .require-note {
+  max-width: 980px;
+  margin: 0 auto 8px;
+  color: #6b7a86;
+  font-size: 12px;
+}
+
+.reservation_cv .fake-recaptcha {
+  max-width: 390px;
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  background: #eef3f8;
+  border: 1px solid #dde6f3;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #6b7a86;
 }
 
-.privacy_policy {
-  background-color: #f7f7f7;
+.reservation_cv .btn-primary {
+  display: block;
+  width: 500px;
+  margin: 18px auto 8px;
+  height: 56px;
+  border: 0;
+  border-radius: 2px;
+  background: #9fb6c3;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: .08em;
 }
 
-.privacy_policy .text-area {
-  margin-bottom: 150px;
+.reservation_cv .btn-primary:hover {
+  filter: brightness(.95);
 }
 
-.privacy_policy ul {
-  color: #333;
-  line-height: 180%;
-  list-style-type: none;
-  margin-bottom: 50px;
+.reservation_cv .submit-note {
+  text-align: center;
+  margin: 6px 0 22px;
+  color: #6b7a86;
+  font-size: 12px;
 }
 
-.privacy_policy p {
-  color: #444;
+.reservation_cv .tel-box {
+  max-width: 500px;
+  margin: 0 auto 120px;
+  border: 1px solid #e5e2d4;
+  background: #fbfaf5;
+}
+
+.reservation_cv .tel-inner {
+  display: flex;
+  gap: 20px;
+  padding: 22px;
+}
+
+.reservation_cv .tel-left {
+  flex: 0 0 220px;
+  color: #6b7a86;
+}
+
+.reservation_cv .tel-number {
+  font-size: 22px;
+  letter-spacing: .12em;
+}
+
+.reservation_cv .tel-time {
+  font-size: 12px;
+  color: #6b7a86;
+}
+
+footer {
+  color: #fff;
   font-size: 15px;
-  line-height: 180%;
-  margin-bottom: 50px;
+  background: #333;
+  padding: 60px 50px 80px;
+  line-height: 2;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
 }
 
-.privacy_policy h2 {
-  color: #333;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-bottom: 50px;
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
 
-.privacy_policy .pmb20 {
-  color: #444;
-  font-size: 15px;
-  line-height: 180%;
-  margin-bottom: 20px;
+footer h4 {
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
-.privacy_policy footer p {
-  color: #FFF;
+footer p {
+  color: #fff;
+}
+
+footer img.icon {
+  width: 14px;
+  height: auto;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+footer .icon {
+  vertical-align: middle;
+}
+
+footer .copy {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.reservation_cv hr {
+  display: none;
 }
