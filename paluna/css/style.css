@@ -1,143 +1,13 @@
 @charset "utf-8";
-
-/* -------------------------------------------------
-  Base / Global
-------------------------------------------------- */
-
 .home {
   background-color: #f7f7f7;
 }
-
-.collection,
-.details,
-.our_craft,
-.moments,
-.our_philosophy,
-.reservation_cv,
-.privacy_policy {
-  background-color: #f7f7f7;
-}
-
 .wrap {
   width: 1200px;
   margin: 0 auto;
+  /* 左右自動 → 中央寄せ */
   background-color: #f7f7f7;
 }
-
-main {
-  font-size: 15px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h1 {
-  font-size: 55px;
-  font-family: "Playfair Display SC", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h2 {
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 180%;
-}
-
-h3 {
-  font-size: 15px;
-  font-family: "Playfair Display SC", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-a {
-  color: #444;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #333;
-}
-
-a:active {
-  color: #012d72;
-}
-
-/* Utility classes */
-.df {
-  display: flex;
-}
-
-.f-center {
-  align-items: center;
-}
-
-.mb25 {
-  margin-bottom: 25px;
-}
-
-.mb50 {
-  margin-bottom: 50px;
-}
-
-.mb60 {
-  margin-bottom: 60px;
-}
-
-.mb100 {
-  margin-bottom: 100px;
-}
-
-.mb150 {
-  margin-bottom: 150px;
-}
-
-.mr15 {
-  margin-right: 15px;
-}
-
-.mr17 {
-  margin-right: 17px;
-}
-
-.mr22 {
-  margin-right: 22px;
-}
-
-.mr60 {
-  margin-right: 60px;
-}
-
-.mr80 {
-  margin-right: 80px;
-}
-
-.size35 {
-  font-size: 35px;
-}
-
-.icon {
-  vertical-align: middle;
-}
-
-.copy {
-  margin-top: 200px;
-  text-align: right;
-}
-
-.bold {
-  font-weight: 600;
-}
-
-/* -------------------------------------------------
-  Header / Navigation
-------------------------------------------------- */
-
 header {
   width: 1200px;
   height: 100px;
@@ -145,160 +15,177 @@ header {
   padding: 25px 50px;
   justify-content: space-between;
 }
-
+main {
+  font-size: 15px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 nav ul {
   display: flex;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
-
 nav li {
   display: flex;
-  justify-content: center; 
-  align-items: center;  
-  text-align: center; 
-  margin-right: 50px;
+  justify-content: center;
+  /* 左右中央 */
+  align-items: center;
+  /* 上下中央 */
+  text-align: center;
+  /* 複数行のときテキスト中央寄せ */
 }
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-/* .logo が nav の下にある例がないので、
-   これが本当に nav .logo 用なのか確認してね */
 nav .logo {
   margin: 30px 0 0 50px;
 }
-
-/* 予約ボタン */
 nav .cv {
   width: 169px;
   height: 50px;
-  background-color: #fff;
+  background-color: #FFF;
   display: flex;
   justify-content: center;
+  /* 左右中央 */
   align-items: center;
+  /* 上下中央 */
   text-align: center;
+  /* 複数行のときテキスト中央寄せ */
 }
-
+nav li {
+  margin-right: 50px;
+}
+nav .cv a {
+  color: #012d72;
+  font-weight: 600;
+}
+nav .cv a:link {
+  text-decoration: none;
+  color: #012d72;
+}
+nav .cv a:visited {
+  text-decoration: none;
+  color: #012d72;
+}
+nav .cv a:hover {
+  text-decoration: underline;
+  color: #012d72;
+}
+nav .cv a:active {
+  text-decoration: underline;
+  color: #012d72;
+}
 nav li a {
-  color: #fff;
+  color: #FFF;
   font-size: 15px;
   font-family: "Shippori Mincho", serif;
   font-weight: 400;
   font-style: normal;
-  text-decoration: none;
 }
-
-nav li a:hover,
-nav li a:active,
-nav li a:visited,
 nav li a:link {
-  color: #fff;
-  text-decoration: underline;
-}
-
-nav .cv a {
-  color: #012d72;
-  font-weight: 600;
   text-decoration: none;
+  color: #fff;
 }
-
-nav .cv a:hover,
-nav .cv a:active,
-nav .cv a:visited,
-nav .cv a:link {
-  color: #012d72;
+nav li a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+nav li a:hover {
   text-decoration: underline;
+  color: #fff;
 }
-
-/* -------------------------------------------------
-  Home: MV
-------------------------------------------------- */
-
+nav li a:active {
+  text-decoration: underline;
+  color: #fff;
+}
 .home .mv {
   width: 1200px;
   height: 600px;
   background: url("../images/mv_bg.png") no-repeat;
   padding: 100px 0 0 550px;
 }
-
 .home .mv h1 {
-  color: #fff;
+  color: #FFF;
   font-size: 45px;
   letter-spacing: 0.05em;
-  line-height: 100%;
+  /* ← 文字間隔を広げる */
   margin-bottom: 50px;
-  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
+  line-height: 100%;
+  /* 影 */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
 }
-
 .home .mv h2 {
-  color: #fff;
+  color: #FFF;
   font-size: 25px;
   font-family: "Shippori Mincho", serif;
   font-weight: 400;
   font-style: normal;
-  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
+  /* 影 */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
 }
-
-/* -------------------------------------------------
-  Home: First Step
-------------------------------------------------- */
-
 .the-first-step {
   position: relative;
+  /* h1の基準にする */
   text-align: center;
+  /* h1を横中央 */
   width: 1200px;
+  /* バナー幅 */
   height: 694px;
   background: url("../images/thefirststep_bg.png") no-repeat;
+  position: relative;
+  /* 親を基準にする */
 }
-
-.the-first-step h1 {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 55px;
-  color: #fff;
-  letter-spacing: 0.05em;
-}
-
-.the-first-step h2 {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 25px;
-  color: #fff;
-  letter-spacing: 0.05em;
-}
-
 .the-first-step .banner {
   padding-top: 313px;
   display: flex;
+  /* 中の要素を並べる */
   justify-content: center;
-  position: relative;
-  gap: 25px;
+  /* 横方向の位置調整（centerで真ん中寄せ） */
   color: #fff;
+  /* テキスト白に */
+  position: relative;
+  /* ボタンなど重ねる基準 */
+  gap: 25px;
 }
-
-.photo02 {
+.the-first-step h1 {
+  position: absolute;
+  /* バナーの上に重ねる */
+  top: 100px;
+  /* 上から100pxの位置に */
+  left: 50%;
+  /* 横中央に置く */
+  transform: translateX(-50%);
+  /* 横だけ中央補正 */
+  font-size: 55px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  /* ← 文字間隔を広げる */
+}
+.the-first-step h2 {
+  position: absolute;
+  /* バナーの上に重ねる */
+  top: 200px;
+  /* 上から150pxの位置に */
+  left: 50%;
+  /* 横中央に置く */
+  transform: translateX(-50%);
+  /* 横だけ中央補正 */
+  font-size: 25px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  /* ← 文字間隔を広げる */
+}
+.hoto02 {
   display: flex;
 }
-
-/* -------------------------------------------------
-  Home: Collection section
-------------------------------------------------- */
-
 .top_collection {
-  color: #444;
+  color: #444444;
 }
-
 .top_collection h1 {
   padding: 80px 120px;
 }
-
 .top_collection h2 {
   padding: 108px 0;
   font-size: 25px;
@@ -306,190 +193,38 @@ nav .cv a:link {
   font-weight: 500;
   font-style: normal;
 }
-
 .collectionbox {
   display: flex;
 }
-
 .collectionbox .bigitem {
   margin-right: 22px;
 }
-
+.pickuptxt {
+  height: 90px;
+}
+.pickuptxt h3 {
+  margin-top: 11px;
+}
+.pickuptxt p {
+  margin-bottom: 44px;
+}
 .c_photo02 {
   display: flex;
 }
-
-.item2 .item22,
+.item2 .item22 {
+  width: 278px;
+  height: 460px;
+  margin-right: 22px;
+}
 .item2 .item {
   width: 278px;
   height: 460px;
 }
+/* details */
 
-.item2 .item22 {
-  margin-right: 22px;
+.details {
+  background-color: #f7f7f7;
 }
-
-.pickuptxt {
-  height: 90px;
-}
-
-.pickuptxt h3 {
-  margin-top: 11px;
-  font-weight: 400;
-}
-
-.pickuptxt p {
-  margin-bottom: 44px;
-}
-
-/* text color for items in collection listing */
-.rings .item h3 {
-  color: #444;
-  margin: 10px 0;
-  font-weight: 500;
-}
-
-.rings .item p {
-  color: #444;
-  margin-bottom: 36px;
-}
-
-
-/* ===== Collection: MV（メインビジュアル） ===== */
-.mv_collection{
-  width: 1200px;
-  height: 600px;
-  background: url("../collection/images/mv_collection_bg.png") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;  
-  padding-right: 120px; 
-  margin: 0 auto 120px; 
-}
-
-.mv_collection h1{
-  color: #fff;
-  font-family: "Playfair Display SC", serif;
-  font-size: 55px;
-  letter-spacing: .05em;
-  line-height: 1;
-  margin: 0 0 20px;
-  text-shadow: 0 0 35px rgba(85,85,85,.75);
-}
-
-.mv_collection h2{
-  color: #fff;
-  font-family: "Shippori Mincho", serif;
-  font-size: 25px;
-  line-height: 1.6;
-  margin: 0;
-  text-shadow: 0 0 35px rgba(85,85,85,.75);
-}
-
-/* ===== Collection: サムネグリッド ===== */
-.rings{ width: 1200px; margin: 0 auto; }
-.rings > .df{
-  gap: 17px;
-  justify-content: space-between;
-  margin: 0 0 40px;
-}
-.rings .item{
-  width: 278px;
-}
-.rings .item img{
-  width: 100%;
-  height: 278px;
-  object-fit: cover;
-  display: block;
-  background: #eee;
-  border-radius: 4px;
-}
-.rings .item h3{
-  margin: 10px 0 6px;
-  color: #444;
-  font-weight: 500;
-}
-.rings .item p{
-  margin: 0 0 24px;
-  color: #444;
-}
-
-/* -------------------------------------------------
-  Home: Philosophy
-------------------------------------------------- */
-
-.our-philosophy {
-  width: 1200px;
-  height: 600px;
-  background: url("../images/ourphilosophy_bg.png") no-repeat;
-  margin-bottom: 50px;
-}
-
-.our-philosophy h1 {
-  color: #fff;
-  padding: 200px 0 30px 120px;
-}
-
-.our-philosophy h2 {
-  color: #fff;
-  padding-left: 120px;
-}
-
-.our-philosophy a {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 80px;
-}
-
-.our-philosophy p {
-  margin-bottom: 80px;
-}
-
-/* -------------------------------------------------
-  Home: Reservation block
-------------------------------------------------- */
-
-.reservation {
-  width: 1200px;
-  height: 400px;
-  background: url("../images/reservation_bg.png") no-repeat;
-  position: relative;
-  margin-bottom: 100px;
-}
-
-.reservation h1 {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 55px;
-  color: #fff;
-  letter-spacing: 0.05em;
-}
-
-.reservation p {
-  position: absolute;
-  top: 180px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  line-height: 1.8;
-  text-align: center;
-}
-
-.cvlink {
-  padding-top: 223px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  gap: 20px;
-}
-
-/* -------------------------------------------------
-  Details / Ring detail pages
-------------------------------------------------- */
-
 .ring-details {
   width: 1200px;
   height: 300px;
@@ -497,434 +232,101 @@ nav .cv a:link {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
-
 .ring-details h1 {
   color: #333;
   margin-bottom: 50px;
 }
-
 .ring-details h2 {
   color: #333;
 }
-
 .detail-ph {
   margin: 0 100px 100px;
 }
-
-.detail-contens {
-  display: flex;
-  margin: 100px 100px 0 0;
-}
-
-.detail-contens .cv {
-  margin-bottom: 100px;
-}
-
-.detail-txt h2 {
-  color: #333;
-  font-size: 35px;
-  margin-bottom: 17px;
-}
-
-.detail-txt h3 {
-  color: #444;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
+h1 {
+  font-size: 55px;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
   font-style: normal;
-  margin-bottom: 17px;
 }
-
-.detail-txt h4 {
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.detail-txt p {
-  color: #444;
+h2 {
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 180%;
-  margin-bottom: 37px;
 }
-
-.detail-txt img {
-  margin-bottom: 50px;
-}
-
-.details .banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* simple divider line */
-hr {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-
-.sorry {
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* -------------------------------------------------
-  our_craft
-------------------------------------------------- */
-
-.ourcraft_mv {
-  width: 1200px;
-  height: 600px;
-  background: url("../our_craft/images/our_craft_mv.png") no-repeat;
-  padding: 220px 0 0 700px;
-  margin-bottom: 200px;
-}
-
-.ourcraft_mv h1 {
-  color: #fff;
-  letter-spacing: 0.05em;
-  margin-bottom: 50px;
-  line-height: 100%;
-  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
-}
-
-.ourcraft_mv h2 {
-  color: #fff;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-shadow: 0 0 35px rgba(85, 85, 85, 0.75);
-}
-
-.text-area {
-  padding: 0 200px;
-}
-
-.ourcraft_contens {
-  color: #444;
-}
-
-.ourcraft_contens h2 {
-  color: #333;
-  margin-bottom: 100px;
-  font-size: 35px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.ourcraft_contens h3 {
-  color: #444;
-  margin-bottom: 50px;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.ourcraft_contens p {
-  color: #444;
-  line-height: 200%;
-  margin-bottom: 50px;
-}
-
-.bar {
-  width: 3px;
-  height: 50px;
-  background-color: #444;
-  margin: 0 auto 100px;
-}
-
-.banner {
-  margin-bottom: 150px;
-}
-
-.our_craft .banner {
-  margin-left: 100px;
-}
-
-/* -------------------------------------------------
-  moments
-------------------------------------------------- */
-
-.moments_mv {
-  width: 1200px;
-  height: 600px;
-  background: url("../moments/images/moments_mv.png") no-repeat;
-  padding: 270px 0 0 700px;
-  margin-bottom: 200px;
-}
-
-.moments_mv h1 {
-  color: #fff;
-  font-size: 45px;
-  letter-spacing: 0.05em;
-  margin-bottom: 50px;
-  line-height: 100%;
-  /* text-shadow: 0 0 35px rgba(85,85,85,0.75); */
-}
-
-.moments_mv h2 {
-  color: #fff;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 150%;
-  /* text-shadow: 0 0 35px rgba(85,85,85,0.75); */
-}
-
-.moment-contens h1 {
-  color: #333;
-  margin-bottom: 80px;
-}
-
-.moment-contens h2 {
-  color: #333;
-  font-size: 35px;
-  margin-bottom: 50px;
-}
-
-.moment-contens p {
-  color: #444;
-  line-height: 180%;
-  margin-bottom: 100px;
-}
-
-.episode-txt {
-  width: 748px;
-  padding: 100px 0 100px 100px;
-  margin-bottom: 200px;
-}
-
-.episode-txt h4 {
-  color: #444;
-  font-size: 25px;
-  margin-bottom: 50px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.episode-txt p {
-  color: #444;
+h3 {
   font-size: 15px;
-  line-height: 200%;
-  margin-bottom: 50px;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-
-/* -------------------------------------------------
-  our_philosophy page
-------------------------------------------------- */
-
-.ourphilosophy_mv {
+.our-philosophy {
   width: 1200px;
+  /* バナー幅 */
   height: 600px;
-  background: url("../our_philosophy/images/our_philosophy_mv.png") no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 200px;
-  text-align: center;
-}
-
-.ourphilosophy_mv h1 {
-  color: #fff;
-  letter-spacing: 0.05em;
-  line-height: 100%;
-  margin: 0 auto 50px;
-}
-
-.ourphilosophy_mv h2 {
-  color: #fff;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.t-logo {
-  margin-bottom: 25px;
-}
-
-.our_philosophy .text-area {
-  margin-bottom: 150px;
-}
-
-.our_philosophy .text-area h2 {
-  color: #333;
-  margin-bottom: 78px;
-}
-
-.our_philosophy .text-area h4 {
-  color: #333;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.ourphilosophy_contens {
-  color: #444;
-}
-
-.ourphilosophy_contens h2 {
-  color: #333;
-  margin-bottom: 100px;
-  font-size: 35px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.ourphilosophy_contens h3 {
-  color: #444;
-  margin-bottom: 50px;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.ourphilosophy_contens p {
-  color: #444;
-  line-height: 200%;
+  background: url("../images/ourphilosophy_bg.png") no-repeat;
   margin-bottom: 50px;
 }
-
-.ourphilosophy_contens .bar {
-  width: 3px;
-  height: 50px;
-  background-color: #444;
-  margin: 0 auto 100px;
+.our-philosophy h1 {
+  color: #FFF;
+  padding: 200px 0 30px 120px;
 }
-
-.text-area .bar-w,
-.text-area02 .bar-w {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 20px auto;
+.our-philosophy h2 {
+  color: #FFF;
+  padding-left: 120px;
 }
-
-.text-area02 .bar-w {
-  margin: 20px 0;
-}
-
-.our_philosophy .text-area02 {
+.our-philosophy a {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 150px;
+  justify-content: flex-end;
+  margin-right: 80px;
 }
-
-.our_philosophy .liora {
-  margin-left: 100px;
-  margin-bottom: 150px;
-}
-
-.accese {
-  margin-bottom: 100px;
-}
-
-/* -------------------------------------------------
-  reservation_cv page
-------------------------------------------------- */
-
-.cv-contens {
+.reservation {
   width: 1200px;
-  height: 300px;
+  height: 400px;
+  background: url("../images/reservation_bg.png") no-repeat;
+  position: relative;
+  /* 親を基準にする */
+  margin-bottom: 100px;
+}
+.reservation h1 {
+  font-size: 55px;
+  color: #fff;
+  position: absolute;
+  /* バナーの上に重ねる */
+  top: 100px;
+  /* 上から120pxの位置に */
+  left: 50%;
+  /* 横中央に置く */
+  transform: translateX(-50%);
+  /* 横だけ中央補正 */
+  letter-spacing: 0.05em;
+  /* ← 文字間隔を広げる */
+}
+.reservation p {
+  color: #fff;
+  position: absolute;
+  /* バナーの上に重ねる */
+  top: 180px;
+  /* 上から180pxの位置に */
+  left: 50%;
+  /* 横中央に置く */
+  transform: translateX(-50%);
+  /* 横だけ中央補正 */
+}
+.cvlink {
+  padding-top: 223px;
   display: flex;
-  flex-direction: column;
+  /* 中の要素を並べる */
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  /* 横方向の位置調整（centerで真ん中寄せ） */
+  position: relative;
+  /* ボタンなど重ねる基準 */
+  gap: 20px;
 }
-
-.cv-contens h1 {
-  color: #333;
-  margin-bottom: 50px;
-}
-
-.cv-contens h2 {
-  color: #333;
-}
-
-.pic {
-  margin-bottom: 100px;
-}
-
-.yoyaku_txt {
-  color: #444;
-  line-height: 180%;
-  margin-bottom: 100px;
-  text-align: center;
-}
-
-.formcv {
-  margin-bottom: 100px;
-}
-
-.teltext {
-  color: #444;
-  line-height: 180%;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* -------------------------------------------------
-  privacy_policy page
-------------------------------------------------- */
-
-.privacy_policy .text-area {
-  margin-bottom: 150px;
-}
-
-.privacy_policy ul {
-  color: #333;
-  line-height: 180%;
-  list-style-type: none;
-  margin-bottom: 50px;
-  padding: 0;
-}
-
-.privacy_policy p {
-  color: #444;
-  font-size: 15px;
-  line-height: 180%;
-  margin-bottom: 50px;
-}
-
-.privacy_policy h2 {
-  color: #333;
-  font-size: 25px;
-  font-family: "Shippori Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-bottom: 50px;
-}
-
-.privacy_policy .pmb20 {
-  color: #444;
-  font-size: 15px;
-  line-height: 180%;
-  margin-bottom: 20px;
-}
-
-/* -------------------------------------------------
-  Footer
-------------------------------------------------- */
-
 footer {
-  color: #fff;
+  color: #FFF;
   font-size: 15px;
   background-color: #333;
   padding: 100px 50px;
@@ -936,26 +338,524 @@ footer {
   font-weight: 400;
   font-style: normal;
 }
-
 footer a {
-  color: #fff;
+  color: #FFF;
   vertical-align: top;
-  text-decoration: none;
 }
-
-footer a:hover,
-footer a:active,
-footer a:visited,
 footer a:link {
+  text-decoration: none;
   color: #fff;
-  text-decoration: underline;
 }
-
+footer a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+footer a:active {
+  text-decoration: underline;
+  color: #fff;
+}
+.df {
+  display: flex;
+}
+.mb25 {
+  margin-bottom: 25px;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
+.mb60 {
+  margin-bottom: 60px;
+}
+.mb100 {
+  margin-bottom: 100px;
+}
+.mb150 {
+  margin-bottom: 150px;
+}
+.mr15 {
+  margin-right: 15px;
+}
+.mr17 {
+  margin-right: 17px;
+}
+.mr22 {
+  margin-right: 22px;
+}
+.mr60 {
+  margin-right: 60px;
+}
+.mr80 {
+  margin-right: 80px;
+}
+.copy {
+  margin-top: 200px;
+  text-align: right;
+}
 footer h4 {
   font-weight: 600;
   margin-bottom: 30px;
 }
+.icon {
+  vertical-align: middle;
+}
+.size35 {
+  font-size: 35px;
+}
+/* collection */
 
-footer p {
+.collection {
+  background-color: #f7f7f7;
+}
+.mv_collection {
+  width: 1200px;
+  height: 300px;
+  background: url("../collection/images/mv_collection_bg.png") no-repeat;
+  padding: 67px 0 0 700px;
+}
+.mv_collection h1 {
+  color: #FFF;
+  font-size: 45px;
+  letter-spacing: 0.05em;
+  /* ← 文字間隔を広げる */
+  margin-bottom: 50px;
+  line-height: 100%;
+  /* 影 */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+}
+.mv_collection h2 {
+  color: #FFF;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  /* 影 */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 15px rgba(85, 85, 85, 0.75);
+}
+.rings .item h3 {
+  color: #444;
+  margin: 10px 0;
+  font-weight: 500;
+}
+.rings .item p {
+  color: #444;
+  margin-bottom: 36px;
+}
+/* collection sylva */
+.detail-contens {
+  display: flex;
+  margin: 100px 100px 0 0;
+}
+.detail-contens .cv {
+  margin-bottom: 100px;
+}
+.detail-txt h2 {
+  color: #333;
+  font-size: 35px;
+  margin-bottom: 17px;
+}
+.detail-txt h3 {
+  color: #444;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 17px;
+}
+.detail-txt h4 {
+  color: #444;
+  margin-bottom: 15px;
+}
+.detail-txt p {
+  color: #444;
+  margin-bottom: 37px;
+  line-height: 180%;
+}
+.detail-txt img {
+  margin-bottom: 50px;
+}
+.details .banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  border: none;
+  /* デフォルトの影や余計な線を消す */
+  border-top: 1px solid #ccc;
+  /* 上に1px線 */
+  margin-bottom: 20px;
+}
+.sorry {
+  margin: 0 auto;
+}
+/* our_craft */
+
+.our_craft {
+  background-color: #f7f7f7;
+}
+.ourcraft_mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../our_craft/images/our_craft_mv.png") no-repeat;
+  padding: 220px 0 0 700px;
+  margin-bottom: 200px;
+}
+.ourcraft_mv h1 {
+  color: #FFF;
+  letter-spacing: 0.05em;
+  /* ← 文字間隔を広げる */
+  margin-bottom: 50px;
+  line-height: 100%;
+  /* 影 */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+}
+.ourcraft_mv h2 {
+  color: #FFF;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* 影 */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+}
+.text-area {
+  padding: 0 200px;
+}
+.ourcraft_contens h2 {
+  color: #333;
+  margin-bottom: 100px;
+  font-size: 35px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ourcraft_contens h3 {
+  color: #444;
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.ourcraft_contens p {
+  color: #444;
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+.ourcraft_contens {
+  color: #444;
+}
+.bar {
+  width: 3px;
+  /* 棒の太さ */
+  height: 50px;
+  /* 棒の長さ */
+  background-color: #444;
+  /* 棒の色（黒） */
+  margin: 0 auto 100px;
+  /* 上下余白＋中央寄せ */
+}
+.banner {
+  margin-bottom: 150px;
+}
+.our_craft .banner{
+  margin-left: 100px;
+}
+/* moments */
+.moments {
+  background-color: #f7f7f7;
+}
+.moments_mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../moments/images/moments_mv.png") no-repeat;
+  padding: 270px 0 0 700px;
+  margin-bottom: 200px;
+}
+.moments_mv h1 {
   color: #fff;
+  font-size: 45px;
+  letter-spacing: 0.05em;
+  /* ← 文字間隔を広げる */
+  margin-bottom: 50px;
+  line-height: 100%;
+  /* 影
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+  */
+}
+.moments_mv h2 {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  /* 影
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 35px rgba(85, 85, 85, 0.75);
+  */
+}
+.moment-contens h1 {
+  color: #333;
+  margin-bottom: 80px;
+}
+.moment-contens h2 {
+  color: #333;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.moment-contens p {
+  color: #444;
+  margin-bottom: 100px;
+  line-height: 180%;
+}
+.episode-txt {
+  width: 748px;
+  /* border: 1px solid #000;
+  */
+  padding: 100px 0 100px 100px;
+  margin-bottom: 200px;
+}
+.episode-txt h4 {
+  color: #444;
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.episode-txt p {
+  color: #444;
+  font-size: 15px;
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+/* our_philosophy */
+.our_philosophy {
+  background-color: #f7f7f7;
+}
+a:link {
+  text-decoration: none;
+  color: #444;
+}
+a:visited {
+  text-decoration: none;
+  color: #444;
+}
+a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+a:active {
+  text-decoration: underline;
+  color: #012d72;
+}
+.ourphilosophy_mv {
+  width: 1200px;
+  height: 600px;
+  background: url("../our_philosophy/images/our_philosophy_mv.png") no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.ourphilosophy_mv h1 {
+  color: #FFF;
+  letter-spacing: 0.05em;
+  /* ← 文字間隔を広げる */
+  line-height: 100%;
+  margin: 0 auto 50px;
+}
+.ourphilosophy_mv h2 {
+  color: #FFF;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.t-logo {
+  margin-bottom: 25px;
+}
+.our_philosophy .text-area h2 {
+  color: #333;
+  margin-bottom: 78px;
+}
+.our_philosophy .text-area h4 {
+  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.bold {
+  font-weight: 600;
+}
+.our-philosophy p {
+  margin-bottom: 80px;
+}
+.ourphilosophy_contens h2 {
+  color: #333;
+  margin-bottom: 100px;
+  font-size: 35px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ourphilosophy_contens h3 {
+  color: #444;
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.ourphilosophy_contens p {
+  color: #444;
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+.ourphilosophy_contens {
+  color: #444;
+}
+.ourphilosophy_contens .bar {
+  width: 3px;
+  /* 棒の太さ */
+  height: 50px;
+  /* 棒の長さ */
+  background-color: #444;
+  /* 棒の色（黒） */
+  margin: 0 auto 100px;
+  /* 上下余白＋中央寄せ */
+}
+.our_philosophy .text-area {
+  margin-bottom: 150px;
+}
+.our_philosophy .text-area02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.our_philosophy .liora {
+  margin-left: 100px;
+  margin-bottom: 150px;
+}
+.text-area .bar-w {
+  /* 棒の太さ */
+  border: none;
+  /* デフォルトの影や余計な線を消す */
+  border-top: 1px solid #ccc;
+  /* 上に1px線 */
+  /* 棒の長さ */
+  margin: 20px auto;
+  /* 上下余白＋中央寄せ */
+}
+.text-area02 .bar-w {
+  /* 棒の太さ */
+  border: none;
+  /* デフォルトの影や余計な線を消す */
+  border-top: 1px solid #ccc;
+  /* 上に1px線 */
+  /* 棒の長さ */
+  margin: 20px 0;
+  /* 上下余白＋中央寄せ */
+}
+.accese {
+  margin-bottom: 100px;
+}
+/* reservation_cv */
+
+.reservation_cv {
+  background-color: #f7f7f7;
+}
+.cv-contens {
+  width: 1200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cv-contens h1 {
+  color: #333;
+  margin-bottom: 50px;
+}
+.cv-contens h2 {
+  color: #333;
+}
+.pic {
+  margin-bottom: 100px;
+}
+.yoyaku_txt {
+  color: #444;
+  margin-bottom: 100px;
+  line-height: 180%;
+}
+.formcv {
+  margin-bottom: 100px;
+}
+.teltext {
+  color: #444;
+  line-height: 180%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* privacy_policy */
+
+.privacy_policy {
+  background-color: #f7f7f7;
+}
+.privacy_policy .text-area {
+  margin-bottom: 150px;
+}
+.privacy_policy ul {
+  color: #333;
+  line-height: 180%;
+  list-style-type: none;
+  margin-bottom: 50px;
+}
+.privacy_policy p {
+  color: #444;
+  font-size: 15px;
+  line-height: 180%;
+  margin-bottom: 50px;
+}
+.privacy_policy h2 {
+  color: #333;
+  font-size: 25px;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 50px;
+}
+.privacy_policy .pmb20 {
+  color: #444;
+  font-size: 15px;
+  line-height: 180%;
+  margin-bottom: 20px;
+}
+.privacy_policy footer p {
+  color: #FFF;
 }
