@@ -1,210 +1,226 @@
 <!DOCTYPE HTML>
 <html lang="ja">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Paluna | Reservation</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Paluna 来店予約フォーム。ご相談や下見も、予約ならスムーズにご案内可能です。">
-  <link href="../css/reset.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width,initial-scale=1">
+       <title>Paluna | Reservation</title>
+       <meta name="robots" content="noindex, nofollow">
+       <meta name="description" content="Paluna 来店予約フォーム。ご相談や下見も、予約ならスムーズにご案内可能です。">
+       <link href="../css/reset.css" rel="stylesheet">
+       <link href="../css/style.css" rel="stylesheet">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+              rel="stylesheet">
 </head>
+
 <body class="reservation_cv">
-  <div class="wrap">
+       <div class="wrap">
 
-    <!-- header -->
-    <header class="df">
-      <div class="logo">
-        <a href="../index.html"><img src="../images/paluna_logo.png" alt="Paluna"></a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../collection/index.html">Collection</a></li>
-          <li><a href="../our_craft/index.html">Our craft</a></li>
-          <li><a href="../moments/index.html">Moments</a></li>
-          <li><a href="../our_philosophy/index.html">Our philosophy</a></li>
-          <li class="cv"><a href="index.html">Reservation</a></li>
-        </ul>
-      </nav>
-    </header>
+              <!-- header -->
+              <header class="df">
+                     <div class="logo">
+                            <a href="../index.html"><img src="../images/paluna_logo.png" alt="Paluna"></a>
+                     </div>
+                     <nav>
+                            <ul>
+                                   <li><a href="../index.html">Home</a></li>
+                                   <li><a href="../collection/index.html">Collection</a></li>
+                                   <li><a href="../our_craft/index.html">Our craft</a></li>
+                                   <li><a href="../moments/index.html">Moments</a></li>
+                                   <li><a href="../our_philosophy/index.html">Our philosophy</a></li>
+                                   <li class="cv"><a href="index.html">Reservation</a></li>
+                            </ul>
+                     </nav>
+              </header>
 
-    <main>
-      <div class="cv-contens mb100">
-        <h1>Reservation</h1>
-        <h2>来店予約</h2>
-      </div>
+              <main>
+                     <div class="cv-contens mb100">
+                            <h1>Reservation</h1>
+                            <h2>来店予約</h2>
+                     </div>
 
-      <section class="reservation-page">
-        <p class="yoyaku_txt">
-          大切な人へ、心に残るサプライズを。<br>
-          Palunaでは、ご来店いただくその瞬間から特別な体験を感じていただけます。<br>
-          ご相談や下見も、予約ならスムーズにご案内可能です。
-        </p>
+                     <section class="reservation-page">
+                            <p class="yoyaku_txt">
+                                   大切な人へ、心に残るサプライズを。<br>
+                                   Palunaでは、ご来店いただくその瞬間から特別な体験を感じていただけます。<br>
+                                   ご相談や下見も、予約ならスムーズにご案内可能です。
+                            </p>
 
-       <form class="reservation-form" action="../index.html" method="get" novalidate>
+                            <form class="reservation-form" action="../thankyou.html" method="get" novalidate>
 
-          <p class="require-note">＊必須項目</p>
+                                   <p class="require-note">＊必須項目</p>
 
-          <!-- 氏名 -->
-          <div class="form-row two">
-            <div class="field">
-              <label for="lname">姓 <span class="req">*</span></label>
-              <input id="lname" name="last_name" type="text" autocomplete="family-name" required>
-            </div>
-            <div class="field">
-              <label for="fname">名 <span class="req">*</span></label>
-              <input id="fname" name="first_name" type="text" autocomplete="given-name" required>
-            </div>
-          </div>
+                                   <!-- 氏名 -->
+                                   <div class="form-row two">
+                                          <div class="field">
+                                                 <label for="lname">姓 <span class="req">*</span></label>
+                                                 <input id="lname" name="last_name" type="text"
+                                                        autocomplete="family-name" required>
+                                          </div>
+                                          <div class="field">
+                                                 <label for="fname">名 <span class="req">*</span></label>
+                                                 <input id="fname" name="first_name" type="text"
+                                                        autocomplete="given-name" required>
+                                          </div>
+                                   </div>
 
-          <!-- セイ/メイ -->
-          <div class="form-row two">
-            <div class="field">
-              <label for="lkana">セイ <span class="req">*</span></label>
-              <input id="lkana" name="last_kana" type="text" inputmode="kana">
-            </div>
-            <div class="field">
-              <label for="fkana">メイ <span class="req">*</span></label>
-              <input id="fkana" name="first_kana" type="text" inputmode="kana" required>
-            </div>
-          </div>
+                                   <!-- セイ/メイ -->
+                                   <div class="form-row two">
+                                          <div class="field">
+                                                 <label for="lkana">セイ <span class="req">*</span></label>
+                                                 <input id="lkana" name="last_kana" type="text" inputmode="kana">
+                                          </div>
+                                          <div class="field">
+                                                 <label for="fkana">メイ <span class="req">*</span></label>
+                                                 <input id="fkana" name="first_kana" type="text" inputmode="kana"
+                                                        required>
+                                          </div>
+                                   </div>
 
-          <!-- 性別 -->
-          <div class="form-row">
-            <fieldset class="field">
-              <legend>性別 <span class="req">*</span></legend>
-              <label class="radio"><input type="radio" name="gender" value="female" required>女性</label>
-              <label class="radio"><input type="radio" name="gender" value="male">男性</label>
-              <label class="radio"><input type="radio" name="gender" value="other">その他</label>
-            </fieldset>
-          </div>
+                                   <!-- 性別 -->
+                                   <div class="form-row">
+                                          <fieldset class="field">
+                                                 <legend>性別 <span class="req">*</span></legend>
+                                                 <label class="radio"><input type="radio" name="gender" value="female"
+                                                               required>女性</label>
+                                                 <label class="radio"><input type="radio" name="gender"
+                                                               value="male">男性</label>
+                                                 <label class="radio"><input type="radio" name="gender"
+                                                               value="other">その他</label>
+                                          </fieldset>
+                                   </div>
 
-          <!-- メール -->
-          <div class="form-row">
-            <div class="field">
-              <label for="email">メールアドレス <span class="req">*</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-          </div>
+                                   <!-- メール -->
+                                   <div class="form-row">
+                                          <div class="field">
+                                                 <label for="email">メールアドレス <span class="req">*</span></label>
+                                                 <input id="email" name="email" type="email" autocomplete="email"
+                                                        required>
+                                          </div>
+                                   </div>
 
-          <!-- 電話 -->
-          <div class="form-row">
-            <div class="field">
-              <label for="tel">電話番号（半角数字） <span class="req">*</span></label>
-              <input id="tel" name="tel" type="tel" inputmode="numeric" pattern="[0-9\-]{10,13}" placeholder="例）0312345678" required>
-              <small class="help">ハイフンを省き、半角でご入力ください。</small>
-            </div>
-          </div>
+                                   <!-- 電話 -->
+                                   <div class="form-row">
+                                          <div class="field">
+                                                 <label for="tel">電話番号（半角数字） <span class="req">*</span></label>
+                                                 <input id="tel" name="tel" type="tel" inputmode="numeric"
+                                                        pattern="[0-9\-]{10,13}" placeholder="例）0312345678" required>
+                                                 <small class="help">ハイフンを省き、半角でご入力ください。</small>
+                                          </div>
+                                   </div>
 
-          <!-- 郵便番号 -->
-          <div class="form-row">
-            <div class="field">
-              <label for="zip">郵便番号 <span class="req">*</span></label>
-              <input id="zip" name="zip" type="text" inputmode="numeric" pattern="\d{3}-?\d{4}" placeholder="例）1070062" required>
-              <small class="help">ハイフンは自動挿入されます。</small>
-            </div>
-          </div>
+                                   <!-- 郵便番号 -->
+                                   <div class="form-row">
+                                          <div class="field">
+                                                 <label for="zip">郵便番号 <span class="req">*</span></label>
+                                                 <input id="zip" name="zip" type="text" inputmode="numeric"
+                                                        pattern="\d{3}-?\d{4}" placeholder="例）1070062" required>
+                                                 <small class="help">ハイフンは自動挿入されます。</small>
+                                          </div>
+                                   </div>
 
-          <!-- ご希望・備考 -->
-          <div class="form-row">
-            <div class="field">
-              <label for="note">ご希望の日時、その他ご要望があればご記入ください。（任意）</label>
-              <textarea id="note" name="note" rows="8"></textarea>
-            </div>
-          </div>
+                                   <!-- ご希望・備考 -->
+                                   <div class="form-row">
+                                          <div class="field">
+                                                 <label for="note">ご希望の日時、その他ご要望があればご記入ください。（任意）</label>
+                                                 <textarea id="note" name="note" rows="8"></textarea>
+                                          </div>
+                                   </div>
 
-          <!-- 同意 -->
-          <div class="form-row">
-            <label class="agree tc">
-              <input type="checkbox" name="agree" required>
-              本フォームに記載した個人情報がお問い合わせ内容の対応のために取り扱われることに同意します。
-            </label>
-          </div>
+                                   <!-- 同意 -->
+                                   <div class="form-row">
+                                          <label class="agree tc">
+                                                 <input type="checkbox" name="agree" required>
+                                                 本フォームに記載した個人情報がお問い合わせ内容の対応のために取り扱われることに同意します。
+                                          </label>
+                                   </div>
 
-          <!-- reCAPTCHA（ダミー。実装時は公式ウィジェットへ差し替え） -->
-          <div class="form-row">
-            <div class="fake-recaptcha" aria-hidden="true">reCAPTCHAで保護されています</div>
-          </div>
+                                   <!-- reCAPTCHA（ダミー。実装時は公式ウィジェットへ差し替え） -->
+                                   <div class="form-row">
+                                          <div class="fake-recaptcha" aria-hidden="true">reCAPTCHAで保護されています</div>
+                                   </div>
 
-          <!-- 送信 -->
-          <div class="form-row">
-            <button class="btn-primary" type="submit">送信する</button>
-            <p class="submit-note">お電話でもご予約を受け付けております</p>
-          </div>
-        </form>
+                                   <!-- 送信 -->
+                                   <div class="form-row">
+                                          <button class="btn-primary" type="submit">送信する</button>
+                                          <p class="submit-note">お電話でもご予約を受け付けております</p>
+                                   </div>
+                            </form>
 
-        <!-- 電話ボックス -->
-        <div class="tel-box">
-          <div class="tel-inner">
-            <div class="tel-left">予約専用ダイヤル</div>
-            <div class="tel-right">
-              <div class="tel-number">0120-000-000</div>
-              <div class="tel-time">［ 9：30〜16：00・通話無料 ］</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+                            <!-- 電話ボックス -->
+                            <div class="tel-box">
+                                   <div class="tel-inner">
+                                          <div class="tel-left">予約専用ダイヤル</div>
+                                          <div class="tel-right">
+                                                 <div class="tel-number">0120-000-000</div>
+                                                 <div class="tel-time">［ 9：30〜16：00・通話無料 ］</div>
+                                          </div>
+                                   </div>
+                            </div>
+                     </section>
+              </main>
 
-    <!-- footer -->
-    <footer class="df">
-      <div class="mr60">
-        <img class="mb60" src="../images/footer_logo.png" alt="Paluna ロゴ">
-        <p>〒107-0062<br>東京都港区南青山5丁目123</p>
-        <p>
-          <a class="icon" href="https://maps.app.goo.gl/iX84MQPxsgChyLKy7" target="_blank" rel="noopener">
-            Google Maps <img class="icon" src="../images/yajirushi.png" alt="">
-          </a>
-        </p>
-      </div>
+              <!-- footer -->
+              <footer class="df">
+                     <div class="mr60">
+                            <img class="mb60" src="../images/footer_logo.png" alt="Paluna ロゴ">
+                            <p>〒107-0062<br>東京都港区南青山5丁目123</p>
+                            <p>
+                                   <a class="icon" href="https://maps.app.goo.gl/iX84MQPxsgChyLKy7" target="_blank"
+                                          rel="noopener">
+                                          Google Maps <img class="icon" src="../images/yajirushi.png" alt="">
+                                   </a>
+                            </p>
+                     </div>
 
-      <div class="df f-center">
-        <div class="df mr80">
-          <div>
-            <h4>contents</h4>
-            <p>
-              <a href="../index.html">Home</a><br>
-              <a href="../collection/index.html">Collection</a><br>
-              <a href="../our_craft/index.html">Our craft</a><br>
-              <a href="../moments/index.html">Moments</a>
-            </p>
-            <a href="../our_philosophy/index.html">Our philosophy</a><br>
-          </div>
-        </div>
-        <div>
-          <h4>Infomation</h4>
-          <p class="mb50"><a href="../privacy_policy/index.html">Privacy Policy</a></p>
-          <h4>Social</h4>
-          <p>
-            <a class="icon" href="https://www.instagram.com/" target="_blank" rel="noopener">
-              <img class="icon" src="../images/IG_icon.png" alt="">Instagram
-            </a>
-          </p>
-        </div>
-      </div>
+                     <div class="df f-center">
+                            <div class="df mr80">
+                                   <div>
+                                          <h4>contents</h4>
+                                          <p>
+                                                 <a href="../index.html">Home</a><br>
+                                                 <a href="../collection/index.html">Collection</a><br>
+                                                 <a href="../our_craft/index.html">Our craft</a><br>
+                                                 <a href="../moments/index.html">Moments</a>
+                                          </p>
+                                          <a href="../our_philosophy/index.html">Our philosophy</a><br>
+                                   </div>
+                            </div>
+                            <div>
+                                   <h4>Infomation</h4>
+                                   <p class="mb50"><a href="../privacy_policy/index.html">Privacy Policy</a></p>
+                                   <h4>Social</h4>
+                                   <p>
+                                          <a class="icon" href="https://www.instagram.com/" target="_blank"
+                                                 rel="noopener">
+                                                 <img class="icon" src="../images/IG_icon.png" alt="">Instagram
+                                          </a>
+                                   </p>
+                            </div>
+                     </div>
 
-      <div>
-        <a href="index.html"><img src="../images/reservation.png" alt="RESERVATION"></a><br>
-        <a href="../our_philosophy/index.html#access"><img src="../images/access.png" alt="ACCESS"></a>
-        <p class="copy">©2025 Paluna</p>
-      </div>
-    </footer>
-  </div>
+                     <div>
+                            <a href="index.html"><img src="../images/reservation.png" alt="RESERVATION"></a><br>
+                            <a href="../our_philosophy/index.html#access"><img src="../images/access.png"
+                                          alt="ACCESS"></a>
+                            <p class="copy">©2025 Paluna</p>
+                     </div>
+              </footer>
+       </div>
 
-  <!-- 任意：郵便番号の自動ハイフン -->
-  <script>
-    (function () {
-      const zip = document.getElementById('zip');
-      if (!zip) return;
-      zip.addEventListener('input', () => {
-        const v = zip.value.replace(/\D/g, '').slice(0,7);
-        zip.value = v.length > 3 ? v.slice(0,3) + '-' + v.slice(3) : v;
-      });
-    })();
-  </script>
+       <!-- 任意：郵便番号の自動ハイフン -->
+       <script>
+              (function () {
+                     const zip = document.getElementById('zip');
+                     if (!zip) return;
+                     zip.addEventListener('input', () => {
+                            const v = zip.value.replace(/\D/g, '').slice(0, 7);
+                            zip.value = v.length > 3 ? v.slice(0, 3) + '-' + v.slice(3) : v;
+                     });
+              })();
+       </script>
 </body>
+
 </html>
