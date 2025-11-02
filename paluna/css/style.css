@@ -359,8 +359,7 @@ nav .cv a:link {
 .mv_collection{
   width: 1200px;
   height: 600px;
-  /* ここを実際の画像名に合わせてください */
-  background: url("../collection/images/collection_mv.png") center/cover no-repeat;
+  background: url("../collection/images/mv_collection_bg.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
