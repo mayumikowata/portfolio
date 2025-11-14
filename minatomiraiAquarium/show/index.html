@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>みなとみらい水族館</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+<body>
+    <!-------------------------- ヘッダーここから -------------------------->
+    <header id="header">
+        <div>
+            <a href="../index.html"><img src="../img/header_logo.png" alt="みなとみらい水族館"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li class="nav_event">
+                    <span>イベント</span>
+                    <ul class="nav_event_sub">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>  
+        </nav>
+        <div class="hamburger_btn">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="slide_menu" id="slideMenu">
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li>
+                    <span>イベント</span>
+                    <ul class="sub_menu">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    
+    <div class="show_mv">
+        <img src="../img/show_mv_2.png" alt="ショーでいるかがジャンプしている様子">
+    </div>
+
+    <div class="show_header contents_wrapper wave_color_white">
+        <div class="show_midashi">
+            <div><img src="../img/Title_bubble_left.png" alt=""></div>
+            <h2>ショー</h2>
+            <div><img src="../img/title_bubble_right.png" alt=""></div>
+        </div>
+
+        <div class="show_info">
+            <h5>海のなかまと、心つながるステージ</h5>
+            <p class="center_text">光と水しぶきに包まれながら海の生き物たちの知恵や力、<br>そしてかわいらしい姿を間近で楽しめるパフォーマンスです。<br>イルカ、アザラシ、ペンギンたちがそれぞれの魅力を活かしたステージで、<br>あなたを海の世界へと誘います。</p>
+        </div>
+        <canvas class="waveCanvas_two_waves"></canvas>
+    </div>
+        
+   
+    
+    <!-------------------------- ヘッダーここまで --------------------------> 
+
+    <main>
+
+     <!-------------------------- アザラシショーここから　-------------------------->
+        <div class="azarashi_show contents_wrapper wave_color_main" id="azarashi_show">
+            <div class="show_azarashi_midashi"><h3>アザラシショー</h3></div>
+            <div class="azarashi_show_img">
+                <div class="azarashi_swim">
+                    <img src="../img/show_azarashi_swim.png" alt="プールの中を泳いでいるアザラシ"> 
+                    <p>ころんとした体で器用にバランスをとったり、<br>拍手やごあいさつを披露する姿は必見！<br>ユーモラスでかわいらしいパフォーマンスに、癒されます。</p> 
+                </div>
+                <div class="azarashi_hand">
+                    <p>水中ではすいすい泳ぎ、陸上ではちょっとのんびり。<br>そんなギャップもアザラシの魅力。</p>
+                    <img src="../img/show_azarashi_hand.png" alt="飼育員の手にタッチするアザラシ">
+                </div>
+            </div>
+
+            <div class="azarashi_show_border">
+
+                <div>
+                    <h4>開催時間</h4>
+                            <ul class="show_time">
+                                <li>11:30</li>
+                                <li>13:00</li>
+                                <li>14:30</li>
+                                <li>16:00</li>
+                            </ul>
+                </div>
+
+                <div>
+
+                        <h4>場所</h4>
+
+                        <div class="show_spot">
+                        <img src="../img/show_map_pin.png" alt="">
+                        <p>2F アザラシプール</p>
+                        </div>
+                     
+                </div>
+
+                <div>
+                    <h4>所要時間</h4>
+                        <div class="show_needtime">
+                            <img src="../img/show_tokei.png" alt="">
+                            <p>15分</p>
+                        </div>
+                </div>
+                    <div class="show_fish_2 pukapuka"><img src="../img/show_fish_2.png" alt=""></div>
+                    <div class="show_azarashi"><img src="../img/show_azarashi_illust.png" alt=""></div>
+            </div>
+
+                <div class="show_awa_1 pukapuka"><img src="../img/show_awa_1.png" alt=""></div>
+                <div class="show_fish_1 bg_img pukapuka"><img src="../img/show_fish_1.png" alt=""></div>
+
+                <canvas class="waveCanvas_two_waves"></canvas>
+        </div>
+    
+     
+     
+        <!-------------------------- アザラシショーここまで　-------------------------->
+
+        <!-------------------------- イルカショーここから　-------------------------->
+
+        <div class="iruka_show contents_wrapper wave_color_white " id="iruka_show">
+            <div class="show_iruka_midashi"><h3>イルカショー</h3></div>
+            <div class="iruka_show_img">
+                <div class="iruka_pool">
+                    <div class=""><p>青い海を切り裂くようなジャンプや華麗なスピン。<br>息の合ったパフォーマンスに、<br>思わず歓声が上がる瞬間をお楽しみください。</p></div>
+                    <img src="../img/show_iruka_pool.png" alt="プールから顔を出すイルカ">  
+                </div>
+                <div class="iruka_boal">
+                    <img src="../img/show_iruka_boal.png" alt="口にボールを乗せるイルカ">
+                    <p>トレーナーとイルカが交わすアイコンタクトや合図の<br>ひとつひとつに、信頼関係の深さがにじみます。<br>まるで心が通じ合っているような感動のステージです。</p>
+                </div>
+            </div>
+
+            <div class="iruka_show_border">
+
+                <div>
+                    <h4>開催時間</h4>
+                            <ul class="show_time">
+                                <li>10:30</li>
+                                <li>12:00</li>
+                                <li>13:00</li>
+                                <li>16:30</li>
+                            </ul>
+                </div>
+
+                <div>
+
+                        <h4>場所</h4>
+
+                        <div class="show_spot">
+                        <img src="../img/show_map_pin.png" alt="">
+                        <p>1F イルカスタジアム</p>
+                        </div>
+                     
+                </div>
+
+                <div>
+                    <h4>所要時間</h4>
+                        <div class="show_needtime">
+                            <img src="../img/show_tokei.png" alt="">
+                            <p>20分</p>
+                        </div>
+                </div>
+
+                <div class="show_iruka_illust"><img src="../img/show_iruka.png" alt=""></div>
+
+            </div>
+
+            <div class="show_awa_2 pukapuka"><img src="../img/show_awa_2.png" alt=""></div>
+            <div class="show_fish_3 pukapuka"><img src="../img/show_fish_3.png" alt=""></div>
+            <div class="show_fish_4 pukapuka"><img src="../img/show_fish_4.png" alt=""></div>
+
+            <canvas class="waveCanvas_two_waves"></canvas>
+        </div>
+    
+    
+
+        <!-------------------------- イルカショーここまで　-------------------------->
+
+        <!-------------------------- ペンギンショーここから　-------------------------->
+
+        <div class="pengin_show contents_wrapper">
+            <div class="show_azarashi_midashi"><h3>ペンギンショー</h3></div>
+            <div class="azarashi_show_img">
+                <div class="azarashi_swim">
+                    <img src="../img/show_pengin_stand.png" alt="直立しているイワトビペンギン"> 
+                    <p>水に飛び込めば一転、流線型の体でスピード全開。<br>陸と海の両方で見せる姿に、ペンギンたちの<br>かわいらしさとたくましさを感じてください。</p> 
+                </div>
+                <div class="azarashi_hand">
+                    <p>よちよち歩きで大行進！<br>小さな翼を広げて走るペンギンたちの姿は、<br>会場をほっこりとした空気で包み込みます。</p>
+                    <img src="../img/show_pengin_swim.png" alt="プールの中を泳いでいるペンギン">
+                </div>
+            </div>
+
+        <div class="pengin_show_border_box last_section">
+            <div class="pengin_show_border">
+
+                <div>
+                    <h4>開催時間</h4>
+                            <ul class="show_time">
+                                <li>11:00</li>
+                                <li>14:30</li>
+                                <li>15:30</li>
+                            </ul>
+                </div>
+
+                <div>
+
+                        <h4>場所</h4>
+
+                        <div class="show_spot">
+                        <img src="../img/show_map_pin.png" alt="">
+                        <p>1F ペンギンランド</p>
+                        </div>
+                     
+                </div>
+
+                <div>
+                    <h4>所要時間</h4>
+                        <div class="show_needtime">
+                            <img src="../img/show_tokei.png" alt="">
+                            <p>15分</p>
+                        </div>
+                </div>
+
+            <div class="show_awa_3 pukapuka"><img src="../img/show_awa_3.png" alt=""></div>
+            <div class="show_fish_5 pukapuka"><img src="../img/show_fish_2.png" alt=""></div>
+            <div class="show_fish_6 pukapuka"><img src="../img/show_sakana6.png" alt=""></div>
+            <div class="show_pengin_illust"><img src="../img/show_pengin_illust.png" alt=""></div>
+
+            </div>
+        </div>
+        <!-------------------------- ペンギンショーここまで　-------------------------->
+
+        <div class="footer_seaWeed sp_rescale_img"><img src="../img/seaweed.png" alt=""></div>
+        <div class="footer_starFish sp_rescale_img"><img src="../img/starfish.png" alt=""></div>
+    </main>
+
+
+     <!-------------------------- フッターここから　-------------------------->
+    <footer>
+        <div class="footer_container">
+            <div class="img_area"><a href="../index.html"><img src="../img/footer_logo.png" alt="みなとみらい水族館"></a></div>
+            <div class="menu_area">
+                <ul>
+                    <li><a href="../index.html">トップ</a></li>
+                    <li class="event_has_sub">
+                        <span>イベント</span>
+                        <ul>
+                            <li><a href="../show/index.html">ショー</a></li>
+                            <li><a href="../esa/index.html">えさやり体験</a></li>
+                            <li><a href="../work/index.html">ワークショップ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                    <li><a href="../access/index.html">アクセス</a></li>
+                    <li><a href="../user_guide/index.html">ご利用案内</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../qa/index.html">よくあるご質問・お問い合わせ</a></li>
+                    <li><a href="../privacyPolicy/index.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyWrite"><small>&copy;みなとみらい水族館 2025</small></div>
+    </footer>
+    <!-------------------------- フッターここまで　-------------------------->
+    <script src="../js/hamburger_btn.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/waveTwoWaves.js"></script>
+    <script src="../js/waveThreeWaves.js"></script>
+    <script src="../js/waveForButton.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>みなとみらい水族館</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+
+
+<body>
+    <!-------------------------- ヘッダーここから -------------------------->
+    <header id="header">
+        <div>
+            <a href="../index.html"><img src="../img/header_logo.png" alt="みなとみらい水族館"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li class="nav_event">
+                    <span>イベント</span>
+                    <ul class="nav_event_sub">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>  
+        </nav>
+        <div class="hamburger_btn">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="slide_menu" id="slideMenu">
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li>
+                    <span>イベント</span>
+                    <ul class="sub_menu">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <div class="contents_wrapper wave_color_white qa_mv_wrapper">
+        <div><img src="../img/qa_mv.png" alt=""></div>
+        <canvas class="waveCanvas_three_waves"></canvas>
+    </div>    
+    <!-------------------------- ヘッダーここまで -------------------------->
+
+    <main id="privacyPolicy">
+        <!-------------------------- ここから -------------------------->
+        <div  class="contents_wrapper wave_color_main privacyPolicy_wrapper">
+            <section class="privacyPolicy_section_container contents_container">
+                <div class="main_heading">
+                    <div><img src="../img/Title_bubble_left.png" alt=""></div>
+                    <h2><a href="">プライバシーポリシー</a></h2>
+                    <div><img src="../img/title_bubble_right.png" alt=""></div>
+                </div>
+                <p>
+                    みなとみらい水族館（以下、弊社といいます。）は、個人情報の保護は弊社が事業活動を行うにあたっての基礎であるとともに、弊社の社会的責任であると認識しております。<br>
+                    弊社は、弊社の製品やサービスに関する情報をはじめ、お客様からご提供いただいた個人情報等、多種多様な情報を取り扱っております。<br>
+                    弊社は個人情報保護について、関連規程の制定及び管理体制の確立を図るとともに、以下のとおりプライバシーポリシーを定め、弊社役員及び従業員に周知徹底し、本方針に従って個人情報を適切に利用、管理及び保護することといたします。
+                </p>
+                <div class="privacyPolicy_contents_container">
+                    <h4>1. 個人情報の収集、利用及び提供について</h4>
+                    <p>弊社は、事業活動を行うにあたって、お客様の大切な情報をご提供いただいていることを踏まえ、各業務実態に応じて個人情報を保護するための情報管理体制を確立し、個人情報の収集、利用及び提供に関して所定の規程に則り適切な取り扱いをいたします。</p>    
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>2. 法令の遵守について</h4>
+                    <p>弊社は、個人情報の取り扱いに関して、法令を遵守いたします。</p>    
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>3. 安全対策について</h4>
+                    <p>弊社は、個人情報を保護するため、情報セキュリティに関する規程に基づき、当該個人情報の管理、個人情報の持ち出し方法の指定、第三者からの不正アクセスの防止等の対策を行い、個人情報の漏洩、紛失、改ざん、破壊等の予防を図ります。</p>    
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>4. ご本人様の要請について</h4>
+                    <p>弊社は、個人情報に関して、ご本人様から当該個人情報の開示、訂正、削除、利用または提供について何らかの要請を受けた場合、誠実に対応いたします。</p>    
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>5. 個人情報管理規程について</h4>
+                    <p>弊社は、弊社役員及び従業員に対し、個人情報を保護する重要性と必要性の理解促進を図り、個人情報の適切な管理を図るため、個人情報管理規程を定め、当該規程を遵守いたします。</p>    
+                </div>
+            </section>
+            <div class="privacyPolicy_shell_1 bg_img"><img src="../img/privacyPolicy_shell_1.png" alt=""></div>
+        </div>
+
+        <div class="contents_wrapper personal_information_wrapper">
+            <section class="privacyPolicy_section_container contents_container">
+                <div class="main_heading">
+                    <div><img src="../img/Title_bubble_left.png" alt=""></div>
+                    <h2><a href="">個人情報の利用目的</a></h2>
+                    <div><img src="../img/title_bubble_right.png" alt=""></div>
+                </div>
+                <p>弊社は、事業活動に関連してご提供いただく（またはご提供いただいている）個人情報に関して、以下の目的に該当する場合のみ利用いたします。</p>
+                <div class="privacyPolicy_contents_container">
+                    <h4>1. お客様の個人情報について</h4>
+                    <p>
+                        弊社製品及びサービス情報等に関するご案内のため<br>
+                        弊社製品及びサービス情報等についてのお問い合わせに対する回答連絡のため<br>
+                        弊社製品及びサービス情報等についてのアフターサービスなど取引業務遂行のため<br>
+                        弊社製品及びサービスの販売またはご提供を目的とするご本人様確認のため<br>
+                        弊社製品及びサービス情報等についてのアンケート調査及びモニター調査のため<br>
+                        弊社製品及びサービス情報等についてのマーケティング活動のため<br>
+                        その他弊社製品及びサービス情報等のご提供に必要な場合<br>
+                    </p>  
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>2. 株主及び投資家の方の個人情報について</h4>
+                    <p>
+                        法令に基づく権利行使及び義務履行のため<br>
+                        法令に基づく株主管理のため<br>
+                        IR活動について株主及び投資家の皆様への情報提供及び調査のため
+                    </p>    
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>3. 取引先各社の個人情報について</h4>
+                    <p>
+                        業務上必要な諸連絡及び商談等のため
+                        情報管理及び収支処理のため
+                    </p>
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>5. 広報活動にあたっての個人情報について</h4>
+                    <p>広報活動としての情報提供のため</p>    
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>6. 環境保全活動にあたっての個人情報について</h4>
+                    <p>CSR・環境保全活動についての情報提供及びアンケート調査のため</p>    
+                </div>
+            </section>
+            <div class="privacyPolicy_shell_2 bg_img"><img src="../img/privacyPolicy_shell_2.png" alt=""></div>
+        </div>
+
+        <div class="contents_wrapper contact_information_wrapper last_section">
+            <section class="privacyPolicy_section_container contents_container">
+                <div class="main_heading privacyPolicy_heading">
+                    <div><img src="../img/Title_bubble_left.png" alt=""></div>
+                    <h2><a href="">お問い合わせ先</a></h2>
+                    <div><img src="../img/title_bubble_right.png" alt=""></div>
+                </div>
+                <p>
+                    当社で保有する個人情報に関するお問い合わせは以下の方法にて受け付けます。<br> 
+                    なお、受付方法によらない開示等の求めには応じられない場合がありますので、予めご了承ください。<br>
+                    また、個人情報の削除により、それまでご利用可能であったサービスを提供することが出来なくなる場合がありますので、予めご了承の上、ご請求ください。
+                </p>
+                <div class="privacyPolicy_contents_container has_link">
+                    <h4>フォームで送る</h4>
+                    <p>フォームからのご送信は<a href="../qa/index.html#contact">こちら</a>に内容をご記入の上、お送りください。</p>    
+                </div>
+                <div class="privacyPolicy_contents_container has_link">
+                    <h4>メールで送る</h4>
+                    <p>
+                        内容にお名前、返信先メールアドレス、お問い合わせ内容をご記入の上、ご送信ください。<br>
+                        <!-- テンプレートを使う場合は、<a href="">こちら</a>から。 -->
+                    </p>
+                    <p>メールアドレス　:　contact@minatomiraiAquarium.com</p>   
+                </div>
+                <div class="privacyPolicy_contents_container">
+                    <h4>郵送で送る</h4>
+                    <p>
+                        内容にお名前、返信先メールアドレス、お問い合わせ内容をご記入の上、お送りください。<br>
+                        お子様の書いたお魚の絵なども、お待ちしております。館内に展示させていただく可能性もございますので、ご了承の上お送りください。
+                    </p>
+                    <p>宛先　:　<br class="sp_br">〒220-0012 神奈川県横浜市西区　みなとみらい６-3-100　お問い合わせ窓口宛て</p>
+                </div>
+            </section>
+        </div>
+        <!-------------------------- ここまで -------------------------->
+        <div class="footer_seaWeed"><img src="../img/seaweed.png" alt=""></div>
+        <div class="footer_starFish"><img src="../img/starfish.png" alt=""></div>
+    </main>
+
+    <!-------------------------- フッターここから　-------------------------->
+    <footer>
+        <div class="footer_container">
+            <div class="img_area"><a href="../index.html"><img src="../img/footer_logo.png" alt="みなとみらい水族館"></a></div>
+            <div class="menu_area">
+                <ul>
+                    <li><a href="../index.html">トップ</a></li>
+                    <li class="event_has_sub">
+                        <span>イベント</span>
+                        <ul>
+                            <li><a href="../show/index.html">ショー</a></li>
+                            <li><a href="../esa/index.html">えさやり体験</a></li>
+                            <li><a href="../work/index.html">ワークショップ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                    <li><a href="../access/index.html">アクセス</a></li>
+                    <li><a href="../user_guide/index.html">ご利用案内</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../qa/index.html">よくあるご質問・お問い合わせ</a></li>
+                    <li><a href="../privacyPolicy/index.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyWrite"><small>&copy;みなとみらい水族館 2025</small></div>
+    </footer>
+    <!-------------------------- フッターここまで　-------------------------->
+    <script src="../js/hamburger_btn.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/waveTwoWaves.js"></script>
+    <script src="../js/waveThreeWaves.js"></script>
+    <script src="../js/waveForButton.js"></script>
+</body>
+
+</html>

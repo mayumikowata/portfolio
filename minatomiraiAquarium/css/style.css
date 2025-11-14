@@ -1,0 +1,4420 @@
+@charset "utf-8";
+
+/* CSS Document */
+/*======================================== 
+                基本設定
+========================================*/
+.main_heading {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.main_heading h2 a {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+}
+
+h3 {
+    display: inline-block;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #262C2D;
+    padding-bottom: 10px;
+    border-bottom: 4px dotted #F8ED65;
+    letter-spacing: 0.1em;
+}
+
+.blue_dotted h3 {
+    border-bottom: 4px dotted #1CBCDC;
+}
+
+h4 {
+    display: inline-block;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #262C2D;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #9FEEFC;
+    letter-spacing: 0.1em;
+}
+
+h5 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+}
+
+p,
+dt,
+dd,
+ul li,
+.qaQuestion,
+.qaA_A,
+label,
+input,
+textarea {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #262C2D;
+}
+
+.contents_wrapper {
+    width: 100%;
+}
+
+.waveCanvas_three_waves,
+.waveCanvas_two_waves,
+.MV canvas {
+    margin-bottom: -5px;
+    width: 100%;
+    max-height: 100px;
+    height: 7.14%;
+    background-position: bottom;
+    pointer-events: none;
+}
+
+.contents_wrapper.wave_color_main {
+    --wave-color: #9FEEFC;
+}
+
+.contents_wrapper.wave_color_acsent {
+    --wave-color: #1CBCDC;
+}
+
+.contents_wrapper.wave_color_white {
+    --wave-color: #fff;
+}
+
+.contents_container {
+    padding-top: 7.50%;
+    padding-bottom: 7.50%;
+    max-width: 1200px;
+    /* width: 100%; */
+    margin: 0 auto;
+}
+
+.more_button a,
+.buttonWrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 16px 16px 20px;
+    border: 3px solid #1CBCDC;
+    border-radius: 100px;
+    background-color: #1CBCDC;
+    transition: 0.3s;
+}
+
+.more_button a div,
+.buttonWrapper button {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+    color: #fff;
+}
+
+button {
+    background: none;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+
+.more_button .white_fish,
+.buttonWrapper .white_fish {
+    width: 23px;
+}
+
+.more_button .blue_fish,
+.buttonWrapper .blue_fish {
+    display: none;
+    width: 23px;
+}
+
+.more_button:hover a,
+.buttonWrapper:hover {
+    background-color: #fff;
+}
+
+.more_button:hover a div,
+.buttonWrapper:hover button {
+    color: #1CBCDC;
+}
+
+.more_button:hover .white_fish,
+.buttonWrapper:hover .white_fish {
+    display: none;
+}
+
+.more_button:hover .blue_fish,
+.buttonWrapper:hover .blue_fish {
+    display: block;
+}
+
+.mrgB_50px {
+    margin-bottom: 4.17%;
+}
+
+.box_shadow {
+    box-shadow: 0 0 10px 0 rgba(00, 00, 00, 0.1);
+}
+
+.bg_img {
+    z-index: -1;
+}
+
+.pukapuka {
+    animation: float_on_wave 6.23s ease-in-out infinite;
+}
+
+.fuwafuwa {
+    animation: float 3s ease-in-out infinite;
+}
+
+.yurayura {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.yurayura3 {
+  animation: sway 3s ease-in-out infinite;
+}
+
+/* 左右にゆらゆら */
+@keyframes sway {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(5px); }
+  50%  { transform: translateX(0); }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* 共通：泳ぐ動き */
+.oyogu {
+  animation-name: swim;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  display: inline-block;
+}
+
+/* 個別にタイミング・スピードを変える */
+.oyogu1 {
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+.oyogu2 {
+  animation-duration: 8.5s;
+  animation-delay: 1.2s;
+}
+.oyogu3 {
+  animation-duration: 10s;
+  animation-delay: 2.5s;
+}
+
+/* アニメーション定義 */
+@keyframes swim {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); }
+  25%  { transform: translateX(40px) translateY(-4px) rotate(3deg); }
+  50%  { transform: translateX(80px) translateY(0px) rotate(0deg); }
+  75%  { transform: translateX(40px) translateY(4px) rotate(-3deg); }
+  100% { transform: translateX(0) translateY(0) rotate(0deg); }
+}
+
+.sp_br {
+    display: none;
+}
+
+.type_more_button a {
+    font-weight: 700;
+    color: #1CBCDC;
+}
+
+@keyframes float_on_wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes awaMove {
+    0% {
+        transform: translate(0, 0) scale(var(--scale, 1));
+        opacity: 0;
+    }
+
+    10% {
+        transform: translate(2%, -40px) scale(var(--scale, 1));
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-3%, -160px) scale(var(--scale, 1));
+    }
+
+    80% {
+        transform: translate(2%, -260px) scale(var(--scale, 1));
+        opacity: .6;
+    }
+
+    100% {
+        transform: translate(-2%, -320px) scale(var(--scale, 1));
+        opacity: 0;
+    }
+}
+
+/*======================================== 
+                ヘッダー
+========================================*/
+.header_station {
+    width: 100%;
+    height: 10vh;
+    background-color: #fff;
+    display: none;
+}
+
+header {
+    position: fixed;
+    top: 1.79%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(00, 00, 00, 0.1);
+    margin: 0 auto;
+    padding: 0.86%;
+}
+
+#top header.scrolled {
+    box-shadow: 0 0 10px 0 rgba(00, 00, 00, 0.1);
+}
+
+nav {
+    margin-right: 3.45%;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4.55%;
+    width: 100%;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    width: 100%;
+    transition: 0.3s;
+}
+
+nav ul li:hover>a {
+    color: #1CBCDC;
+}
+
+.nav_event {
+    transition: 0.3s ease;
+}
+
+.nav_event:hover>span {
+    color: #1CBCDC;
+}
+
+.nav_event_sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #1CBCDC;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 180px;
+    height: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.nav_event_sub li {
+    display: block;
+    white-space: nowrap;
+}
+
+.nav_event_sub li a {
+    display: block;
+    color: #262C2D;
+}
+
+.nav_event_sub li:hover a {
+    color: #1CBCDC;
+}
+
+.nav_event:hover .nav_event_sub {
+    display: block;
+    height: auto;
+    opacity: 1;
+}
+
+.MV {
+    position: relative;
+    width: 100%;
+}
+
+.MV canvas {
+    height: 26%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.MV_slider {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 24 / 13;
+    overflow: hidden;
+}
+
+.MV_slider .slide_item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.8s ease;
+    pointer-events: none;
+}
+
+.MV_slider .slide_item.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.MV_slider .slide_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.pagenation {
+    position: absolute;
+    bottom: 50.00%;
+    left: 2.86%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+    transform: translateY(50%);
+}
+
+.pagenation .pagenation_btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #9FEEFC;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pagenation .pagenation_btn.active {
+    background-color: #1CBCDC;
+}
+
+.hamburger {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1002;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #1CBCDC;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.slide_menu {
+    position: fixed;
+    top: -20px;
+    right: -100%;
+    width: 60%;
+    max-width: 320px;
+    height: 120vh;
+    background: #9FEEFC;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    display: flex;
+    /* align-items: center; */
+    padding: 30% 8.52% 30% 0;
+    align-items: center;
+    transition: right 0.4s;
+    flex-direction: column;
+}
+
+.slide_menu.open {
+    right: -8.52%;
+}
+
+.slide_menu>ul>li:not(:first-child) {
+    margin-top: 15.63%;
+}
+
+.slide_menu ul li .sub_menu li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.slide_menu ul>li>a {
+    transition: 0.3s;
+}
+
+.slide_menu ul>li:hover>a {
+    color: #1CBCDC;
+}
+
+.slide_menu ul li .sub_menu li::before {
+    content: "";
+    width: 8px;
+    height: 1px;
+    background-color: #262C2D;
+    margin-right: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 130%;
+    height: 120vh;
+    transform: translateY(-10%);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*======================================== 
+                イベント
+========================================*/
+.event_slider {
+    display: flex;
+    gap: 8.33%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event_slider .event_dl_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.event_wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.event_button {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    --wave-color: #1CBCDC;
+}
+
+.event_button a {
+    position: relative;
+    cursor: pointer;
+}
+
+.event_button a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.event_more {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+    transition: 2s;
+}
+
+.waveCanvas_forButton {
+    position: absolute;
+    bottom: -150%;
+    left: 0;
+    transition: bottom 2.5s ease;
+    pointer-events: none;
+}
+
+.event_button a:hover .waveCanvas_forButton {
+    bottom: 0;
+}
+
+.event_button a:hover .event_more {
+    top: 50%;
+}
+
+.event_sango {
+    position: absolute;
+    bottom: 13.16%;
+    right: -4.71%;
+}
+
+.event_ukiwa {
+    position: absolute;
+    top: 8.4%;
+    left: -4.57%;
+}
+
+.event_fish {
+    position: absolute;
+    top: 11.7%;
+    right: 6.07%;
+}
+
+.event_ball {
+    position: absolute;
+    bottom: 2.27%;
+    right: 12.07%;
+}
+
+.event_dolphin {
+    position: absolute;
+    bottom: 1.43%;
+    left: 2.07%;
+    animation: dolphin 6s linear infinite;
+    transform-origin: 200px 200px;
+}
+
+.slide_prev,
+.slide_next {
+    display: none;
+}
+
+@keyframes dolphin {
+    0% {
+        transform: rotate(0deg) rotate(-360deg);
+    }
+
+    25% {
+        transform: rotate(90deg) rotate(-180deg);
+    }
+
+    50% {
+        transform: rotate(180deg) rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(270deg) rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg) rotate(360deg);
+    }
+}
+
+/*======================================== 
+            ピックアップ
+========================================*/
+.pickUp_wrapper {
+    background-color: #9FEEFC;
+    position: relative;
+}
+
+.pickUp dl {
+    display: flex;
+    gap: 11.67%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pickUp_bubble {
+    position: absolute;
+    top: 8.00%;
+    left: 8.43%;
+}
+
+.pickUp_seaOtter {
+    position: absolute;
+    top: 8.79%;
+    right: 8.93%;
+}
+
+.pickUp_flatfish {
+    position: absolute;
+    bottom: 10.79%;
+    left: 4.29%;
+}
+
+.pickUp dl .pickUp_dl_container {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #262C2D;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pickUp dl .pickUp_dl_container a dd img {
+    transition: 0.3s;
+}
+
+.pickUp dl .pickUp_dl_container:hover a dd img {
+    opacity: 0.7;
+}
+
+.pickUp dl .pickUp_dl_container a dd img {
+    width: 100%;
+}
+
+.pickUp dl .pickUp_dl_container a dt {
+    padding: 20px;
+}
+
+/*======================================== 
+            フロアマップ
+========================================*/
+.floor_map_wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.floor_map_dotCircle {
+    position: absolute;
+    top: 0;
+    right: 2%;
+}
+
+.floor_map_leftCircle {
+    position: absolute;
+    bottom: 14.22%;
+    left: 1.78%;
+}
+
+.floor_map_boat {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+.top_floor_map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.floor_map_img {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.floor_map_img a img {
+    width: 100%;
+}
+
+.floor_map_catchCopy {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.floor_map_catchCopy::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    width: 1px;
+    height: 30px;
+    background-color: #262C2D;
+    transform: rotate(-45deg);
+}
+
+.floor_map_catchCopy::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: -5%;
+    width: 1px;
+    height: 30px;
+    background-color: #262C2D;
+    transform: rotate(45deg);
+}
+
+/*======================================== 
+                アクセス
+========================================*/
+.access_wrapper {
+    background-color: #1CBCDC;
+    position: relative;
+}
+
+.access_bubble {
+    position: absolute;
+    top: 2.04%;
+    right: 3.28%;
+}
+
+.access_jellyFish {
+    position: absolute;
+    z-index: 1;
+    bottom: 11.5%;
+    left: 3.64%;
+}
+
+.access {
+    background-color: #fff;
+    padding: 4.17% 4.17%;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.access_contents {
+    display: flex;
+    gap: 4.17%;
+    margin-bottom: 4.17%;
+}
+
+.access_contents .img_area,
+.access_contents .img_area img {
+    width: 100%;
+}
+
+.access_contents dl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.access_contents dl dt {
+    margin-top: 4.17%;
+    margin-bottom: 1.67%;
+}
+
+@media only screen and (width <=1280px) {
+    .access_jellyFish {
+        opacity: 0.6;
+    }
+}
+
+/*======================================== 
+            お子様連れOK　
+========================================*/
+.kidsOk_wrapper {
+    background-color: #9FEEFC;
+}
+
+.kidsOk_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kidsOk_dl_contents {
+    display: flex;
+    gap: 5.00%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.kidsOk_dl_container {
+    max-width: 290px;
+    width: 100%;
+    background-color: #fff;
+    padding: 4.50%;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.kidsOk_dl_container p {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.number_cicle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #1CBCDC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Zen Maru Gothic", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+}
+
+@media only screen and (width <=960px) {
+    .kidsOk_dl_contents {
+        flex-direction: column;
+    }
+
+    .kidsOk_dl_contents .kidsOk_dl_container:not(:first-child) {
+        margin-top: 4.17%;
+    }
+
+    .number_cicle {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*======================================== 
+            フッター
+========================================*/
+main {
+    position: relative;
+}
+
+.footer_seaWeed {
+    position: absolute;
+    bottom: 0;
+    left: 6.5%;
+}
+
+.footer_starFish {
+    position: absolute;
+    bottom: 0;
+    right: 6.5%;
+}
+
+.footer_seaWeed img,
+.footer_starFish img {
+    transform-origin: bottom center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7.14%;
+    padding-bottom: 2.86%;
+    background-color: #E8DAB7;
+    position: relative;
+}
+
+.footer_container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_container .menu_area>ul {
+    display: flex;
+}
+
+.footer_container .menu_area>ul:last-child {
+    margin-top: 4.17%;
+}
+
+.footer_container .menu_area>ul>li {
+    margin-left: 50px;
+}
+
+.footer_container .menu_area ul .event_has_sub {
+    display: flex;
+}
+
+.footer_container .menu_area ul .event_has_sub li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.event_has_sub>ul>li::before {
+    content: "";
+    display: block;
+    margin: 0 3px 0 5px;
+    width: 9px;
+    height: 1px;
+    background-color: #262C2D;
+    transition: 0.3s;
+}
+
+.footer_container div ul li a:hover {
+    color: #1CBCDC;
+}
+
+.copyWrite {
+    margin-top: 2.50%;
+}
+
+/*======================================== 
+            よくあるご質問
+========================================*/
+.qa_mv_wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.qa_mv_wrapper canvas {
+    max-height: 100px;
+    height: 30.00%;
+}
+
+.qa_mv_wrapper div img {
+    width: 100%;
+}
+
+.qa_mv_wrapper canvas {
+    position: absolute;
+    bottom: 0;
+}
+
+.qa {
+    align-items: center;
+}
+
+.QAContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.qa_contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.qaItem {
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 100px;
+    box-shadow: 0 0 10px 0 rgba(00, 00, 00, 0.1);
+    padding: 25px;
+}
+
+.qaQuestion {
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+.qaQuestion_contents {
+    display: flex;
+    gap: 2.17%;
+    text-align: left;
+    width: 100%;
+}
+
+.qaQuestion_Q {
+    font-weight: bold;
+    font-size: 30px;
+    color: #9FEEFC;
+}
+
+.plus_minus_btn {
+    width: 31px;
+    height: 31px;
+    background-color: #1CBCDC;
+    border-radius: 1000px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.plus_minus_btn::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 2px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.plus_minus_btn::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.qaItem .qaA {
+    vertical-align: middle;
+    display: flex;
+    gap: 2%;
+    transform: translateY(-10%);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.qaItem.open {
+    border-radius: 38px;
+}
+
+.qaItem.open .qaA {
+    opacity: 1;
+    max-height: 300px;
+    transform: none;
+    margin-top: 2.5%;
+    background-color: #fff;
+    transition: 0.8s;
+}
+
+.qaItem.open .plus_minus_btn {
+    background-color: #F8ED65;
+}
+
+.qaItem.open .plus_minus_btn::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.qaItem.open .plus_minus_btn::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.qaA_A {
+    font-weight: bold;
+    font-size: 30px;
+    color: #1CBCDC;
+}
+
+.contact_wrapper {
+    background-color: #9FEEFC;
+    position: relative;
+}
+
+.contact_wrapper .contents_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_wrapper h3 {
+    border-bottom: 4px dotted #1CBCDC;
+}
+
+.contact_wrapper .caution {
+    width: 100%;
+    background-color: #1CBCDC;
+    border-radius: 100px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(00, 00, 00, 0.1);
+    color: #fff;
+    margin-top: 4.17%;
+}
+
+.caution p {
+    text-align: center;
+}
+
+.contents_wrapper .contents_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.67%;
+    align-items: center;
+}
+
+.name_mail_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4.17%;
+    flex-wrap: wrap;
+    flex: 4;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.contents_wrapper .contents_container form>div:not(:last-child) {
+    margin-top: 20px;
+}
+
+.contact_contents_container {
+    display: flex;
+    gap: 1.67%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex: 1;
+}
+
+.name_mail_container .contact_contents_container {
+    gap: 3.34%;
+}
+
+.contact_contents_container>label {
+    background-color: #F8ED65;
+    border-radius: 100px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(00, 00, 00, 0.1);
+    min-width: 100px;
+    text-align: center;
+}
+
+.contact_contents_container .inputContainer,
+.details>textarea {
+    border: none;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(00, 00, 00, 0.1);
+}
+
+.inputContainer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkBoxContents>div {
+    display: flex;
+    align-items: center;
+}
+
+.checkBoxContents>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.checkBoxContents>div>div {
+    display: flex;
+    align-items: center;
+}
+
+.checkBox>label,
+.details>label {
+    min-width: 190px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    margin-right: 8px;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #1CBCDC;
+    font-size: 14px;
+}
+
+input[type="checkbox"]:checked {
+    border: 2px solid #F8ED65;
+    background-color: #F8ED65;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 45.45%;
+    left: 31.82%;
+    width: 11px;
+    height: 2px;
+    background-color: #262C2D;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 52.27%;
+    left: 13.64%;
+    width: 7px;
+    height: 2px;
+    background-color: #262C2D;
+    transform: rotate(45deg);
+    border-radius: 10px;
+}
+
+.details textarea {
+    width: 100%;
+    min-height: 5.00%;
+    /* resize: none; */
+}
+
+.buttonWrapper {
+    cursor: pointer;
+    margin-top: 4.17%;
+}
+
+.qa_wrapper {
+    position: relative;
+}
+
+.qa_bottle {
+    position: absolute;
+    bottom: 0.71%;
+    left: 12.36%;
+}
+
+.qa_fishes {
+    position: absolute;
+    top: 7.00%;
+    left: 5.79%;
+}
+
+.contact_bubble {
+    position: absolute;
+    top: 10.86%;
+    right: 6.50%;
+}
+
+/*======================================== 
+            プライバシーポリシー
+========================================*/
+.privacyPolicy_wrapper,
+.personal_information_wrapper,
+.contact_information_wrapper {
+    position: relative;
+}
+
+.privacyPolicy_contents_container {
+    margin-top: 4.17%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.privacyPolicy_shell_1 {
+    position: absolute;
+    left: 5.21%;
+    bottom: -5.79%;
+}
+
+.privacyPolicy_shell_2 {
+    position: absolute;
+    right: 5.64%;
+    bottom: -5.36%;
+}
+
+.privacyPolicy_contents_container.has_link p a {
+    color: #1CBCDC;
+    font-weight: 500;
+}
+
+.contact_information_wrapper .contents_container {
+    padding-bottom: 12.86%;
+}
+
+/*======================================== 
+            ワークショップ
+========================================*/
+.work_shop_MV {
+    width: 100%;
+    background-color: #9FEEFC;
+}
+
+.work_shop_MV img {
+    width: 100%;
+}
+
+.work_shop_MV .main_heading {
+    justify-content: flex-start;
+    margin-top: 4.29%;
+    margin-left: 4.29%;
+}
+
+.work_shop_copy {
+    margin-top: 4.29%;
+    margin-bottom: 6.43%;
+}
+
+.work_shop_copy h5,
+.work_shop_copy p {
+    text-align: center;
+}
+
+.work_shop_detail_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work_shop_detail_container .content_area {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    flex: 1 1 50%;
+}
+
+.work_shop_detail_container .content_area .contents:not(:first-child) {
+    margin-top: 8.34%;
+}
+
+.work_shop_detail_container .content_area .item {
+    display: flex;
+    align-items: center;
+    gap: 5.84%;
+}
+
+.work_shop_detail_container .content_area .item div {
+    align-self: flex-start;
+    display: inline-block;
+    transform: translateY(0.5em);
+}
+
+.work_shop_detail_container .content_area .item div img {
+    display: block;
+}
+
+.work_shop_detail_container .contents .time {
+    display: flex;
+    gap: 5.00%;
+}
+
+.work_shop_detail_container .contents .time li {
+    background-color: #1CBCDC;
+    border-radius: 10px;
+    padding: 2.16% 3.66%;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.work_shop_detail_container .content_area .item,
+.work_shop_detail_container .contents .time {
+    margin-top: 3.34%;
+}
+
+.work_shop_detail_container .img_area {
+    flex: 1 1 50%;
+    width: 100%;
+}
+
+.work_shop_detail_container .img_area img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.work_shop_container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.work_shop_container .contents_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.work_shop_container .contents_area h2 {
+    margin-top: 25.62%;
+}
+
+.work_shop_container .contents_area p {
+    margin-top: 9.49%;
+    text-align: center;
+}
+
+.work_shop_bin_1 {
+    margin-right: 10.67%;
+}
+
+.work_shop_bin_2 {
+    margin-left: 6.67%;
+}
+
+.work_shop_awa_1 {
+    position: absolute;
+    top: 36.88%;
+    left: -19.06%;
+}
+
+.work_shop_awa_2 {
+    position: absolute;
+    top: 43.13%;
+    right: -11.88%;
+}
+
+.bottle_aqua_point_wrapper {
+    background-color: #9FEEFC;
+}
+
+.bottle_aqua_point_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bottle_aqua_point_container .contents {
+    margin-top: 6.92%;
+    display: flex;
+    justify-content: center;
+    gap: 8.33%;
+    width: 100%;
+}
+
+.bottle_aqua_point_container .contents .item {
+    background-color: #fff;
+    max-width: 267px;
+    /* max-width: 22.25%; */
+    border-radius: 10px;
+    position: relative;
+    padding: 6.42% 1.83% 0.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottle_aqua_point_container .contents .item .number_circle {
+    position: absolute;
+    top: -13.11%;
+    width: 68px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #1CBCDC;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.bottle_aqua_point_container .contents .item_1 .img_area {
+    margin-top: 13.86%;
+}
+
+.bottle_aqua_point_container .contents .item_2 .img_area {
+    margin-top: 13.11%;
+}
+
+.bottle_aqua_point_container .contents .item_3 .img_area {
+    margin-top: 3.00%;
+}
+
+.precautions_container .contents {
+    background-color: #1CBCDC;
+    border-radius: 10px;
+    color: #fff;
+    padding: 9.75% 4.33%;
+    width: 71.83%;
+    margin: 0 auto;
+}
+
+.precautions_container .contents .title {
+    display: flex;
+    align-items: center;
+    gap: 1.20%;
+}
+
+.precautions_container .contents .button_fish_white {
+    max-width: 23px;
+}
+
+.precautions_container .contents .text_area {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1.20%;
+}
+
+.precautions_container .contents .text_area li {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 1.20%;
+}
+
+.precautions_container .contents .text_area li::before {
+    content: "・";
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+
+/* kowata ここから*/
+/*======================================== 
+            フロアマップ　
+========================================*/
+#floor_map main{
+    padding-top: 90px;
+}
+
+/* 3つのリンク */
+#floor_map .contents_container {
+    display: flex;
+}
+
+#floor_map .page_link_container {
+    flex-direction: column;
+}
+
+#floor_map .floor_map_detail_contents {
+    display: flex;
+    gap: 10.83%;
+    margin-bottom: 100px;
+}
+
+#floor_map .event_txt {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+#floor_map .event_txt .more_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#floor_map .event_txt h3 {
+    margin-bottom: 10px;
+}
+
+#floor_map .event_txt h4 {
+    margin-bottom: 10px;
+}
+
+#floor_map p {
+    margin: 0 auto;
+    width: 86.67%;
+}
+
+#floor_map .icon {
+    display: flex;
+    margin: 0 auto;
+    width: 53%;
+}
+
+#floor_map .floor_map_detail_contents.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ひだりのあかいさかなたいぐん */
+#floor_map .floor_map_akasakana_l {
+    position: absolute;
+    bottom: 93%;
+    left: 5%;
+}
+
+/* みぎのあかいさかなたいぐん1 */
+#floor_map .floor_map_akasakana_r1 {
+    position: absolute;
+    bottom: 92%;
+    left: 83%;
+}
+
+/* みぎのあかいさかなたいぐん2 */
+#floor_map .floor_map_akasakana_r2 {
+    position: absolute;
+    bottom: 63%;
+    left: 80%;
+}
+
+#floor_map .floor_map_map_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#floor_map .floor_map {
+    position: relative;
+    max-width: 500px;
+}
+
+#floor_map .floor_map img {
+    max-width: 500px;
+    width: 100%;
+    z-index: 1;
+}
+
+#floor_map .pin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #1CBCDC;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#floor_map .pin::after {
+    content: "?";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 12px;
+}
+
+#floor_map .dolphin_pin {
+    top: 11.40%;
+    left: 51.80%;
+}
+
+#floor_map .penguin_pin {
+    top: 27.50%;
+    right: 14.60%;
+}
+
+#floor_map .jellyfish_pin {
+    bottom: 37.10%;
+    left: 38.80%;
+}
+
+#floor_map .large_aquarium_pin {
+    bottom: 14.57%;
+    left: 12.40%;
+}
+
+#floor_map .seal_pin {
+    top: 10.20%;
+    right: 38.40%;
+}
+
+#floor_map .clownfish_pin {
+    top: 28.20%;
+    right: 12.80%;
+}
+
+#floor_map .spotted_garden_eel_pin {
+    top: 41.40%;
+    left: 38.60%;
+}
+
+#floor_map .pin .pop_up {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    background-color: #fff;
+    border: 3px solid #F8ED65;
+    border-radius: 50px;
+    padding: 250%;
+    transform: translateX(-50%) scale(0.6);
+    transform-origin: bottom center;
+    pointer-events: none;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#floor_map .pop_up h3 {
+    margin-bottom: 6.67%;
+}
+
+#floor_map .pin .pop_up::before {
+    content: "";
+    position: absolute;
+    border: 15px solid transparent;
+    border-top-color: #F8ED65;
+    top: 100%;
+    z-index: 3;
+}
+
+#floor_map .pin .pop_up::after {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+    top: 99.9%;
+    z-index: 4;
+}
+
+#floor_map .pin:hover .pop_up {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+}
+
+/*======================================== 
+            ご利用案内　
+========================================*/
+#user_guide main{
+    padding-top: 90px;
+}
+
+#user_guide .contents_container_second {
+    max-width: 1200px;
+    margin: 0 auto 90px;
+}
+
+#user_guide .contents_container_last {
+    margin: 0 auto 100px;
+}
+
+#user_guide .anshin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#user_guide .user_guide_detail_contents {
+    width: 71.43%;
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+#user_guide .ug_d_icon {
+    flex: 1 1 0;
+    border-radius: 10px;
+    background-color: #9feefc;
+}
+
+#user_guide .icon {
+    margin: 50px 85px 50px;
+}
+
+#user_guide .txt {
+    margin: 0 11.24% 50px;
+}
+
+#user_guide .bold {
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 営業案内 */
+#user_guide :root {
+    --accent: #10bfdc;
+    --card-bg: #9FEEFC;
+    --radius: 10px;
+    --wave-color: #ffffff;
+}
+
+/* カード */
+#user_guide .guide-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 0 24px 28px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* 見出し */
+#user_guide .guide-title {
+    text-align: center;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+/* リスト本体 */
+#user_guide .guide-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0 0;
+}
+
+/* 行（2カラム） */
+#user_guide .guide-item {
+    display: grid;
+    grid-template-columns: minmax(12ch, 1fr) 2fr;
+    gap: 16px 100px;
+    padding: 39px 0;
+    position: relative;
+}
+
+/* 2行目以降の“波”区切り線 */
+#user_guide .guide-item+.guide-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -24px;
+    right: -24px;
+    height: 16px;
+    background: var(--wave);
+    background-size: 120px 16px;
+    background-repeat: repeat-x;
+}
+
+/* ラベル側 */
+#user_guide .label {
+    font-weight: 700;
+    color: #262C2D;
+    line-height: 1.6;
+}
+
+/* 内容側 */
+#user_guide .value {
+    line-height: 1.9;
+}
+
+/* なみなみ */
+#user_guide .guide-item+.guide-item::before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    top: 0;
+    height: 16px;
+    background-image: url("../img/user_guide_nami_line.png");
+    background-repeat: repeat-x;
+    background-size: 27px 16px;
+}
+
+/* 最後の行の“下側”にも波を出す */
+#user_guide .guide-item:last-child::after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    bottom: 0;
+    height: 16px;
+    background-image: url("../img/user_guide_nami_line.png");
+    background-repeat: repeat-x;
+    background-size: 27px 16px;
+}
+
+/* 波ぶんの余白を追加（重なり防止） */
+#user_guide .guide-item:last-child {
+    padding-bottom: calc(24px + 16px);
+}
+
+/* 注意とお願い */
+#user_guide .request {
+    margin: 90px auto;
+}
+
+#user_guide h7 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+}
+
+/* カード本体：w=630, margin=50, 角丸10 */
+#user_guide .notice-card {
+    width: 630px;
+    margin: 50px auto;
+    border-radius: 10px;
+    background: #00b7e3;
+    color: #fff;
+    padding: 50px 70px;
+}
+
+/* 見出し＋魚アイコン */
+#user_guide .notice-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+#user_guide .notice-fish {
+    width: 22px;
+    height: auto;
+    display: block;
+}
+
+/* 箇条書き（「・」で揃える） */
+#user_guide .notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#user_guide .notice-list li {
+    position: relative;
+    padding-left: 1.2em;
+    line-height: 2;
+}
+
+#user_guide .notice-list li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+}
+
+#user_guide .bg_water {
+    background-color: #9FEEFC;
+}
+
+/* ほたて */
+#user_guide .guide_hotate {
+    position: absolute;
+    bottom: 94%;
+    left: 69%;
+}
+
+/* ひとで */
+#user_guide .guide_hitode {
+    position: absolute;
+    bottom: 95%;
+    left: 28%;
+}
+
+/* あおいさかなにひき */
+#user_guide .guide_bluefish {
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+}
+
+/* みぎのしろいさかなたいぐん */
+#user_guide .guide_w_sakana_r {
+    position: absolute;
+    bottom: 41%;
+    left: 81%;
+}
+
+/* ひだりのきいろいさかな */
+#user_guide .guide_y_sakana_l {
+    position: absolute;
+    bottom: 33%;
+    left: 8%;
+}
+
+/* みぎのきいろいさかな */
+#user_guide .guide_y_sakana_r {
+    position: absolute;
+    bottom: 28%;
+    left: 80%;
+}
+
+/* ひだりのしろいさかなたいぐん */
+#user_guide .guide_w_sakana_l {
+    position: absolute;
+    bottom: 23%;
+    left: 8%;
+}
+
+#user_guide .guide_awa1_r img,
+#user_guide .guide_awa_l img,
+#user_guide .guide_awa2_r img {
+    display: block;
+    width: 24px;
+    /* 泡は小さめ */
+    height: auto;
+    pointer-events: none;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: awaMove var(--dur, 8s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+/* 個別にちょいパラメータ（任意） */
+#user_guide .guide_awa1_r img {
+    --dur: 8.5s;
+    --delay: .2s;
+}
+
+#user_guide .guide_awa_l img {
+    --dur: 9.2s;
+    --delay: 1.1s;
+}
+
+#user_guide .guide_awa2_r img {
+    --dur: 7.6s;
+    --delay: .6s;
+}
+
+/* 位置（あなたの今の指定そのまま利用） */
+#user_guide .guide_awa1_r {
+    position: absolute;
+    bottom: 7.5%;
+    left: 81%;
+}
+
+#user_guide .guide_awa_l {
+    position: absolute;
+    bottom: 5.5%;
+    left: 15%;
+}
+
+#user_guide .guide_awa2_r {
+    position: absolute;
+    bottom: 0.5%;
+    left: 84%;
+}
+
+/* ひだりのわかめ */
+#user_guide .guide_wakame_l {
+    position: absolute;
+    bottom: -3%;
+    left: 15%;
+}
+
+/* みぎのわかめ */
+#user_guide .guide_wakame_r {
+    position: absolute;
+    bottom: -3%;
+    left: 83%;
+}
+
+#user_guide .br-sp {
+    display: none;
+}
+
+/*======================================== 
+            ピックアップ潜入ツアー
+========================================*/
+
+#pickup main{
+    padding-top: 90px;
+}
+
+#pickup .main_heading_mv {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 50px;
+}
+
+#pickup .contents_container_second {
+    max-width: 1200px;
+    margin: 0 auto 90px;
+}
+
+#pickup .detail_contents {
+    display: flex;
+    flex-direction: row;
+}
+
+#pickup .tour_ph--pc {
+    width: 43.33%;
+    padding-right: 100px;
+}
+
+#pickup .tour_ph--sp {
+    display: none;
+}
+
+#pickup .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#pickup .txt h2 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+}
+
+#pickup .txt h3 {
+    margin-bottom: 50px;
+}
+
+#pickup .txt h4 {
+    margin-bottom: 20px;
+}
+
+#pickup .txt p {
+    width: 80%;
+    margin-bottom: 100px;
+}
+
+#pickup .txt .section-title {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 16px;
+}
+
+/* あわあわ 左の画像 */
+#pickup .txt .section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: url("../img/Title_bubble_left.png") no-repeat center / contain;
+}
+
+/* あわあわ 右の画像 */
+#pickup .txt .section-title::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: url("../img/title_bubble_right.png") no-repeat center / contain;
+}
+
+/* おさかなあいこん */
+#pickup .txt .fee-row.icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+    line-height: 1.8;
+}
+
+#pickup .txt .fee-row.icon::before {
+    content: "";
+    width: 1.2em;
+    height: 1.2em;
+    background: url("../img/biger_fish_blue.png") no-repeat center/contain;
+    flex: 0 0 auto;
+}
+
+/* ふわふわくらげあか */
+#pickup .tour_jellyfish_red {
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+}
+
+/* ふわふわくらげあお */
+#pickup .tour_jellyfish_blue {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+}
+
+/* わかめ・ひとでをフッター直前にぴったり配置 */
+#pickup .footer_seaWeed,
+#pickup .footer_starFish {
+    position: absolute;
+    bottom: -100px;
+    /* ← 白い隙間をなくすポイント！ */
+    z-index: 1;
+    /* フッターより少し下でもOKなら調整 */
+}
+
+/* 左のわかめ */
+#pickup .footer_seaWeed {
+    left: 5%;
+}
+
+/* 右のひとで */
+#pickup .footer_starFish {
+    right: 5%;
+}
+
+.br-sp {
+    display: none;
+}
+
+/*======================================== 
+            スタンプラリー
+========================================*/
+#stamp main{
+    padding-top: 90px;
+}
+
+#stamp .contents_container_second {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+/* 詳細のはこ */
+#stamp .stamp-details {
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+
+#stamp .txt .section-title {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 16px;
+}
+
+#stamp .detail_contents {
+    display: flex;
+    flex-direction: row;
+}
+
+#stamp .cntents_container {
+    padding: 0 100px;
+}
+
+#stamp .tour_ph {
+    width: 43.33%;
+    padding-right: 100px;
+}
+
+#stamp .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#stamp .txt h2 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+}
+
+#stamp .txt h3 {
+    margin-bottom: 50px;
+}
+
+#stamp .txt h4 {
+    margin-bottom: 20px;
+}
+
+#stamp .txt p {
+    margin-bottom: 100px;
+}
+
+/* あわあわ 左の画像 */
+#stamp .txt .section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: url("../img/Title_bubble_left.png") no-repeat center / contain;
+}
+
+/* あわあわ 右の画像 */
+#stamp .txt .section-title::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: url("../img/title_bubble_right.png") no-repeat center / contain;
+}
+
+/* おさかなあいこん */
+#stamp .txt .fee-row.icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+    line-height: 1.8;
+}
+
+#stamp .txt .fee-row.icon::before {
+    content: "";
+    width: 1.2em;
+    height: 1.2em;
+    background: url("../img/biger_fish_blue.png") no-repeat center/contain;
+    flex: 0 0 auto;
+}
+
+/* 3つのリンク */
+#stamp .contents_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#stamp .stamp_detail_contents {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+#stamp .event_txt {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* ★ 2つ目だけ左右を反転 */
+#stamp .contents_container_second .stamp_detail_contents:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+#stamp .number {
+    margin-bottom: 15px;
+}
+
+#stamp .event_txt h4 {
+    margin-bottom: 10px;
+}
+
+/* ２段目 */
+#stamp .floor_map_detail_contents.reverse {
+    flex-direction: row-reverse;
+}
+
+/* あかいさかな　みぎむき */
+#stamp .stamp_redfish_right {
+    position: absolute;
+    bottom: 53%;
+    left: 70%;
+}
+
+/* あかいさかな　ひだりむき */
+#stamp .stamp_redfish_left {
+    position: absolute;
+    bottom: 10%;
+    left: 60%;
+}
+
+/* ひだりのあわ　さんこ */
+#stamp .stamp_awa3-2 {
+    position: absolute;
+    bottom: 42%;
+    left: 15%;
+}
+
+/* みぎのあわ　さんこ */
+#stamp .stamp_awa3-3 {
+    position: absolute;
+    bottom: 20%;
+    left: 80%;
+}
+
+#stamp .contents_container_second .main_heading img[src*="pickup_stamp_MV"] {
+    display: block;
+    width: clamp(220px, 88vw, 1200px);
+    height: auto;
+    margin: 0 auto;
+}
+
+#stamp .sp_image {
+    display: none;
+}
+
+#stamp .br-sp {
+    display: none;
+}
+
+/* わかめ・ひとでをフッター直前にぴったり配置 */
+#stamp .footer_seaWeed,
+#stamp .footer_starFish {
+    position: absolute;
+    bottom: -100px;
+    /* ← 白い隙間をなくすポイント！ */
+    z-index: 1;
+    /* フッターより少し下でもOKなら調整 */
+}
+
+/* 左のわかめ */
+#stamp .footer_seaWeed {
+    left: 5%;
+}
+
+/* 右のひとで */
+#stamp .footer_starFish {
+    right: 5%;
+}
+
+/*======================================== 
+            ショー
+========================================*/
+.show_header {
+    background-color: #9FEEFC;
+    padding-top: 1.07%;
+}
+
+.show_mv img {
+    width: 100%;
+}
+
+.show_midashi {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 58px;
+    margin-left: 7.14%;
+}
+
+.show_midashi h2 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+}
+
+.show_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+pukapuka h5 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+}
+
+.center_text {
+    text-align: center;
+}
+
+.show_azarashi_midashi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.57%;
+}
+
+.azarashi_swim {
+    margin-top: 4.83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.azarashi_swim p {
+    margin-top: 13%;
+    text-align: center;
+}
+
+.azarashi_swim img {
+    width: 100%;
+}
+
+.azarashi_show {
+    position: relative;
+}
+
+.azarashi_show_img {
+    display: flex;
+    justify-content: center;
+    gap: 9.87%;
+}
+
+.azarashi_hand {
+    margin-top: 18%;
+}
+
+.azarashi_hand p {
+    text-align: center;
+}
+
+.azarashi_hand img {
+    margin-top: 16.36%;
+    margin-bottom: 7.85%;
+    width: 100%;
+}
+
+.azarashi_show_border {
+    border: 4px dotted #F8ED65;
+    width: 1019px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5.3% 0% 5.3% 7.45%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.show_time {
+    display: flex;
+    gap: 6.29%;
+    margin-top: 2.06%;
+    margin-bottom: 4.71%;
+}
+
+.show_time li {
+    background-color: #1CBCDC;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffff;
+    border-radius: 10px;
+    padding: 10px 21px;
+}
+
+.show_spot {
+    display: flex;
+    margin-top: 2.06%;
+    margin-bottom: 4.71%;
+}
+
+.show_spot img {
+    margin-right: 3.04%;
+}
+
+.show_needtime {
+    display: flex;
+    margin-top: 2.06%;
+}
+
+.show_needtime img {
+    margin-right: 3.04%;
+}
+
+.show_awa_1 {
+    position: absolute;
+    top: 8.50%;
+    right: 41.14%;
+}
+
+.show_fish_1 {
+    position: absolute;
+    top: 14%;
+    right: 12.43%;
+}
+
+.show_fish_2 {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+}
+
+.show_azarashi {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+}
+
+.iruka_show {
+    background-color: #9FEEFC;
+    position: relative;
+    overflow: hidden;
+}
+
+.show_iruka_midashi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.57%;
+}
+
+.show_iruka_midashi h3 {
+    border-bottom: 4px dotted #1CBCDC;
+}
+
+.iruka_pool {
+    margin-top: 4.83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iruka_pool img {
+    width: 100%;
+}
+
+.iruka_pool p {
+    margin-top: 40%;
+    margin-bottom: 25%;
+    text-align: center;
+    display: inline-block;
+}
+
+.iruka_boal {
+    margin-top: 4.83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iruka_boal img {
+    width: 100%;
+}
+
+.iruka_boal p {
+    margin-top: 14%;
+    text-align: center;
+}
+
+.iruka_show_img {
+    display: flex;
+    justify-content: center;
+    gap: 9.87%;
+    margin-bottom: 4.70%;
+    width: 100%;
+}
+
+.show_awa_2 {
+    position: absolute;
+    top: 30%;
+    right: 45%;
+}
+
+.show_fish_3 {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    z-index: 0;
+}
+
+.show_fish_4 {
+    position: absolute;
+    bottom: 45%;
+    left: 10%;
+}
+
+.show_iruka_illust {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+}
+
+.iruka_show_border {
+    border: 4px dotted #ffff;
+    max-width: 1019px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5.3% 0% 5.3% 7.45%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.iruka_show_border h4 {
+    border-bottom: 4px solid #ffff;
+}
+
+.azarashi_swim {
+    margin-top: 4.83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.azarashi_swim img {
+    width: 100%;
+}
+
+.azarashi_swim p {
+    text-align: center;
+}
+
+.pengin_show {
+    position: relative;
+}
+
+.pengin_show_border {
+    border: 4px dotted #F8ED65;
+    width: 1019px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5.3% 0% 5.3% 7.45%;
+    margin-bottom: 14.71%;
+}
+
+.show_awa_3 {
+    position: absolute;
+    top: 9%;
+    right: 36.07%;
+}
+
+.show_fish_5 {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+
+.show_fish_6 {
+    position: absolute;
+    bottom: 90%;
+    right: 15.50%;
+}
+
+.show_pengin_illust {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.sp_br {
+    display: none;
+}
+
+.pengin_show_border_box {
+    padding-bottom: 5%;
+}
+
+/*======================================== 
+            えさやり体験
+========================================*/
+.esa_needtime {
+    display: flex;
+    margin-top: 2.06%;
+    margin-bottom: 4.71%;
+}
+
+.esa_needtime img {
+    margin-right: 3.04%;
+}
+
+.esa_money {
+    display: flex;
+    align-items: center;
+    margin-top: 2.06%;
+}
+
+.esa_money img {
+    margin-right: 3.04%;
+    margin-bottom: 3%;
+}
+
+.pengin_esa {
+    background-color: #9FEEFC;
+    position: relative;
+    padding-bottom: 14.71%;
+}
+
+.pengin_fish {
+    margin-top: 4.83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pengin_fish p {
+    margin-top: 40%;
+    text-align: center;
+}
+
+.pengin_fish img {
+    width: 100%;
+}
+
+.esa_attention {
+    background-color: #1CBCDC;
+    border-radius: 10px;
+    max-width: 834px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4%;
+    margin-top: 4.21%;
+}
+
+.esa_attention_box {
+    padding-bottom: 10%;
+}
+
+.esa_attention_title {
+    display: flex;
+    align-items: center;
+}
+
+.esa_attention_title img {
+    margin-right: 1.32%;
+}
+
+.esa_attention_title {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+    color: white;
+    margin-bottom: 3.84%;
+}
+
+.esa_attention_ul li {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+    color: white;
+    margin-bottom: 3.84%;
+}
+
+.esa_fish_2 {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+}
+
+.show_azarashi_fish {
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+}
+
+.esa_pengin_illust {
+    position: absolute;
+    bottom: -10%;
+    right: 3%;
+}
+
+/*======================================== 
+            アクセス
+========================================*/
+.access_kasou {
+    position: relative;
+}
+
+.access_midashi h2 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #1CBCDC;
+    letter-spacing: 0.1em;
+}
+
+.access_midashi {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.access_mv {
+    position: relative;
+}
+
+.access_mv canvas {
+    position: absolute;
+    bottom: 0;
+}
+
+.access_mv img {
+    width: 100%;
+}
+
+.access_h4_box h4 {
+    display: inline-block;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffff;
+    letter-spacing: 0.1em;
+    border-bottom: none;
+    background-color: #1CBCDC;
+    border-radius: 10px;
+    width: 160px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+    margin-bottom: 15%;
+    flex-shrink: 0;
+}
+
+.access_h4_box {
+    display: flex;
+    width: 100%;
+}
+
+.access_h4_box p {
+    margin-top: 1%;
+    /* white-space: nowrap; */
+}
+
+.access_info {
+    display: flex;
+    /* flex: 1; */
+    align-items: center;
+    justify-content: center;
+    /* gap: 16.29%; */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.access_info>div {
+    width: 100%;
+}
+
+.access_box {
+    display: flex;
+    width: 100%;
+}
+
+.access_box img {
+    margin-bottom: 19%;
+    margin-right: 10%;
+}
+
+.access_box p {
+    display: inline-block;
+    width: fit-content;
+}
+
+.access_phone {
+    margin-top: -2%;
+}
+
+/* フロアマップ */
+.access_map_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 6.37%;
+    width: 100%f;
+}
+
+.access_map_box img {
+    max-width: 824px;
+    width: 100%;
+}
+
+.access_koutsu h4 {
+    display: inline-block;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #262C2D;
+    letter-spacing: 0.1em;
+    border-bottom: none;
+}
+
+.access_koutsu {
+    margin-left: 7.14%;
+}
+
+.access_koutsu h3 {
+    margin-bottom: 2%;
+}
+
+.access_koutsu h4 {
+    margin-bottom: 2%;
+}
+
+.access_koutsu p {
+    margin-bottom: 3%;
+}
+
+.koutsu_img {
+    margin-bottom: 2%;
+    margin-right: 1%;
+}
+
+.car_h3 {
+    margin-top: 3%;
+}
+
+.access_parking {
+    border: 2px solid #1CBCDC;
+    border-radius: 10px;
+    max-width: 521px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5.71%;
+    margin-bottom: 3.36%;
+    width: 100%;
+}
+
+.access_parking_title {
+    display: inline-block;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #262C2D;
+    border-bottom: none;
+    background-color: #1CBCDC;
+    color: white;
+    padding: 6px 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    max-width: 519px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access_parking_body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #262C2D;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.parking_info h4 {
+    margin-bottom: 1%;
+}
+
+.parking_info p:not(:last-child) {
+    margin-bottom: 3%;
+}
+
+.parking_info {
+    margin-left: 7.14%;
+    padding-bottom: 12.86%;
+}
+
+.access_manbou {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+}
+
+.access_awa {
+    position: absolute;
+    top: 50%;
+    right: 35%;
+}
+
+/*======================================== 
+                モバイル
+========================================*/
+@media only screen and (width <=750px) {
+
+    /*-------------- 全体 --------------*/
+    .last_section {
+        padding-bottom: 26.67%;
+    }
+
+    .sp_rescale_img img {
+        transform: scale(0.6);
+    }
+
+    .sp_br {
+        display: block;
+    }
+
+    .br-sp {
+        display: inline;
+    }
+
+    /*-------------- トップ --------------*/
+    header nav {
+        display: none;
+    }
+
+    #top header {
+        box-shadow: none;
+    }
+
+    header {
+        width: 85.71%;
+    }
+
+    .header_station {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .canvas_none {
+        display: none;
+    }
+
+    .event_slider_wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .event_slider {
+        display: flex;
+        transition: transform 0.5s;
+        width: 100%;
+        flex-wrap: nowrap;
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    .event_dl_container {
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide_prev {
+        position: absolute;
+        left: 7.46%;
+        top: 29.33%;
+        border: none;
+        cursor: pointer;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .slide_next {
+        position: absolute;
+        right: 7.46%;
+        top: 29.33%;
+        border: none;
+        cursor: pointer;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .slide_prev:hover,
+    .slide_next:hover {
+        transform: scale(1.2);
+    }
+
+    .slide_prev img,
+    .slide_next img {
+        max-width: 46px;
+    }
+
+    .event_fish {
+        display: none;
+    }
+
+    .event_dolphin {
+        display: none;
+    }
+
+    .event_ukiwa {
+        display: none;
+    }
+
+    .event_ball {
+        right: auto;
+        left: 12.07%;
+    }
+
+    .event_sango {
+        opacity: 0.6;
+    }
+
+    .pickUp dl .pickUp_dl_container:not(:first-child) {
+        margin-top: 8.33%;
+    }
+
+    .pickUp_seaOtter {
+        display: none;
+    }
+
+    .pickUp_bubble {
+        left: auto;
+        right: 8.43%;
+    }
+
+    .pickUp_flatfish {
+        display: none;
+    }
+
+    .top_floor_map {
+        padding-left: 4.17%;
+        padding-right: 4.17%;
+    }
+
+    .floor_map_dotCircle,
+    .floor_map_leftCircle {
+        transform: scale(0.6);
+    }
+
+    .floor_map_dotCircle {
+        right: -15%;
+    }
+
+    .floor_map_leftCircle {
+        left: -14.78%;
+    }
+
+    .access_wrapper .contents_container {
+        margin-left: 4.17%;
+        margin-right: 4.17%;
+    }
+
+    .access_contents {
+        flex-direction: column-reverse;
+    }
+
+    .access_contents>dl {
+        margin-top: 4.17%;
+    }
+
+    .access_bubble {
+        display: none;
+    }
+
+    .access_jellyFish {
+        left: auto;
+        bottom: 13.50%;
+        right: 5.64%;
+        transform: scale(0.8);
+        z-index: 1;
+    }
+
+    .access_jellyFish img {
+        transform: scale(0.8);
+    }
+
+    .footer_container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_container .img_area {
+        margin-top: 6.67%;
+    }
+
+    .footer_container div ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer_container div ul li {
+        width: 100%;
+    }
+
+    .footer_container div>ul>li:not(:first-child) {
+        margin-right: 0;
+        margin-top: 6.67%;
+    }
+
+    .footer_container .menu_area .event_has_sub {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_container div .event_has_sub>li:nth-child(3) {
+        margin-right: 0;
+        margin-top: 1.33%;
+    }
+
+    .sub_footer_menu {
+        margin-top: 6.67%;
+    }
+
+    /*-------------- ショー --------------*/
+    h5 {
+        font-family: "Zen Maru Gothic", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        color: #1CBCDC;
+        letter-spacing: 0.1em;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .sp_br {
+        display: inline;
+    }
+
+    .sp_br2 {
+        display: none;
+    }
+
+    .azarashi_show_img {
+        display: block
+    }
+
+    .azarashi_swim p {
+        margin-top: 50px;
+    }
+
+    .azarashi_hand {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 5px;
+        margin-bottom: 100px;
+    }
+
+    .azarashi_hand img {
+        margin-bottom: 50px;
+        transform: scale(0.8);
+    }
+
+    .azarashi_swim img {
+        transform: scale(0.8);
+    }
+
+    .azarashi_show_border {
+        width: 80%;
+    }
+
+    .show_time {
+        display: block;
+    }
+
+    .show_time li {
+        margin-bottom: 3%;
+        width: 100px;
+    }
+
+    .show_azarashi {
+        transform: scale(0.6);
+        top: 70%;
+        left: 40%;
+    }
+
+    .show_awa_1 {
+        top: 0%;
+        right: 5%;
+    }
+
+    .show_fish_1 {
+        display: none;
+    }
+
+    .show_fish_2 {
+        display: none;
+    }
+
+    .iruka_show_img {
+        display: block;
+    }
+
+    .iruka_pool {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .iruka_pool img {
+        transform: scale(0.9);
+    }
+
+    .iruka_pool p {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .iruka_boal p {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .iruka_boal img {
+        transform: scale(0.9);
+    }
+
+    .iruka_show_border {
+        width: 80%;
+    }
+
+    .show_iruka_illust {
+        transform: scale(0.5);
+        right: -35%;
+        bottom: -20%;
+    }
+
+    .show_fish_3 {
+        left: 70%;
+        top: 35%;
+    }
+
+    .show_awa_2 {
+        display: none;
+    }
+
+    .show_fish_4 {
+        display: none;
+    }
+
+    .show_awa_3 {
+        display: none;
+    }
+
+    .show_fish_5 {
+        display: none;
+    }
+
+    .show_fish_6 {
+        display: none;
+    }
+
+    .pengin_show_border {
+        width: 80%;
+    }
+
+    .show_pengin_illust {
+        transform: scale(0.7);
+        right: 2%;
+        bottom: 5%;
+    }
+
+    /*-------------- えさやり --------------*/
+    .show_azarashi_fish {
+        transform: scale(0.5);
+        bottom: 70%;
+        left: 40%;
+    }
+
+    .esa_fish_2 {
+        display: none;
+    }
+
+    .esa_pengin_illust {
+        transform: scale(0.7);
+        bottom: 8%;
+        right: -10%;
+    }
+
+    .pengin_fish p {
+        margin-top: 1%;
+        margin-bottom: 8%;
+    }
+
+    .pengin_fish img {
+        transform: scale(0.8);
+    }
+
+    .esa_attention {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10%;
+    }
+
+    /*-------------- ワークショップ --------------*/
+    .work_shop_copy {
+        padding: 6.67%;
+    }
+
+    .work_shop_detail_container {
+        flex-direction: column-reverse;
+        padding-right: 6.67%;
+        padding-left: 6.67%;
+    }
+
+    .work_shop_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work_shop_bin_1 img {
+        display: none;
+    }
+
+    .work_shop_bin_2 {
+        margin-left: 0;
+        margin-top: 6.67%;
+    }
+
+    .work_shop_bin_2 img {
+        transform-origin: top;
+        transform: scale(1);
+        width: 100%;
+    }
+
+    .work_shop_container .contents_area h2 {
+        margin-top: 6.67%;
+    }
+
+    .bottle_aqua_point_container .contents {
+        margin-top: 11.20%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottle_aqua_point_container .contents .item {
+        padding: 2.67%;
+        padding-top: 10.27%;
+    }
+
+    .bottle_aqua_point_container .contents .item:not(:first-child) {
+        margin-top: 8.33%;
+    }
+
+    .bottle_aqua_point_container .contents .item .img_area {
+        margin-top: 6.67%;
+    }
+
+    /*-------------- フロアマップ --------------*/
+    #floor_map .floor_map_map_container {
+        flex-direction: column;
+    }
+
+    #floor_map .br-sp {
+        display: inline;
+    }
+
+    #floor_map .fm_d_ph .pc_image {
+        display: none;
+    }
+
+    #floor_map .sp_image {
+        display: block;
+        max-width: 100%;
+    }
+
+    #floor_map .contents_container {
+        width: 100%;
+        max-width: none;
+        padding: 0 16px;
+        padding-bottom: 40px;
+    }
+
+    #floor_map .qa_mv_wrapper img {
+        width: clamp(240px, 92vw, 720px);
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #floor_map .main_heading.floor_map {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 24px;
+    }
+
+    #floor_map .main_heading.floor_map>img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #floor_map .main_heading.floor_map .pin {
+        transform: scale(.85);
+        transform-origin: center;
+        z-index: 1;
+    }
+
+    #floor_map .main_heading.floor_map .pin .pop_up {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: min(78vw, 300px);
+    }
+
+    #floor_map .floor_map_akasakana_l img,
+    #floor_map .floor_map_akasakana_r1 img,
+    #floor_map .floor_map_akasakana_r2 img {
+        width: clamp(64px, 22vw, 140px);
+        height: auto;
+    }
+
+    #floor_map .floor_map_akasakana_l {
+        left: 4% !important;
+        bottom: 12% !important;
+    }
+
+    #floor_map .floor_map_akasakana_r1 {
+        left: auto !important;
+        right: 6% !important;
+        bottom: 14% !important;
+    }
+
+    #floor_map .floor_map_akasakana_r2 {
+        left: auto !important;
+        right: 12% !important;
+        bottom: 4% !important;
+    }
+
+    #floor_map .floor_map_detail_contents {
+        display: flex;
+        flex-direction: column !important;
+        /* reverse無効化 */
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    #floor_map .fm_d_ph {
+        width: 100% !important;
+        margin: 0;
+    }
+
+    #floor_map .fm_d_ph img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+    }
+
+    #floor_map .event_txt {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    #floor_map .event_txt h3 {
+        margin: 0 0 10px;
+    }
+
+    #floor_map .event_txt h4 {
+        margin: 0 0 20px;
+    }
+
+    #floor_map .event_txt p {
+        margin: 0 0 20px;
+    }
+
+    #floor_map .more_button.icon {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    #floor_map .floor_map_akasakana_l img,
+    #floor_map .floor_map_akasakana_r1 img,
+    #floor_map .floor_map_akasakana_r2 img {
+        display: none;
+    }
+
+    @media (max-width: 480px) {
+
+        #floor_map .floor_map_akasakana_l,
+        #floor_map .floor_map_akasakana_r1,
+        #floor_map .floor_map_akasakana_r2 {
+            display: none;
+        }
+    }
+
+    /*-------------- アクセス --------------*/
+    .access_info {
+        flex-direction: column;
+    }
+
+    .access_kasou {
+        padding-right: 6.67%;
+        padding-left: 6.67%;
+    }
+
+    .access_parking h3 {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .access_manbou,
+    .access_awa {
+        transform-origin: right;
+        transform: scale(0.3);
+    }
+
+    .access_awa {
+        display: none;
+    }
+
+    .access_manbou {
+        right: 6.24%;
+        top: 51.41%;
+    }
+
+    .parking_info_wrapper {
+        padding-bottom: 26.67%;
+    }
+
+    /*-------------- ご利用案内 --------------*/
+    #user_guide .br-sp {
+        display: inline;
+    }
+
+    /* brは inline でOK */
+    /* 共通コンテナの左右余白を詰める */
+    #user_guide .contents_container_second,
+    #user_guide .contents_container_last {
+        max-width: none;
+        margin: 0 auto 40px;
+        padding: 0 16px;
+    }
+
+    /* MV画像は画面幅に合わせて可変 */
+    .qa_mv_wrapper img {
+        display: block;
+        width: clamp(240px, 92vw, 720px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* 「安心」3カード：縦積み＋間隔調整 */
+    #user_guide .user_guide_detail_contents {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 auto 24px;
+    }
+
+    #user_guide .ug_d_icon {
+        width: 100%;
+    }
+
+    /* カードを縦並び＆中央寄せに */
+    #user_guide .user_guide_detail_contents {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    #user_guide .ug_d_icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ★ アイコンのボックスを中央に＆中の画像も中央 */
+    #user_guide .ug_d_icon .icon {
+        margin: 24px auto 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #user_guide .ug_d_icon .icon img {
+        display: block;
+        width: clamp(64px, 24vw, 120px);
+        height: auto;
+    }
+
+    /* テキストも中央寄せに（お好み） */
+    #user_guide .ug_d_icon .txt {
+        text-align: center;
+        margin: 0 16px 20px;
+    }
+
+    #user_guide .icon {
+        margin: 24px auto 12px;
+    }
+
+    #user_guide .txt {
+        margin: 0 16px 20px;
+    }
+
+    #user_guide .bold {
+        margin-bottom: 12px;
+    }
+
+    /* 営業案内カード（波付きの表） */
+    #user_guide .guide-card {
+        width: 100%;
+        max-width: none;
+        padding: 10%;
+        border-radius: 10px;
+    }
+
+    /* 2カラム → 1カラム */
+    #user_guide .guide-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 16px 0;
+    }
+
+    /* 波の左右をカードpaddingに合わせて内側へ */
+    #user_guide .guide-item+.guide-item::before,
+    #user_guide .guide-item:last-child::after {
+        left: -16px;
+        right: -16px;
+        height: 12px;
+        background-size: 20px 12px;
+    }
+
+    /* 最終行の余白も小さめに（波ぶん） */
+    #user_guide .guide-item:last-child {
+        padding-bottom: calc(16px + 12px);
+    }
+
+    /* 注意とお願いカード：可変幅に */
+    #user_guide .request {
+        margin: 48px auto;
+    }
+
+    #user_guide .notice-card {
+        width: min(92%, 630px);
+        margin: 24px auto;
+        padding: 16px 18px;
+    }
+
+    #user_guide .notice-title {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    #user_guide .notice-fish {
+        width: 20px;
+    }
+
+    /* タイトル行（泡の画像付きh2）が窮屈ならサイズ調整（任意） */
+    .main_heading img {
+        width: 28px;
+        height: auto;
+    }
+
+    /* ほたて */
+    #user_guide .guide_hotate img,
+    /* ひとで */
+    #user_guide .guide_hitode img,
+    /* みぎのしろいさかなたいぐん */
+    #user_guide .guide_w_sakana_r img,
+    /* ひだりのしろいさかなたいぐん */
+    #user_guide .guide_w_sakana_l img,
+    /* ひだりのわかめ */
+    #user_guide .guide_wakame_l img,
+    /* みぎのわかめ */
+    #user_guide .guide_wakame_r img {
+        display: none;
+    }
+
+    /* あおいさかなにひき */
+    #user_guide .guide_bluefish img,
+    /* ひだりのきいろいさかな */
+    #user_guide .guide_y_sakana_l img,
+    /* みぎのきいろいさかな */
+    #user_guide .guide_y_sakana_r img {
+        transform: scale(0.5);
+    }
+
+    /* 飾り画像位置替え */
+    #user_guide .guide_awa1_r img,
+    #user_guide .guide_awa_l img,
+    #user_guide .guide_awa2_r img {
+        --scale: 0.5;
+    }
+
+    #user_guide .guide_awa1_r {
+        bottom: 3%;
+        left: 88%;
+    }
+
+    #user_guide .guide_awa_l {
+        bottom: 4%;
+        left: 0.1%;
+    }
+
+    #user_guide .guide_awa2_r {
+        bottom: 1%;
+        left: 93%;
+    }
+
+    /* あおいさかなにひき */
+    #user_guide .guide_bluefish {
+        position: absolute;
+        bottom: 43%;
+        left: 4%;
+    }
+
+    /* ひだりのきいろいさかな */
+    #user_guide .guide_y_sakana_l {
+        position: absolute;
+        bottom: 40%;
+        left: 69%;
+    }
+
+    /* みぎのきいろいさかな */
+    #user_guide .guide_y_sakana_r {
+        position: absolute;
+        bottom: 18%;
+        left: 80%;
+    }
+
+    /* ひだりのわかめ */
+    #user_guide .guide_wakame_l {
+        position: absolute;
+        bottom: -1%;
+        left: 17%;
+    }
+
+    /* みぎのわかめ */
+    #user_guide .guide_wakame_r {
+        position: absolute;
+        bottom: -2%;
+        left: 81%;
+    }
+
+    @media (max-width: 480px) {
+
+        .guide_bluefish,
+        .guide_w_sakana_r,
+        .guide_y_sakana_l,
+        .guide_y_sakana_r,
+        .guide_w_sakana_l,
+        .guide_awa1_r,
+        .guide_awa_l,
+        .guide_awa2_r,
+        .guide_wakame_l,
+        .guide_wakame_r {
+            display: none;
+        }
+    }
+
+    /*-------------- ピックアップツアー --------------*/
+    .br-sp {
+        display: inline;
+    }
+
+    /* 余白をコンパクトに */
+    #pickup .contents_container_second {
+        max-width: none;
+        margin: 0 auto 40px;
+        padding: 0 16px;
+    }
+
+    /* MV画像は画面幅に合わせてスッと縮む */
+    #pickup .main_heading_mv {
+        margin: 0 auto 24px;
+    }
+
+    #pickup .main_heading_mv img {
+        display: block;
+        width: clamp(240px, 92vw, 720px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* レイアウト：縦積み */
+    #pickup .detail_contents {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* PC用の左画像は消す／SP用を出す（h3の下に表示） */
+    #pickup .tour_ph--pc {
+        display: none;
+    }
+
+    #pickup .tour_ph--sp {
+        display: block;
+        margin: 12px 0 20px;
+    }
+
+    #pickup .tour_ph--sp img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* テキスト幅・余白をSP向けに */
+    #pickup .txt p {
+        width: 100%;
+        margin-bottom: 24px;
+        line-height: 1.9;
+    }
+
+    #pickup .txt h3 {
+        margin-bottom: 12px;
+    }
+
+    #pickup .txt h4 {
+        margin: 16px 0 10px;
+    }
+
+    /* タイトルの泡アイコンを小さめに */
+    #pickup .txt .section-title {
+        padding: 0 28px;
+        margin-bottom: 12px;
+    }
+
+    #pickup .txt .section-title::before,
+    #pickup .txt .section-title::after {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* おさかなアイコン行（料金）も詰める */
+    #pickup .txt .fee-row.icon {
+        gap: 8px;
+        margin-bottom: 6px;
+        line-height: 1.8;
+    }
+
+    /* くらげの位置を下に逃がす（被り防止） */
+    #pickup .pukapuka img {
+        width: clamp(72px, 22vw, 140px);
+        height: auto;
+    }
+
+    #pickup .tour_jellyfish_red {
+        left: auto;
+        right: 8px;
+        bottom: -8px;
+    }
+
+    #pickup .tour_jellyfish_blue {
+        left: 8px;
+        bottom: -20px;
+    }
+
+    #pickup .tour_jellyfish_blue img {
+        transform: scale(0.4);
+    }
+
+    #pickup .tour_jellyfish_red img {
+        transform: scale(0.3);
+    }
+
+    /* ふわふわくらげあか */
+    #pickup .tour_jellyfish_red {
+        position: absolute;
+        bottom: 1%;
+        left: 57%;
+    }
+
+    /* ふわふわくらげあお */
+    #pickup .tour_jellyfish_blue {
+        position: absolute;
+        bottom: 1.5%;
+        left: 22%;
+    }
+
+    #pickup .footer_seaWeed img,
+    #pickup .footer_starFish img {
+        display: none;
+    }
+
+    /*-------------- ピックアップスタンプラリー --------------*/
+    #stamp .br-sp {
+        display: inline;
+    }
+
+    /* brは inline でOK */
+    #stamp .pc_image {
+        display: none;
+    }
+
+    #stamp .sp_image {
+        display: block;
+    }
+
+    /* コンテナの左右余白を狭く＆縦の余白も縮める */
+    #stamp .contents_container_second {
+        max-width: none;
+        padding: 0 16px;
+        margin: 0 auto 40px;
+    }
+
+    /* 詳細ボックスの上余白を縮める */
+    #stamp .stamp-details {
+        margin-top: 80px;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    /* タイトル（泡アイコン付き）の詰め・泡サイズダウン */
+    #stamp .txt .section-title {
+        padding: 0 28px;
+        margin-bottom: 12px;
+    }
+
+    #stamp .txt .section-title::before,
+    #stamp .txt .section-title::after {
+        width: 22px;
+        height: 22px;
+    }
+
+    #stamp .txt h4 {
+        margin-bottom: 20px;
+    }
+
+    #stamp .txt p {
+        margin: 20px;
+    }
+
+    /* 3つのステップ：縦積み＋間隔縮小 */
+    #stamp .contents_container_second .stamp_detail_contents {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 32px;
+    }
+
+    /* PCで使ってる“2つ目だけ左右反転”はスマホでは無効化 */
+    #stamp .contents_container_second .stamp_detail_contents:nth-child(2) {
+        flex-direction: column !important;
+    }
+
+    /* ステップ番号画像・本文の見た目 */
+    #stamp .number {
+        margin-bottom: 8px;
+        max-width: 120px;
+        height: auto;
+    }
+
+    #stamp .event_txt {
+        text-align: left;
+        width: 100%;
+    }
+
+    /* 画像（左カラム相当）は全幅にして中央へ */
+    #stamp .stamp_detail_contents>div:first-child img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        /* 角丸が要らなければ消してOK */
+    }
+
+    /* 料金行（魚＋テキスト）は軽く詰める */
+    #stamp .txt .fee-row.icon {
+        gap: 8px;
+        line-height: 1.8;
+        margin-bottom: 6px;
+    }
+
+    #stamp .stamp-mv img {
+        display: block;
+        width: 88%;
+        /* max-width: 1200px; */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #stamp .stamp-mv {
+        margin: 0 auto 24px;
+    }
+
+    #stamp .txt {
+        margin: 5%;
+    }
+
+    #stamp .txt h2,
+    #stamp .txt h3 {
+        margin: 0 auto;
+    }
+
+    /* あかいさかな　みぎむき */
+    #stamp .stamp_redfish_right {
+        position: absolute;
+        bottom: 56%;
+        left: 70%;
+    }
+
+    /* あかいさかな　ひだりむき */
+    #stamp .stamp_redfish_left {
+        position: absolute;
+        bottom: 1%;
+        left: 55%;
+    }
+
+    /* ひだりのあわ　さんこ */
+    #stamp .stamp_awa3-2 {
+        position: absolute;
+        bottom: 3%;
+        left: 15%;
+    }
+
+    /* みぎのあわ　さんこ */
+    #stamp .stamp_awa3-3 {
+        position: absolute;
+        bottom: 20%;
+        left: 80%;
+    }
+
+    #stamp .stamp_redfish_right img {
+        transform: scale(0.7);
+    }
+
+    #stamp .stamp_redfish_left img {
+        transform: scale(0.6);
+    }
+
+    #stamp .stamp_awa3-2 img,
+    #stamp .stamp_awa3-3 img {
+        transform: scale(0.3);
+    }
+
+    #stamp .footer_seaWeed img,
+    #stamp .footer_starFish img {
+        display: none;
+    }
+
+    /*-------------- QA --------------*/
+    .qa_title_dot {
+        display: none;
+    }
+
+    .qa_fishes {
+        display: none;
+    }
+
+    .QAContainer {
+        padding-right: 6.67%;
+        padding-left: 6.67%;
+    }
+
+    .contact_wrapper .contents_container {
+        padding-right: 6.67%;
+        padding-left: 6.67%;
+    }
+
+    .name_mail_container {
+        flex-direction: column;
+    }
+
+    .name_mail_container .contact_contents_container {
+        flex-direction: column;
+    }
+
+    .name_mail_container .contact_contents_container:not(:first-child) {
+        margin-top: 3.34%;
+    }
+
+    .name_mail_container .contact_contents_container input {
+        margin-top: 3.34%;
+    }
+
+    .checkBox {
+        flex-direction: column;
+    }
+
+    .checkBoxContents {
+        margin-top: 3.34%;
+    }
+
+    .contact_contents_container.details {
+        flex-direction: column;
+    }
+
+    .contact_contents_container.details textarea {
+        margin-top: 3.34%;
+        resize: none;
+    }
+
+    .contact_bubble {
+        display: none;
+    }
+
+    .contact_wrapper form>.contact_contents_container:not(:first-child) {
+        margin-top: 6.67%;
+    }
+
+    .qa_bottle {
+        bottom: -10.10%;
+        z-index: 2;
+    }
+
+    /*-------------- プライバシーポリシー --------------*/
+    #privacyPolicy .contents_container {
+        padding-right: 6.67%;
+        padding-left: 6.67%;
+    }
+
+    .privacyPolicy_shell_1,
+    .privacyPolicy_shell_2 {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>みなとみらい水族館</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+<body>
+    
+    <!-------------------------- ヘッダーここから -------------------------->
+    <header id="header">
+        <div>
+            <a href="../index.html"><img src="../img/header_logo.png" alt="みなとみらい水族館"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li class="nav_event">
+                    <span>イベント</span>
+                    <ul class="nav_event_sub">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>  
+        </nav>
+        <div class="hamburger_btn">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="slide_menu" id="slideMenu">
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li>
+                    <span>イベント</span>
+                    <ul class="sub_menu">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    
+    <div class="show_mv">
+        <img src="../img/esa_mv_2.png" alt="アザラシにごはんをあげている様子">
+    </div>
+
+    <div class="show_header contents_wrapper wave_color_white">
+        <div class="show_midashi">
+            <div><img src="../img/Title_bubble_left.png" alt=""></div>
+            <h2>えさやり体験</h2>
+            <div><img src="../img/title_bubble_right.png" alt=""></div>
+        </div>
+
+        <div class="show_info">
+            <h5>食べる姿にキュンとする。特別な距離感。</h5>
+            <p class="center_text">水族館ならではの特別な時間。可愛い動物たちに、<br>あなたの手から直接ごはんをあげられるドキドキ体験です。<br>大きな口を開けて待つ姿や、夢中で食べる表情を間近で見ると、ぐっと距離が近づいた気分に。<br>子どもから大人まで楽しめる人気のイベントです。</p>
+        </div>
+        <canvas class="waveCanvas_two_waves"></canvas>
+    </div>
+        
+   
+    
+    <!-------------------------- ヘッダーここまで --------------------------> 
+
+    <main>
+
+     <!-------------------------- アザラシえさここから　-------------------------->
+        <div class="azarashi_show contents_wrapper wave_color_main">
+            <div class="show_azarashi_midashi"><h3>アザラシのもぐもぐタイム</h3></div>
+            <div class="azarashi_show_img">
+                <div class="azarashi_swim">
+                    <img src="../img/esa_azarashi_pic_1.png" alt="水中から顔を出して口を開けているアザラシ"> 
+                    <p>水面から顔をのぞかせて、「ちょうだい」とおねだり。<br>魚を食べる瞬間の迫力と、<br>のんびりした可愛さのギャップを楽しめます。</p> 
+                </div>
+                <div class="azarashi_hand">
+                    <p>つぶらな瞳でじっと見つめてくるアザラシたち。<br>差し出した魚を器用にキャッチする姿に<br>思わず笑顔がこぼれます。</p>
+                    <img src="../img/esa_azarashi_pic_2.png" alt="魚をくわえているアザラシ">
+                </div>
+            </div>
+
+            <div class="azarashi_show_border">
+
+                <div>
+                    <h4>開催時間</h4>
+                            <ul class="show_time">
+                                <li>12:00</li>
+                                <li>14:00</li>
+                            </ul>
+                </div>
+
+                <div>
+
+                        <h4>場所</h4>
+
+                        <div class="show_spot">
+                        <img src="../img/show_map_pin.png" alt="">
+                        <p>2F アザラシプール</p>
+                        </div>
+                     
+                </div>
+
+                <div>
+                    <h4>所要時間</h4>
+                        <div class="esa_needtime">
+                            <img src="../img/show_tokei.png" alt="">
+                            <p>15分</p>
+                        </div>
+                </div>
+
+                <div>
+                    <h4>お申込み</h4>
+                        <div class="esa_money">
+                            <img src="../img/esa_sakana_mark.png" alt="">
+                            <p>料金：200円<br>館内インフォメーションでお申込みください。</p>
+                        </div>
+                </div>
+                    <div class="esa_fish_2 pukapuka bg_img"><img src="../img/show_fish_2.png" alt=""></div>
+            <div class="show_azarashi_fish"><img src="../img/esa_azarashi_illust.png" alt=""></div>
+            </div>
+
+            <div class="show_awa_1 pukapuka"><img src="../img/show_awa_1.png" alt=""></div>
+            <div class="show_fish_1 pukapuka bg_img"><img src="../img/show_fish_1.png" alt=""></div>
+
+            <canvas class="waveCanvas_two_waves"></canvas>
+        </div>
+    
+        <!-------------------------- アザラシえさここまで　-------------------------->
+
+        <!-------------------------- ペンギンえさここから　-------------------------->
+
+        <div class="iruka_show contents_wrapper wave_color_white ">
+            <div class="show_iruka_midashi"><h3>ペンギンのもぐもぐタイム</h3></div>
+            <div class="iruka_show_img">
+                <div class="iruka_pool">
+                    <p>小さな体で元気いっぱい！<br>くちばしを大きく広げてごはんを食べる姿に<br>癒されることまちがいなし。</p>
+                    <img src="../img/esa_pengin_walk.png" alt="お客さんの足元を歩くペンギン">  
+                </div>
+                <div class="pengin_fish">
+                    <img src="../img/esa_pengin_fish.png" alt="魚を食べようとしているペンギン">
+                    <p>かわいい鳴き声とともに群れでやってくるペンギンたち。<br>よちよち歩きながら魚をパクっと食べる仕草は<br>見ているだけで思わず笑顔に。</p>
+                </div>
+            </div>
+
+            <div class="iruka_show_border">
+
+                <div>
+                    <h4>開催時間</h4>
+                            <ul class="show_time">
+                                <li>12:30</li>
+                                <li>15:00</li>
+                            </ul>
+                </div>
+
+                <div>
+
+                        <h4>場所</h4>
+
+                        <div class="show_spot">
+                        <img src="../img/show_map_pin.png" alt="">
+                        <p>1F ペンギンランド</p>
+                        </div>
+                     
+                </div>
+
+                <div>
+                    <h4>所要時間</h4>
+                        <div class="esa_needtime">
+                            <img src="../img/show_tokei.png" alt="">
+                            <p>10分</p>
+                        </div>
+                </div>
+
+                <div>
+                    <h4>お申込み</h4>
+                        <div class="esa_money">
+                            <img src="../img/esa_sakana_mark.png" alt="">
+                            <p>料金：200円<br>館内インフォメーションでお申込みください。</p>
+                        </div>
+                </div>
+                <div class="esa_pengin_illust"><img src="../img/esa_pengin_illust.png" alt=""></div>
+            </div>
+
+            <div class="show_awa_2 pukapuka"><img src="../img/show_awa_2.png" alt=""></div>
+            <div class="show_fish_3 pukapuka"><img src="../img/show_fish_3.png" alt=""></div>
+            <div class="show_fish_4 pukapuka"><img src="../img/show_fish_4.png" alt=""></div>
+
+            <canvas class="waveCanvas_two_waves"></canvas>
+        </div>
+    
+    
+
+        <!-------------------------- ペンギンえさここまで　-------------------------->
+
+        <!-------------------------- 注意書きここから-------------------------->
+        <div class="esa_attention_box last_section">
+            <div class="esa_attention">
+            <div class="esa_attention_title">
+                <img src="../img/button_fish_white.png" ait="">
+                <p>注意とお願い</p>
+            </div>
+
+            <ul class="esa_attention_ul">
+                <li>・参加にあたっては、スタッフの指示に従ってください。</li>
+                <li>・4才以上の方が対象のプログラムです。 未就学児の方は、保護者の方の付添が必要です。</li>
+                <li>・写真撮影についてはスタッフの指示に従ってください。</li>
+                <li>・万が一、水槽に物を落としてしまった場合、補償等は出来かねます。</li>
+                <li>・動物を驚かすような行為はお控えください。</li>
+            </ul>
+            </div>
+        </div>
+        <!-------------------------- 注意書きここまで　-------------------------->
+        <div class="footer_seaWeed sp_rescale_img"><img src="../img/seaweed.png" alt=""></div>
+        <div class="footer_starFish sp_rescale_img"><img src="../img/starfish.png" alt=""></div>
+    </main>
+
+    <!-------------------------- フッターここから　-------------------------->
+    <footer>
+        <div class="footer_container">
+            <div class="img_area"><a href="../index.html"><img src="../img/footer_logo.png" alt="みなとみらい水族館"></a></div>
+            <div class="menu_area">
+                <ul>
+                    <li><a href="../index.html">トップ</a></li>
+                    <li class="event_has_sub">
+                        <span>イベント</span>
+                        <ul>
+                            <li><a href="../show/index.html">ショー</a></li>
+                            <li><a href="../esa/index.html">えさやり体験</a></li>
+                            <li><a href="../work/index.html">ワークショップ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                    <li><a href="../access/index.html">アクセス</a></li>
+                    <li><a href="../user_guide/index.html">ご利用案内</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../qa/index.html">よくあるご質問・お問い合わせ</a></li>
+                    <li><a href="../privacyPolicy/index.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyWrite"><small>&copy;みなとみらい水族館 2025</small></div>
+    </footer>
+    <!-------------------------- フッターここまで　-------------------------->
+    <script src="../js/hamburger_btn.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/waveTwoWaves.js"></script>
+    <script src="../js/waveThreeWaves.js"></script>
+    <script src="../js/waveForButton.js"></script>
+</body>
+
+</html>

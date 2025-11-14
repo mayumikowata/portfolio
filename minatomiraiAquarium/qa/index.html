@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>みなとみらい水族館</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+
+
+<body>
+    <!-------------------------- ヘッダーここから -------------------------->
+    <header id="header">
+        <div>
+            <a href="../index.html"><img src="../img/header_logo.png" alt="みなとみらい水族館"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li class="nav_event">
+                    <span>イベント</span>
+                    <ul class="nav_event_sub">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>  
+        </nav>
+        <div class="hamburger_btn">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="slide_menu" id="slideMenu">
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li>
+                    <span>イベント</span>
+                    <ul class="sub_menu">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <div class="contents_wrapper wave_color_white qa_mv_wrapper">
+        <div><img src="../img/qa_mv.png" alt=""></div>
+        <canvas class="waveCanvas_three_waves"></canvas>
+    </div>
+    <!-------------------------- ヘッダーここまで -------------------------->
+
+    <main>
+        <!-------------------------- よくあるご質問ここから -------------------------->
+        <div  class="contents_wrapper wave_color_main qa_wrapper">
+            <section class="qa contents_container">
+                <div class="main_heading">
+                    <div><img src="../img/Title_bubble_left.png" alt=""></div>
+                    <h2><a href="">よくあるご質問<span class="qa_title_dot">・</span><br class="sp_br">お問い合わせ</a></h2>
+                    <div><img src="../img/title_bubble_right.png" alt=""></div>
+                </div>
+                <div class="qa_contents">
+                    <h3>よくあるご質問</h3>
+                    <div class="QAContainer">
+                        <div class="qaItem">
+                            <button class="qaQuestion"><div class="qaQuestion_contents"><span class="qaQuestion_Q">Q</span>ベビーカーの持ち込みは可能ですか？</div><div class="plus_minus_btn"></div></button>
+                            <div class="qaA">
+                                <span class="qaA_A">A</span>
+                                <p>
+                                    可能です。館内はベビーカーでそのままご利用いただけます。<br>
+                                    一部エリアにはスロープやエレベーターも完備していますので、小さなお子さま連れでも安心です。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="qaItem">
+                            <button class="qaQuestion"><div class="qaQuestion_contents"><span class="qaQuestion_Q">Q</span>館内で飲食はできますか？</div><div class="plus_minus_btn"></div></button>
+                            <div class="qaA">
+                                <span class="qaA_A">A</span><p>可能です。お弁当などの持ち込みは、指定された休憩スペースでお召し上がりいただけます。</p>
+                            </div>
+                        </div>
+                        <div class="qaItem">
+                            <button class="qaQuestion"><div class="qaQuestion_contents"><span class="qaQuestion_Q">Q</span>再入場はできますか？</div><div class="plus_minus_btn"></div></button>
+                            <div class="qaA">
+                                <span class="qaA_A">A</span>
+                                <p>
+                                    はい、当日であれば再入場が可能です。<br>
+                                    入口のスタッフにお声がけいただくと、再入場スタンプを押しますのでお申し付けください。
+                                </p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+            <div class="qa_bottle pukapuka sp_rescale_img p_e_none"><img src="../img/qa_bottle.png" alt=""></div>
+            <div class="qa_fishes bg_img sp_rescale_img"><img src="../img/qa_fish.png" alt=""></div>
+            
+            <canvas class="waveCanvas_two_waves"></canvas>
+        </div>
+        <!-------------------------- よくあるご質問ここまで -------------------------->
+        
+        <!-------------------------- お問い合わせここから -------------------------->
+        <div class="contents_wrapper contact_wrapper last_section">
+            <section class="contents_container">
+                <h3 id="contact">お問い合わせ</h3>
+                <div class="caution">
+                    <p>その他のご質問や、ご意見、団体のお客様のご相談などは、下記フォームよりお問い合わせください。</p>
+                </div>
+                <form action="">
+                    <div class="name_mail_container">
+                        <div class="contact_contents_container">
+                            <label for="name">お名前</label>
+                            <input type="text" id="name" name="name" class="name inputContainer" placeholder="水族　館太郎">
+                        </div>
+                        <div class="contact_contents_container">
+                            <label for="mail">メール</label>
+                            <input type="text" id="mail" name="mail" placeholder="example@mail.com" class="mail inputContainer">
+                        </div>
+                    </div>        
+                    <div class="checkBox contact_contents_container">
+                        <label>お問い合わせ内容</label>                    
+                        <div class="checkBoxContents inputContainer">
+                            <div>
+                                <div>
+                                    <input type="checkbox" id="feedback">
+                                    <label for="feedback">ご意見・ご感想</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="questions_for_zookeepers">
+                                    <label for="questions_for_zookeepers">飼育員に質問がしたい</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="group_reservation">
+                                    <label for="group_reservation">団体予約の相談がしたい</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="others">
+                                    <label for="others">その他お問い合わせ</label>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    <div class="details contact_contents_container">
+                        <label for="details">お問い合わせ詳細</label>
+                        <textarea id="details" name="details" placeholder="お問い合わせ詳細をご記入ください。"></textarea>
+                    </div>                    
+                    
+
+
+                    <div class="buttonWrapper box_shadow">
+                        <button type="submit">送信する</button>
+                        <img src="../img/biger_fish_white.png" class="white_fish" alt="">
+                        <img src="../img/biger_fish_blue.png" class="blue_fish" alt="">
+                    </div>
+                    
+                </form>
+            </section>
+            <div class="contact_bubble pukapuka sp_rescale_img"><img src="../img/qa_bubble.png" alt=""></div>
+        </div>
+        <!-------------------------- お問い合わせここまで -------------------------->
+        <div class="footer_seaWeed sp_rescale_img"><img src="../img/seaweed.png" alt=""></div>
+        <div class="footer_starFish sp_rescale_img"><img src="../img/starfish.png" alt=""></div>
+    </main>
+
+    <!-------------------------- フッターここから　-------------------------->
+    <footer>
+        <div class="footer_container">
+            <div class="img_area"><a href="../index.html"><img src="../img/footer_logo.png" alt="みなとみらい水族館"></a></div>
+            <div class="menu_area">
+                <ul>
+                    <li><a href="../index.html">トップ</a></li>
+                    <li class="event_has_sub">
+                        <span>イベント</span>
+                        <ul>
+                            <li><a href="../show/index.html">ショー</a></li>
+                            <li><a href="../esa/index.html">えさやり体験</a></li>
+                            <li><a href="../work/index.html">ワークショップ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                    <li><a href="../access/index.html">アクセス</a></li>
+                    <li><a href="../user_guide/index.html">ご利用案内</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../qa/index.html">よくあるご質問・お問い合わせ</a></li>
+                    <li><a href="../privacyPolicy/index.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyWrite"><small>&copy;みなとみらい水族館 2025</small></div>
+    </footer>
+    <!-------------------------- フッターここまで　-------------------------->
+    <script src="../js/hamburger_btn.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/qa.js"></script>
+    <script src="../js/waveTwoWaves.js"></script>
+    <script src="../js/waveThreeWaves.js"></script>
+    <script src="../js/waveForButton.js"></script>
+</body>
+
+</html>

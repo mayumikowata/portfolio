@@ -1,113 +1,368 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="横浜・みなとみらいの家族向け水族館を想定したWebサイト。親子で安心しておでかけ計画ができるよう、やさしい色合いとわかりやすい導線、親しみやすいイラストで構成しました。">
-  <title>みなとみらい水族館 | Mayumi Kowata Portfolio</title>
+<meta charset="utf-8">
+<title>みなとみらい水族館</title>
+<link href="css/reset.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!--jQuery本体-->
+<script src="js/jquery-1.11.2.min.js"></script>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+<!--ready関数-->
+<script>
+$(function(){
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/style.css">
+});
+</script>
+
 </head>
 
-<body>
-  <!-- = Header = -->
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="../index.html">
-        <img class="brand-logo" src="../assets/MK.svg" alt="ホームへ戻る">
-      </a>
 
-      <nav class="site-nav" aria-label="primary">
-        <a href="../about/index.html">ABOUT ME</a>
-        <a href="../index.html#works" aria-current="page">WORKS</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- = Work Detail = -->
-    <section class="section detail">
-      <div class="wrap narrow">
-
-        <!-- Section kicker -->
-        <p class="section-kicker">WORKS</p>
-
-        <!-- Title -->
-        <h1 class="section-title en">みなとみらい水族館</h1>
-        <h2 class="section-subtitle">
-          家族向け水族館（横浜・みなとみらい）を想定したWebサイト
-        </h2>
-
-        <!-- Category -->
-        <h3 class="detail-category">Web Design</h3>
-
-        <!-- Header (logo + summary) -->
-        <div class="detail-header">
-          <div class="logo-box">
-            <img src="../assets/logo_minatomiraiAquarium.svg" alt="みなとみらい水族館 ロゴ">
-          </div>
-
-          <div class="detail-summary">
-            <ul class="pill-list">
-              <li>企画</li>
-              <li>デザイン</li>
-              <li>コーディング</li>
-              <li>ロゴデザイン</li>
+<body id="top">
+    <!-------------------------- ヘッダーここから -------------------------->
+    <div class="header_station"></div>
+    <header id="header">
+        <div>
+            <a href="index.html"><img src="img/header_logo.png" alt="みなとみらい水族館"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li class="nav_event">
+                    <span>イベント</span>
+                    <ul class="nav_event_sub">
+                        <li><a href="show/index.html">ショー</a></li>
+                        <li><a href="esa/index.html">えさやり体験</a></li>
+                        <li><a href="work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="floor_map/index.html">フロアマップ</a></li>
+                <li><a href="access/index.html">アクセス</a></li>
+                <li><a href="user_guide/index.html">ご利用案内</a></li>
+            </ul>  
+        </nav>
+        <div class="hamburger_btn">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="slide_menu" id="slideMenu">
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li>
+                    <span>イベント</span>
+                    <ul class="sub_menu">
+                        <li><a href="show/index.html">ショー</a></li>
+                        <li><a href="esa/index.html">えさやり体験</a></li>
+                        <li><a href="work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="floor_map/index.html">フロアマップ</a></li>
+                <li><a href="access/index.html">アクセス</a></li>
+                <li><a href="user_guide/index.html">ご利用案内</a></li>
             </ul>
-
-            <p>
-              海の生きものたちの楽しさを感じてもらえるよう、<br>
-              波のモチーフを全体にあしらい、やさしい雰囲気でまとめました。<br><br>
-              子どもが笑顔で見られるような、<br>カラフルで親しみやすいイラストを多く使っています。<br>
-              親子で「行ってみたいね」と話したくなるような、<br>
-              見やすく安心感のあるトーンを目指しました。
-            </p>
-          </div>
         </div>
+        <div class="overlay"></div>
+    </header>
+    
+    
 
-        <!-- Mockup -->
-        <figure class="mockup">
-          <img src="../assets/mockup_minatomiraiAquarium.png" alt="みなとみらい水族館 サイトのモックアップ">
-        </figure>
-
-        <!-- Notes -->
-        <div class="note-box">
-          <p>
-            ロゴは、みなとみらい水族館の人気者であるアザラシをワンポイントで表現しました。<br>
-            ヒゲの部分に、みなとみらいの頭文字「MM」をさりげなく忍ばせて、遊び心を加えています。<br>
-            明るい色合いとポップな印象で、子どもにも親しみやすいデザインにしました。
-          </p>
+    <div class="MV contents_wrapper wave_color_white">
+        <div class="MV_slider">
+            <div class="slide_item active"><img src="img/top_mv_aquarium.png" alt=""></div>
+            <div class="slide_item">
+                <a href="pickUp/pickUp_tour/index.html"><img src="img/top_mv_tour.png" alt=""></a>
+            </div>
+            <div class="slide_item"><a href="pickUp/pickUp_stamp/index.html"><img src="img/top_mv_stamp.png" alt=""></a></div>
+            <div class="pagenation">
+                <span class="pagenation_btn active"></span>
+                <span class="pagenation_btn"></span>
+                <span class="pagenation_btn"></span>
+            </div>
         </div>
-
-        <p class="center mt-48">
-          <a class="btn" href="#top" id="backToTop3">Back to top</a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer Pattern -->
-  <div class="footer-pattern"></div>
-
-  <!-- = Footer = -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© 2025 Mayumi Kowata Portfolio</p>
+        <canvas class="waveCanvas_two_waves canvas_none"></canvas>
     </div>
-  </footer>
+    
+    <!-------------------------- ヘッダーここまで -------------------------->
 
-  <!-- Scripts -->
-  <script src="../js/jquery-1.11.2.min.js"></script>
-  <script src="../js/script.js"></script>
+    <main>
+        <!-------------------------- イベントここから -------------------------->
+        <div  class="contents_wrapper wave_color_main event_wrapper">
+            <section class="event contents_container">
+                <div class="main_heading">
+                    <div><img src="img/Title_bubble_left.png" alt=""></div>
+                    <h2>イベント</h2>
+                    <div><img src="img/title_bubble_right.png" alt=""></div>
+                </div>
+
+                <div class="event_slider_wrapper">
+                    <div class="event_slider">
+                        <dl class="event_dl_container">
+                            <dd class="event_button">
+                                <a href="show/index.html">
+                                    <img src="img/event_show.png" alt="イルカショー">
+                                    <div class="event_more">もっとみる</div>
+                                    <canvas class="waveCanvas_forButton"></canvas>
+                                </a>
+                            </dd>
+                            <dt><h3>ショー</h3></dt>
+                        </dl>
+
+                        <dl  class="event_dl_container">
+                            <dd class="event_button">
+                                <a href="esa/index.html">
+                                    <img src="img/event_feeding.png" alt="えさやり体験">
+                                    <div class="event_more">もっとみる</div>
+                                    <canvas class="waveCanvas_forButton"></canvas>
+                                </a>
+                            </dd>
+                            <dt><h3>えさやり体験</h3></dt>
+                        </dl>
+
+                        <dl  class="event_dl_container">
+                            <dd class="event_button">
+                                <a href="work/index.html">
+                                    <img src="img/event_bottleium.png" alt="ワークショップ">
+                                    <div class="event_more">もっとみる</div>
+                                    <canvas class="waveCanvas_forButton"></canvas>
+                                </a>
+                            </dd>
+                            <dt><h3>ワークショップ</h3></dt>
+                        </dl>
+                        
+                    </div>
+
+                    <button class="slide_prev"><img src="img/event_slider_prev_btn.png" alt=""></button>
+                    <button class="slide_next"><img src="img/event_slider_next_btn.png" alt=""></button>
+                </div>
+            </section>
+            <div class="event_fish scroll_img"><img src="img/event_fish.png" alt=""></div>
+            <div class="event_sango bg_img"><img src="img/sango.png" alt=""></div>
+            <div class="event_ukiwa bg_img"><img src="img/ukiwa.png" alt=""></div>
+            <div class="event_ball sp_rescale_img pukapuka"><img src="img/ball.png" alt=""></div>
+            <div class="event_dolphin bg_img"><img src="img/event_dolphin.png" alt=""></div>
+            <canvas class="waveCanvas_two_waves"></canvas>
+        </div>
+        
+        
+        
+        <!-------------------------- イベントここまで -------------------------->
+        
+        <!-------------------------- ピックアップここから -------------------------->
+        <div class="contents_wrapper pickUp_wrapper wave_color_white">
+            <section class="pickUp contents_container">
+                <div class="main_heading">
+                    <div><img src="img/Title_bubble_left.png" alt=""></div>
+                    <h2>ピックアップ</h2>
+                    <div><img src="img/title_bubble_right.png" alt=""></div>
+                </div>
+                
+                <dl>
+                    <div class="pickUp_dl_container">
+                        <a href="pickUp/pickUp_tour/index.html">
+                            <dd><img src="img/pickUp_tour.png" alt="水族館の裏側潜入ツアー"></dd>
+                            <dt>水族館の裏側潜入ツアー</dt>
+                        </a>
+                    </div>
+                    <div class="pickUp_dl_container">
+                        <a href="pickUp/pickUp_stamp/index.html">
+                            <dd><img src="img/pickUp_adovencher.png" alt="海の生き物探し物アドベンチャー！"></dd>
+                            <dt>海の生き物探し物アドベンチャー！</dt>
+                        </a>
+                    </div>
+                </dl>
+            </section>
+            <div class="pickUp_bubble bg_img p_e_none"><img src="img/pickUp_bubble.png" alt=""></div>
+            <div class="pickUp_seaOtter fuwafuwa"><img src="img/seaOtter.png" alt=""></div>
+            <div class="pickUp_flatfish scroll_img"><img src="img/flatfish.png" alt=""></div>
+            <canvas class="waveCanvas_three_waves"></canvas>
+        </div>
+        <!-------------------------- ピックアップここまで -------------------------->
+
+        <!-------------------------- フロアマップここから -------------------------->
+        <div class="contents_wrapper floor_map_wrapper wave_color_acsent">
+            <section class="contents_container top_floor_map">
+                <div class="main_heading">
+                    <div><img src="img/Title_bubble_left.png" alt=""></div>
+                    <h2><a href="floor_map/index.html">フロアマップ</a></h2>
+                    <div><img src="img/title_bubble_right.png" alt=""></div>
+                </div>
+
+                <div class="floor_map_img"><a href="floor_map/index.html"><img src="img/floor_map.png" alt="フロアマップ"></a></div>
+
+                <div class="floor_map_catchCopy"><p>お魚たちのことが学べるよ</p></div>
+                <div class="more_button">
+                    <a href="floor_map/index.html">
+                        <div>もっとみる</div>
+                        <img src="img/biger_fish_white.png" class="white_fish" alt="">
+                        <img src="img/biger_fish_blue.png" class="blue_fish" alt="">
+                    </a>
+                </div>
+            </section>
+            <div class="floor_map_dotCircle bg_img"><img src="img/floor_map_dot_circle.png" alt=""></div>
+            <div class="floor_map_leftCircle bg_img"><img src="img/floor_map_left_circle.png" alt=""></div>
+            <div class="floor_map_boat sp_rescale_img pukapuka p_e_none"><img src="img/boat.png" alt=""></div>
+            <canvas class="waveCanvas_two_waves"></canvas>
+        </div>
+        <!-------------------------- フロアマップここまで -------------------------->
+
+        <!-------------------------- アクセスここから -------------------------->
+        
+        <div class="contents_wrapper access_wrapper wave_color_main">
+            <section class="contents_container">
+                <div class="access box_shadow">
+                    <div class="main_heading">
+                        <div><img src="img/Title_bubble_left.png" alt=""></div>
+                        <h2><a href="access/index.html">アクセス</a></h2>
+                        <div><img src="img/title_bubble_right.png" alt=""></div>
+                    </div>
+
+                    <div class="access_contents">
+                        <dl>
+                            <dd>
+                                〒220-0012 神奈川県横浜市西区<br>
+                                みなとみらい6-3-100
+                            </dd>
+
+                            <dt>
+                                <h4>
+                                    電車でお越しの方へ
+                                </h4>
+                            </dt>
+                            <dd>
+                                横浜高速鉄道みなとみらい線<br>
+                                みなとみらい駅　4番出口から徒歩12分
+                            </dd>
+
+                            <dt>
+                                <h4>
+                                   お車でお越しの方へ 
+                                </h4>
+                            </dt>
+                            <dd>
+                                駐車場も併設しております。<br>
+                                現在の混雑状況は<span class="type_more_button"><a href="access/index.html#parking_info">こちら</a></span>
+                            </dd>
+                        </dl>
+
+                        <div class="img_area">
+                            <img src="img/access_map.png" alt="アクセスマップ">
+                        </div>
+                    </div>
+
+                    <div class="more_button">
+                        <a href="access/index.html">
+                            <div>もっとみる</div>
+                            <img src="img/biger_fish_white.png" class="white_fish" alt="">
+                            <img src="img/biger_fish_blue.png" class="blue_fish" alt="">
+                        </a>
+                    </div>
+                </div>
+                
+            </section>
+            <div class="access_bubble"><img src="img/access_bubble.png" alt=""></div>
+            <div class="access_jellyFish sp_rescale_img fuwafuwa"><img src="img/jellyFish.png" alt=""></div>
+            <canvas class="waveCanvas_three_waves"></canvas>
+        </div>
+
+        <!-------------------------- アクセスここまで -------------------------->
+
+        <!-------------------------- お子様連れOKここから　-------------------------->
+        <div class="contents_wrapper kidsOk_wrapper last_section">
+            <section class="contents_container kidsOk_container">
+                <div class="medium_heading blue_dotted mrgB_50px">
+                    <h3>お子様連れでも安心してお越しいただけます</h3>
+                </div>
+
+                <dl class="kidsOk_dl_contents">
+                    <div class="kidsOk_dl_container box_shadow">
+                        <div class="number_cicle">
+                            <span>1</span>
+                        </div>
+                        <p>
+                            授乳室・おむつ替え<br>
+                            スペース完備    
+                        </p>
+                        
+                    </div>
+
+                    <div class="kidsOk_dl_container box_shadow">
+                        <div class="number_cicle">
+                            <span>2</span>
+                        </div>
+                        <p>
+                            ベビーカーで<br>
+                            ラクラク移動  
+                        </p>
+                        
+                    </div>
+
+                    <div class="kidsOk_dl_container box_shadow">
+                        <div class="number_cicle">
+                            <span>3</span>
+                        </div>
+                        <p>
+                            豊富な<br>
+                            キッズ向けサービス    
+                        </p>
+                        
+                    </div>
+                </dl>
+            </section>
+        </div>
+        <!-------------------------- お子様連れOKここまで　-------------------------->
+        <div class="footer_seaWeed sp_rescale_img"><img src="img/seaweed.png" alt=""></div>
+        <div class="footer_starFish sp_rescale_img"><img src="img/starfish.png" alt=""></div>
+    </main>
+
+    <!-------------------------- フッターここから　-------------------------->
+    <footer>
+        <div class="footer_container">
+            <div class="img_area"><a href="index.html"><img src="img/footer_logo.png" alt="みなとみらい水族館"></a></div>
+            <div class="menu_area">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li class="event_has_sub">
+                        <span>イベント</span>
+                        <ul>
+                            <li><a href="show/index.html">ショー</a></li>
+                            <li><a href="esa/index.html">えさやり体験</a></li>
+                            <li><a href="work/index.html">ワークショップ</a></li>
+            <li><a href="/pickUp/pickUp_tour/index.html">館内ツアー</a></li>
+            <li><a href="/pickUp/pickUp_stamp/index.html">スタンプラリー</a></li>
+							
+							
+                        </ul>
+                    </li>
+                    <li><a href="floor_map/index.html">フロアマップ</a></li>
+                    <li><a href="access/index.html">アクセス</a></li>
+                    <li><a href="user_guide/index.html">ご利用案内</a></li>
+                </ul>
+                <ul>
+                    <li><a href="qa/index.html">よくあるご質問・お問い合わせ</a></li>
+                    <li><a href="privacyPolicy/index.html">プライバシーポリシー</a></li>
+                </ul>  
+            </div>
+            
+        </div>
+        <div class="copyWrite"><small>&copy;みなとみらい水族館 2025</small></div>
+    </footer>
+    <!-------------------------- フッターここまで　-------------------------->
+
+    <script src="js/hamburger_btn.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/waveTwoWaves.js"></script>
+    <script src="js/waveThreeWaves.js"></script>
+    <script src="js/waveForButton.js"></script>
+    <script src="js/rotate45deg.js"></script>
+    <script src="js/scrolled.js"></script>
+    <script src="js/event_slider.js"></script>
 </body>
+
 </html>

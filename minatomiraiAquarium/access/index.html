@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>みなとみらい水族館</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+<body>
+
+     <!-------------------------- ヘッダーここから -------------------------->
+
+    <header id="header">
+        <div>
+            <a href="../index.html"><img src="../img/header_logo.png" alt="みなとみらい水族館"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li class="nav_event">
+                    <span>イベント</span>
+                    <ul class="nav_event_sub">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>  
+        </nav>
+        <div class="hamburger_btn">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="slide_menu" id="slideMenu">
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li>
+                    <span>イベント</span>
+                    <ul class="sub_menu">
+                        <li><a href="../show/index.html">ショー</a></li>
+                        <li><a href="../esa/index.html">えさやり体験</a></li>
+                        <li><a href="../work/index.html">ワークショップ</a></li>
+                    </ul>
+                </li>
+                <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+                <li><a href="../user_guide/index.html">ご利用案内</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    
+    <div class="access_mv contents_wrapper wave_color_white qa_mv_wrapper">
+        <canvas class="waveCanvas_three_waves"></canvas>
+        <img src="../img/access_mv.png" alt="みなとみらい水族館の外観">
+    </div>
+        
+
+    <!-------------------------- ヘッダーここまで -------------------------->
+
+
+    <main class="access_kasou">
+        <div class="access_midashi">
+                <div><img src="../img/Title_bubble_left.png" alt=""></div>
+                <h2>アクセス</h2>
+                <div><img src="../img/title_bubble_right.png" alt=""></div>
+        </div>
+
+
+        <div class="access_info">
+            <div>
+                <div class="access_box">
+                    <img src="../img/access_pin.png" alt="">
+                    <p>〒222-0000<br>神奈川県横浜市西区みなとみらい6-3-100</p>
+                </div>
+
+                <div class="access_box">
+                    <img src="../img/access_phone.png" alt="" class="access_phone">
+                    <p>060-1234-5678</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="access_h4_box">
+                    <h4>開館時間</h4>
+                    <p>10:00~17:30(入館は17:00まで)</p>
+                </div>
+
+                <div class="access_h4_box">
+                    <h4>休館日</h4>
+                    <p>月曜日（月曜日が祝日の場合は翌平日）</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="access_map_box"> 
+            <img src="../img/access_map2.png" alt="みなとみらい水族館までのマップ">
+        </div>
+
+        <div class="access_koutsu">
+            <h3>公共交通機関をご利用の場合</h3>
+            <div>
+                <div>
+                    <img src="../img/access_densha.png" alt="" class="koutsu_img">
+                    <h4>電車でお越しの方</h4>
+                </div>
+
+                <p>横浜高速鉄道みなとみらい線　4番出口より徒歩12分</p>
+            </div>
+
+            <div>
+                <div>
+                    <img src="../img/access_buss.png" alt="" class="koutsu_img">
+                    <h4>バスでお越しの方</h4>
+                </div>
+                <p>高速横浜線「みなとみらい駅」より徒歩8分</p>
+            </div>
+
+            <h3 class="car_h3">自動車をご利用の場合</h3>
+
+            <div>
+                <img src="../img/access_car.png" alt="" class="koutsu_img">
+                <h4>駐車場のご案内</h4>
+            </div>
+        </div>
+
+        <div class="access_parking"  id="parking_info">
+            <h3 class="access_parking_title">現在の駐車場混雑状況</h3>
+            <p class="access_parking_body">まもなく満車</p>
+        </div>
+        <div class="parking_info_wrapper">
+            <div class="parking_info last_section">
+                <h4>駐車場台数</h4>
+                <p>200台</p>
+
+                <h4>駐車料金</h4>
+                <p>普通車：200円（20分間につき）<br>※駐車台数に限りがございますので、満車の場合はお待ちいただくことがあります。<br>※土･日祝日は大変混雑いたします。早い時間に満車になりますので、電車等の公共の交通機関のご利用をお勧めいたします。</p>
+
+                <h4>駐車場営業時間</h4>
+                <p>  平　日　9:30～19:00<br>土日祝　9:00～19:00</p>
+            </div>
+        </div>
+
+        <img src="../img/access_manbou.png" alt="" class="access_manbou">
+        <img src="../img/access_awa.png" alt="" class="access_awa">
+        <div class="footer_seaWeed sp_rescale_img"><img src="../img/seaweed.png" alt=""></div>
+        <div class="footer_starFish sp_rescale_img"><img src="../img/starfish.png" alt=""></div>    
+    </main>
+    
+
+
+<!-------------------------- フッターここから　-------------------------->
+    <footer>
+        <div class="footer_container">
+            <div class="img_area"><a href="../index.html"><img src="../img/footer_logo.png" alt="みなとみらい水族館"></a></div>
+            <div class="menu_area">
+                <ul>
+                    <li><a href="../index.html">トップ</a></li>
+                    <li class="event_has_sub">
+                        <span>イベント</span>
+                        <ul>
+                            <li><a href="../show/index.html">ショー</a></li>
+                            <li><a href="../esa/index.html">えさやり体験</a></li>
+                            <li><a href="../work/index.html">ワークショップ</a></li>
+							
+            <li><a href="../pickUp/pickUp_tour/index.html">館内ツアー</a></li>
+            <li><a href="/pickUp/pickUp_stamp/index.html">スタンプラリー</a></li>
+
+						
+					  </ul>
+                    </li>
+                    <li><a href="../floor_map/index.html">フロアマップ</a></li>
+                    <li><a href="../access/index.html">アクセス</a></li>
+                    <li><a href="../user_guide/index.html">ご利用案内</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../qa/index.html">よくあるご質問・お問い合わせ</a></li>
+                    <li><a href="../privacyPolicy/index.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyWrite"><small>&copy;みなとみらい水族館 2025</small></div>
+    </footer>
+    <!-------------------------- フッターここまで　-------------------------->
+    <script src="../js/hamburger_btn.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/waveTwoWaves.js"></script>
+    <script src="../js/waveThreeWaves.js"></script>
+    <script src="../js/waveForButton.js"></script>
+
+</body>
+
+</html>
