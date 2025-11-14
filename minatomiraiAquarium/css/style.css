@@ -106,14 +106,17 @@ a {
 
 .contents_wrapper.wave_color_main {
     --wave-color: #9FEEFC;
+    bottom: -1px;
 }
 
 .contents_wrapper.wave_color_acsent {
     --wave-color: #1CBCDC;
+    bottom: -1px;
 }
 
 .contents_wrapper.wave_color_white {
     --wave-color: #fff;
+   
 }
 
 .contents_container {
@@ -206,51 +209,81 @@ button {
 }
 
 .yurayura {
-  animation: sway 4s ease-in-out infinite;
+    animation: sway 4s ease-in-out infinite;
 }
 
 .yurayura3 {
-  animation: sway 3s ease-in-out infinite;
+    animation: sway 3s ease-in-out infinite;
 }
 
 /* 左右にゆらゆら */
 @keyframes sway {
-  0%   { transform: translateX(0); }
-  25%  { transform: translateX(5px); }
-  50%  { transform: translateX(0); }
-  75%  { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* 共通：泳ぐ動き */
 .oyogu {
-  animation-name: swim;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  display: inline-block;
+    animation-name: swim;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    display: inline-block;
 }
 
 /* 個別にタイミング・スピードを変える */
 .oyogu1 {
-  animation-duration: 7s;
-  animation-delay: 0s;
+    animation-duration: 7s;
+    animation-delay: 0s;
 }
+
 .oyogu2 {
-  animation-duration: 8.5s;
-  animation-delay: 1.2s;
+    animation-duration: 8.5s;
+    animation-delay: 1.2s;
 }
+
 .oyogu3 {
-  animation-duration: 10s;
-  animation-delay: 2.5s;
+    animation-duration: 10s;
+    animation-delay: 2.5s;
 }
 
 /* アニメーション定義 */
 @keyframes swim {
-  0%   { transform: translateX(0) translateY(0) rotate(0deg); }
-  25%  { transform: translateX(40px) translateY(-4px) rotate(3deg); }
-  50%  { transform: translateX(80px) translateY(0px) rotate(0deg); }
-  75%  { transform: translateX(40px) translateY(4px) rotate(-3deg); }
-  100% { transform: translateX(0) translateY(0) rotate(0deg); }
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(40px) translateY(-4px) rotate(3deg);
+    }
+
+    50% {
+        transform: translateX(80px) translateY(0px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateX(40px) translateY(4px) rotate(-3deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
 }
 
 .sp_br {
@@ -1669,7 +1702,7 @@ input[type="checkbox"]:checked::before {
 /*======================================== 
             フロアマップ　
 ========================================*/
-#floor_map main{
+#floor_map main {
     padding-top: 90px;
 }
 
@@ -1870,7 +1903,7 @@ input[type="checkbox"]:checked::before {
 /*======================================== 
             ご利用案内　
 ========================================*/
-#user_guide main{
+#user_guide main {
     padding-top: 90px;
 }
 
@@ -2193,7 +2226,7 @@ input[type="checkbox"]:checked::before {
             ピックアップ潜入ツアー
 ========================================*/
 
-#pickup main{
+#pickup main {
     padding-top: 90px;
 }
 
@@ -2342,7 +2375,7 @@ input[type="checkbox"]:checked::before {
 /*======================================== 
             スタンプラリー
 ========================================*/
-#stamp main{
+#stamp main {
     padding-top: 90px;
 }
 
