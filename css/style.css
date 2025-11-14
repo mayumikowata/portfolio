@@ -630,6 +630,21 @@ body {
   text-align: right;
 }
 
+
+/* ===== DTP detail: logo なしレイアウト調整 ===== */
+.detail-header.no-logo {
+  display: block !important;       /* 2カラムレイアウトを強制オフ */
+}
+
+.detail-header.no-logo .logo-box {
+  display: none !important;        /* 念のため完全に非表示 */
+}
+
+.detail-header.no-logo .detail-summary {
+  max-width: 100% !important;      /* 幅制限があった場合に全幅に */
+}
+
+
 /* --------------------------------
    Responsive
 -------------------------------- */
