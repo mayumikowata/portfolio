@@ -644,7 +644,7 @@ body {
   max-width: 100% !important;      /* 幅制限があった場合に全幅に */
 }
 
-.br-sp {
+br.br-sp {
   display: none;
 }
 
@@ -714,7 +714,7 @@ body {
     margin-bottom: 0;
   }
 
-    .br-sp {
+  br.br-sp {
     display: inline;
   }
 }
