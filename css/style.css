@@ -644,6 +644,10 @@ body {
   max-width: 100% !important;      /* 幅制限があった場合に全幅に */
 }
 
+.br-sp {
+  display: none;
+}
+
 /* --------------------------------
    Responsive
 -------------------------------- */
@@ -708,5 +712,9 @@ body {
   .skill-desc {
     font-size: 1rem;
     margin-bottom: 0;
+  }
+
+    .br-sp {
+    display: inline;
   }
 }
